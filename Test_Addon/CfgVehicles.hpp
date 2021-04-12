@@ -86,6 +86,11 @@ class cfgVehicles {
     class shto_vn_crate_base: vn_b_ammobox_12 {
       scope = 1;
       scopeCurator = 1;
+      TransportMaxWeapons = 0;
+      TransportMaxItems = 0;
+      TransportMaxMagazines = 0;
+      TransportMaxBackpacks = 0;
+      maximumLoad = 0;
       ace_dragging_canDrag = 1;
       ace_dragging_dragPosition[] = {0, 1.2, 0};
       ace_dragging_dragDirection = 0;
@@ -117,35 +122,35 @@ class cfgVehicles {
       shellType = "shto_vn_m101_shell_ab";
 		};
     class shto_vn_m101_frag_crate: shto_vn_m101_he_crate {
-			displayName = "M1 105mm FRAG x2 Crate";
+			displayName = "M546 105mm FRAG x2 Crate";
       openVariant = "shto_vn_m101_frag_crate_open";
 		};
     class shto_vn_m101_frag_crate_open: shto_vn_m101_he_crate_open {
-			displayName = "M1 105mm FRAG x2 Crate (Open)";
+			displayName = "M546 105mm FRAG x2 Crate (Open)";
       shellType = "shto_vn_m101_shell_frag";
 		};
     class shto_vn_m101_wp_crate: shto_vn_m101_he_crate {
-			displayName = "M1 105mm WP x2 Crate";
+			displayName = "M60 105mm WP x2 Crate";
       openVariant = "shto_vn_m101_wp_crate_open";
 		};
     class shto_vn_m101_wp_crate_open: shto_vn_m101_he_crate_open {
-			displayName = "M1 105mm WP x2 Crate (Open)";
+			displayName = "M60 105mm WP x2 Crate (Open)";
       shellType = "shto_vn_m101_shell_frag";
 		};
     class shto_vn_m101_smoke_crate: shto_vn_m101_he_crate {
-			displayName = "M1 105mm Smoke x2 Crate";
+			displayName = "M60 105mm Smoke x2 Crate";
       openVariant = "shto_vn_m101_smoke_crate_open";
 		};
     class shto_vn_m101_smoke_crate_open: shto_vn_m101_he_crate_open {
-			displayName = "M1 105mm Smoke x2 Crate (Open)";
+			displayName = "M60 105mm Smoke x2 Crate (Open)";
       shellType = "shto_vn_m101_shell_smk";
 		};
     class shto_vn_m101_illum_crate: shto_vn_m101_he_crate {
-			displayName = "M1 105mm LUME x2 Crate";
+			displayName = "M314 105mm LUME x2 Crate";
       openVariant = "shto_vn_m101_illum_crate_open";
 		};
     class shto_vn_m101_illum_crate_open: shto_vn_m101_he_crate_open {
-			displayName = "M1 105mm LUME x2 Crate (Open)";
+			displayName = "M314 105mm LUME x2 Crate (Open)";
       shellType = "shto_vn_m101_shell_illum";
 		};
 };
