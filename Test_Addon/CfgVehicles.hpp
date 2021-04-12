@@ -117,23 +117,35 @@ class cfgVehicles {
       shellType = "shto_vn_m101_shell_ab";
 		};
     class shto_vn_m101_frag_crate: shto_vn_m101_he_crate {
-			displayName = "M1 105mm AB x2 Crate";
-      openVariant = "shto_vn_m101_ab_crate_open";
+			displayName = "M1 105mm FRAG x2 Crate";
+      openVariant = "shto_vn_m101_frag_crate_open";
 		};
     class shto_vn_m101_frag_crate_open: shto_vn_m101_he_crate_open {
-			displayName = "M1 105mm AB x2 Crate (Open)";
+			displayName = "M1 105mm FRAG x2 Crate (Open)";
       shellType = "shto_vn_m101_shell_frag";
 		};
     class shto_vn_m101_wp_crate: shto_vn_m101_he_crate {
-			displayName = "M1 105mm AB x2 Crate";
-      openVariant = "shto_vn_m101_ab_crate_open";
+			displayName = "M1 105mm WP x2 Crate";
+      openVariant = "shto_vn_m101_wp_crate_open";
 		};
     class shto_vn_m101_wp_crate_open: shto_vn_m101_he_crate_open {
-			displayName = "M1 105mm AB x2 Crate (Open)";
+			displayName = "M1 105mm WP x2 Crate (Open)";
       shellType = "shto_vn_m101_shell_frag";
 		};
-
-    shto_vn_m101_shell_wp
-    shto_vn_m101_shell_smk
-    shto_vn_m101_shell_illum
+    class shto_vn_m101_smoke_crate: shto_vn_m101_he_crate {
+			displayName = "M1 105mm Smoke x2 Crate";
+      openVariant = "shto_vn_m101_smoke_crate_open";
+		};
+    class shto_vn_m101_smoke_crate_open: shto_vn_m101_he_crate_open {
+			displayName = "M1 105mm Smoke x2 Crate (Open)";
+      shellType = "shto_vn_m101_shell_smk";
+		};
+    class shto_vn_m101_illum_crate: shto_vn_m101_he_crate {
+			displayName = "M1 105mm LUME x2 Crate";
+      openVariant = "shto_vn_m101_illum_crate_open";
+		};
+    class shto_vn_m101_illum_crate_open: shto_vn_m101_he_crate_open {
+			displayName = "M1 105mm LUME x2 Crate (Open)";
+      shellType = "shto_vn_m101_shell_illum";
+		};
 };
