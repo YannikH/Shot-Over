@@ -34,9 +34,11 @@ _action = ["Fire Howitzer","Fire Howitzer","",{
 			systemChat "Moved in gunner";
 			systemChat str (gunner _this);
 			private _startTime = time;
+			reload _this;
 			waitUntil {
 				systemChat str [gunner _this, currentMagazine _this];
 				_this loadMagazine [[0], "shto_howitzer_105mm_base", (magazines _this) # 0];
+				reload _this;
 				_this setWeaponReloadingTime [_unit, "shto_howitzer_105mm_base", 0];
 				_unit fireAtTarget [objNull];
 				(time > (_startTime + 2)) || (count (magazines _this) == 0)
