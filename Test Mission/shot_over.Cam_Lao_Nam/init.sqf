@@ -27,3 +27,5 @@ shto_fnc_getTE = compile preprocessFileLineNumbers "fnc_getTE.sqf";
 shto_fnc_mouseButton = compile preprocessFileLineNumbers "fnc_mouseButton.sqf";
 shto_fnc_attemptLoad = compile preprocessFileLineNumbers "fnc_attemptLoad.sqf";
 shto_fnc_getMagazineFromShell = compile preprocessFileLineNumbers "fnc_getMagazineFromShell.sqf";
+shto_fnc_setupSupplyTruck = compile preprocessFileLineNumbers "fnc_setupSupplyTruck.sqf";
+shto_fnc_spawnAndCarry = compile preprocessFileLineNumbers "fnc_spawnAndCarry.sqf";
