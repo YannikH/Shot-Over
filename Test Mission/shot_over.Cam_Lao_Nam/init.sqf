@@ -3,11 +3,9 @@ shto_interaction_distance = 5;
     sleep 1;
     call compile preprocessFileLineNumbers "addHowitzerActions.sqf";
     call compile preprocessFileLineNumbers "addShellActions.sqf";
+    call compile preprocessFileLineNumbers "addCrateActions.sqf";
     shto_carry_mouseButtonEvent = findDisplay 46 displayAddEventHandler ["MouseButtonDown", "_this call shto_fnc_mouseButton;"];
 };
-
-
-
 
 ["shto_vn_static_m101_02_base", "fired", {
     params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
