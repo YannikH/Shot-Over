@@ -27,3 +27,15 @@ shto_fnc_attemptLoad = compile preprocessFileLineNumbers "fnc_attemptLoad.sqf";
 shto_fnc_getMagazineFromShell = compile preprocessFileLineNumbers "fnc_getMagazineFromShell.sqf";
 shto_fnc_setupSupplyTruck = compile preprocessFileLineNumbers "fnc_setupSupplyTruck.sqf";
 shto_fnc_spawnAndCarry = compile preprocessFileLineNumbers "fnc_spawnAndCarry.sqf";
+
+shto_fnc_getRangeTable = compile preprocessFileLineNumbers "fcs\fnc_getRangeTable.sqf";
+shto_fnc_getFiringSolutionForTable = compile preprocessFileLineNumbers "fcs\fnc_getFiringSolutionForTable.sqf";
+shto_fnc_getFiringSolutionsForMagazines = compile preprocessFileLineNumbers "fcs\fnc_getFiringSolutionsForMagazines.sqf";
+
+shto_fnc_initDialog = compile preprocessFileLineNumbers "fcs\fnc_initDialog.sqf";
+shto_fnc_calculateFromNotebook = compile preprocessFileLineNumbers "fcs\fnc_calculateFromNotebook.sqf";
+shto_fnc_saveView = compile preprocessFileLineNumbers "fcs\fnc_saveView.sqf";
+
+private _m101Magazines = ["shto_105mm_mag_ab_x1_c1","shto_105mm_mag_ab_x1_c2","shto_105mm_mag_ab_x1_c3","shto_105mm_mag_ab_x1_c4","shto_105mm_mag_ab_x1_c5"];
+[_m101Magazines, 5500, -50] spawn shto_fnc_getFiringSolutionsForMagazines;
+//["shto_105mm_mag_ab_x1_c1", -5, 66, false, {code to run when done}] spawn shto_fnc_getRangeTable;

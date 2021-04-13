@@ -10,6 +10,7 @@ _action = ["Carry Shell","Carry Shell","",{
     private _shell = ace_player getVariable "ace_dragging_carriedObject";
     if (!isNil "_shell" && !(isNull _shell)) exitWith {};
     [ace_player, _target] call ace_dragging_fnc_startCarry;
+
     [] spawn {
         sleep 0.1;
         [localize "STR_ACE_Dragging_Drop", "Load", localize "STR_ace_dragging_RaiseLowerRotate"] call ace_interaction_fnc_showMouseHint;
