@@ -4,7 +4,7 @@ class CfgWeapons {
 
     class shto_howitzer_105mm_base: vn_howitzer_105mm_base {
         scope = 1;
-        autoReload = 0;
+        autoReload = 1;
         modes[] = {"Single"};
         reloadTime = 0;
         magazineReloadTime = 0;
