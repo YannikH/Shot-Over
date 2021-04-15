@@ -9,10 +9,6 @@ if (isNull (gunner _howitzer)) then {
 	systemChat "Moved in gunner";
 	systemChat str (gunner _howitzer);
 	private _startTime = time;
-	sleep 2;
-	reload _howitzer;
-	_howitzer loadMagazine [[0], "shto_howitzer_105mm_base", (magazines _howitzer) # 0];
-	sleep 1;
 	_unit fireAtTarget [objNull];
 	//waitUntil {
 	//	_unit fireAtTarget [objNull];
@@ -20,4 +16,6 @@ if (isNull (gunner _howitzer)) then {
 	//};
 	moveOut _unit;
 	deleteVehicle _unit;
+} else {
+	(gunner _howitzer) fireAtTarget [objNull];
 };

@@ -501,6 +501,7 @@ class Mission
 			};
 			id=69;
 			type="vn_b_air_uh1c_07_02";
+			atlOffset=0.21124268;
 		};
 		class Item5
 		{
