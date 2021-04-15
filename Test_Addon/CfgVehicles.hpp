@@ -153,4 +153,9 @@ class cfgVehicles {
 			displayName = "M314 105mm LUME x2 Crate (Open)";
       shellType = "shto_vn_m101_shell_illum";
 		};
+
+    class vn_b_pack_lw_06;
+    class shto_rto_pack: vn_b_pack_lw_06 {
+      displayName = "FDC Backpack(Shot, Over!)";
+    };
 };

@@ -24,29 +24,7 @@ _action = ["Close Breech","Close Breech","",{
 ["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
 
 _action = ["Fire Howitzer","Fire Howitzer","",{
-	_target spawn {
-		_unit = nil;
-		if (isNull (gunner _this)) then {
-			systemChat "creating AI";
-			_unit = group player createUnit ["B_UAV_AI", [0,0,0], [], 0, "FORM"];
-			_unit disableAI "ALL";
-			_unit moveInGunner _this;
-			systemChat "Moved in gunner";
-			systemChat str (gunner _this);
-			private _startTime = time;
-			reload _this;
-			waitUntil {
-				systemChat str [gunner _this, currentMagazine _this];
-				_this loadMagazine [[0], "shto_howitzer_105mm_base", (magazines _this) # 0];
-				reload _this;
-				_this setWeaponReloadingTime [_unit, "shto_howitzer_105mm_base", 0];
-				_unit fireAtTarget [objNull];
-				(time > (_startTime + 2)) || (count (magazines _this) == 0)
-			};
-			moveOut _unit;
-			deleteVehicle _unit;
-		};
-	};
+	[_target, player] remoteExecCall ["shto_fnc_remoteFireHowitzer", _target];
 },{
 	((_target animationSourcePhase "m101_reload_source") < 0.01)
 }, nil, nil, {[_target, [0.2,-1,0.25]] call shto_fnc_posAlongRecoilAxis;}, SHTO_INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
