@@ -87,7 +87,8 @@ shto_fnc_saveView = compile preprocessFileLineNumbers "fcs\fnc_saveView.sqf";
 shto_fnc_openMinimized = compile preprocessFileLineNumbers "fcs\fnc_openMinimized.sqf";
 shto_fnc_dialogKeyUp = compile preprocessFileLineNumbers "fcs\fnc_dialogKeyUp.sqf";
 
-shto_fnc_preparePallet = compile preprocessFileLineNumbers "fcs\fnc_dialogKeyUp.sqf";
+shto_fnc_preparePallet = compile preprocessFileLineNumbers "fcs\fnc_preparePallet.sqf";
+shto_fnc_fire = compile preprocessFileLineNumbers "fcs\fnc_fired.sqf";
 
 private _m101Magazines = ["shto_105mm_mag_ab_x1_c1","shto_105mm_mag_ab_x1_c2","shto_105mm_mag_ab_x1_c3","shto_105mm_mag_ab_x1_c4","shto_105mm_mag_ab_x1_c5"];
 [_m101Magazines, 5500, -50] spawn shto_fnc_getFiringSolutionsForMagazines;

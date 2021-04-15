@@ -20,6 +20,7 @@ class CfgWeapons {
         class Single: Single1 {
             displayName = "";
             artilleryCharge = 1;
+            artilleryDispersion = 0;
             reloadTime = 0.8;
         };
         class EventHandlers {
