@@ -65,6 +65,9 @@ class cfgVehicles {
                 initPhase=0;
             };
         };
+      class shto_vn_static_m101_01 : shto_vn_static_m101_02_base {
+        model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01";
+      };
     };
 
     class ACE_Track;
@@ -135,7 +138,7 @@ class cfgVehicles {
 		};
     class shto_vn_m101_wp_crate_open: shto_vn_m101_he_crate_open {
 			displayName = "M60 105mm WP x2 Crate (Open)";
-      shellType = "shto_vn_m101_shell_frag";
+      shellType = "shto_vn_m101_shell_wp";
 		};
     class shto_vn_m101_smoke_crate: shto_vn_m101_he_crate {
 			displayName = "M60 105mm Smoke x2 Crate";
@@ -170,6 +173,7 @@ class cfgVehicles {
       ace_dragging_carryDirection = 0;
       crateCount = 21;
       crateClass = "shto_vn_m101_he_crate";
+      yOffset = 0.2;
     };
     class shto_vn_m101_he_pallet_x24: shto_vn_m101_he_pallet_x42 {
       displayName = "M1 105mm HE x24 Pallet";
@@ -181,4 +185,5 @@ class cfgVehicles {
       crateCount = 9;
       crateClass = "shto_vn_m101_he_crate";
     };
+
 };
