@@ -158,4 +158,27 @@ class cfgVehicles {
     class shto_rto_pack: vn_b_pack_lw_06 {
       displayName = "FDC Backpack(Shot, Over!)";
     };
+
+    class Land_vn_us_common_pallet_01;
+    class shto_vn_m101_he_pallet_x42: Land_vn_us_common_pallet_01 {
+      displayName = "M1 105mm HE x42 Pallet";
+      ace_dragging_canDrag = 1;
+      ace_dragging_dragPosition[] = {0, 1.2, 0};
+      ace_dragging_dragDirection = 0;
+      ace_dragging_canCarry = 1;
+      ace_dragging_carryPosition[] = {0, 1.2, 0};
+      ace_dragging_carryDirection = 0;
+      crateCount = 21;
+      crateClass = "shto_vn_m101_he_crate";
+    };
+    class shto_vn_m101_he_pallet_x24: shto_vn_m101_he_pallet_x42 {
+      displayName = "M1 105mm HE x24 Pallet";
+      crateCount = 12;
+      crateClass = "shto_vn_m101_he_crate";
+    };
+    class shto_vn_m101_he_pallet_x18: shto_vn_m101_he_pallet_x42 {
+      displayName = "M1 105mm HE 18 Pallet";
+      crateCount = 9;
+      crateClass = "shto_vn_m101_he_crate";
+    };
 };
