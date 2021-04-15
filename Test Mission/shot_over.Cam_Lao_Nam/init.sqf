@@ -6,14 +6,14 @@ shto_interaction_distance = 5;
     call compile preprocessFileLineNumbers "addCrateActions.sqf";
     shto_carry_mouseButtonEvent = findDisplay 46 displayAddEventHandler ["MouseButtonDown", "_this call shto_fnc_mouseButton;"];
 
-    
+
     _action = ["SHTO_FDC_Notebook","FDC Notebook","vn\modules_f_vietnam\data\vn_displayartillery\mapfolder.paa",{
         createDialog "shto_calculator";
     },{
         (backpack player) isKindOf "shto_rto_pack"
     }] call ace_interact_menu_fnc_createAction;
     ["Man", 1, ["ACE_SelfActions", "ACE_Equipment"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-    
+
     _action = ["SHTO_FDC_Notebook","FDC Notebook","vn\modules_f_vietnam\data\vn_displayartillery\mapfolder.paa",{
         createDialog "shto_calculator";
     },{
@@ -86,6 +86,8 @@ shto_fnc_calculateFromNotebook = compile preprocessFileLineNumbers "fcs\fnc_calc
 shto_fnc_saveView = compile preprocessFileLineNumbers "fcs\fnc_saveView.sqf";
 shto_fnc_openMinimized = compile preprocessFileLineNumbers "fcs\fnc_openMinimized.sqf";
 shto_fnc_dialogKeyUp = compile preprocessFileLineNumbers "fcs\fnc_dialogKeyUp.sqf";
+
+shto_fnc_preparePallet = compile preprocessFileLineNumbers "fcs\fnc_dialogKeyUp.sqf";
 
 private _m101Magazines = ["shto_105mm_mag_ab_x1_c1","shto_105mm_mag_ab_x1_c2","shto_105mm_mag_ab_x1_c3","shto_105mm_mag_ab_x1_c4","shto_105mm_mag_ab_x1_c5"];
 [_m101Magazines, 5500, -50] spawn shto_fnc_getFiringSolutionsForMagazines;
