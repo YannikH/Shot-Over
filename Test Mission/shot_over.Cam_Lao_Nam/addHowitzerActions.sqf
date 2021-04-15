@@ -24,7 +24,11 @@ _action = ["Close Breech","Close Breech","",{
 ["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
 
 _action = ["Fire Howitzer","Fire Howitzer","",{
-	[_target, player] remoteExecCall ["shto_fnc_remoteFireHowitzer", _target];
+	if (!isNull (gunner _target)) then {
+		[_target, player] remoteExecCall ["shto_fnc_remoteFireHowitzer", gunner _target];
+	} else {
+		[_target, player] remoteExecCall ["shto_fnc_remoteFireHowitzer", _target];
+	};
 },{
 	((_target animationSourcePhase "m101_reload_source") < 0.01)
 }, nil, nil, {[_target, [0.2,-1,0.25]] call shto_fnc_posAlongRecoilAxis;}, SHTO_INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;

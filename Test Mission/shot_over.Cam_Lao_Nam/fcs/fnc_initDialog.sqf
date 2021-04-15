@@ -2,7 +2,6 @@ params ["_dialog", ["_pageChange", 0], ["_minimized", false]];
 // systemChat str _this;
 if (!_minimized) then {95010 cutText ["", "PLAIN"];};
 if (!isNil "_dialog") then {
-	systemChat "setting var";
 	uiNamespace setVariable ["shto_fcs_dialog", _dialog];
 } else {
 	_dialog = uiNamespace getVariable "shto_fcs_dialog";

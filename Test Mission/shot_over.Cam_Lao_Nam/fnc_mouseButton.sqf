@@ -9,4 +9,8 @@ if (count _nearHowitzers == 0) exitWith {
 	hint "No howitzer nearby";
 };
 private _howitzer = _nearHowitzers # 0;
-[ace_player, _howitzer] remoteExec ["shto_fnc_attemptLoad", _howitzer];
+if (isNull (gunner _howitzer)) then {
+	[ace_player, _howitzer] remoteExec ["shto_fnc_attemptLoad", _howitzer];
+} else {
+	[ace_player, _howitzer] remoteExec ["shto_fnc_attemptLoad", gunner _howitzer];
+};
