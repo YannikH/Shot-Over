@@ -34,7 +34,7 @@ shto_interaction_distance = 5;
                 closedialog 2;
             };
         },
-        [201, [false, false, false]]
+        [207, [false, false, false]]
     ] call CBA_fnc_addKeybind;
     [
         "Shot, Over!",
@@ -50,7 +50,7 @@ shto_interaction_distance = 5;
                 };
             };
         },
-        [201, [false, true, false]]
+        [207, [false, true, false]]
     ] call CBA_fnc_addKeybind;
 };
 
