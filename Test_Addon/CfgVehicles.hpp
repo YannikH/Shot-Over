@@ -40,36 +40,36 @@ class cfgVehicles {
 				class MainTurret: MainTurret { };
       };
 		};
-    class shto_vn_static_m101_02_base : vn_b_army_static_m101_02 {
-        //crew = "B_UAV_AI";
-        displayName = "M101 Howitzer (Shot, Over!)";
-        model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01";
-        class Turrets: Turrets {
-            class MainTurret: MainTurret {
-                weapons[] = {"shto_howitzer_105mm_base"};
-                magazines[] = {};
-            };
+    class shto_vn_static_m101_02_base: vn_b_army_static_m101_02 {
+      //crew = "B_UAV_AI";
+      displayName = "M101 Howitzer (Shot, Over!)";
+      model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01";
+      class Turrets: Turrets {
+          class MainTurret: MainTurret {
+              weapons[] = {"shto_howitzer_105mm_base"};
+              magazines[] = {};
           };
-        class AnimationSources //removing shield actions
-        {
-            class m101_reload_source
-            {
-                source = "user";
-                animPeriod=5;
-                initPhase=0.7;
-            };
-            class m101_revolving_source: m101_reload_source
-            {
-                source = "user";
-                animPeriod=0.2;
-                initPhase=0;
-            };
         };
-      class shto_vn_static_m101_01 : shto_vn_static_m101_02_base {
-        model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01";
+      class AnimationSources //removing shield actions
+      {
+          class m101_reload_source
+          {
+              source = "user";
+              animPeriod=5;
+              initPhase=0.7;
+          };
+          class m101_revolving_source: m101_reload_source
+          {
+              source = "user";
+              animPeriod=0.2;
+              initPhase=0;
+          };
       };
     };
-
+    class shto_vn_static_m101_01: shto_vn_static_m101_02_base {
+      picture = "\vn\static_f_vietnam\ui\pic_vn_static_m101_01_ca.paa";
+      model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01";
+    };
     class ACE_Track;
     class shto_vn_m101_shell: ACE_Track {
         displayName = "M1 105mm HE Shell";
