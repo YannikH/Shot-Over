@@ -4,6 +4,7 @@ shto_interaction_distance = 5;
     call compile preprocessFileLineNumbers "addHowitzerActions.sqf";
     call compile preprocessFileLineNumbers "addShellActions.sqf";
     call compile preprocessFileLineNumbers "addCrateActions.sqf";
+    call compile preprocessFileLineNumbers "container\addContainerActions.sqf";
     shto_carry_mouseButtonEvent = findDisplay 46 displayAddEventHandler ["MouseButtonDown", "_this call shto_fnc_mouseButton;"];
 
 
@@ -87,8 +88,12 @@ shto_fnc_saveView = compile preprocessFileLineNumbers "fcs\fnc_saveView.sqf";
 shto_fnc_openMinimized = compile preprocessFileLineNumbers "fcs\fnc_openMinimized.sqf";
 shto_fnc_dialogKeyUp = compile preprocessFileLineNumbers "fcs\fnc_dialogKeyUp.sqf";
 
-shto_fnc_preparePallet = compile preprocessFileLineNumbers "fcs\fnc_preparePallet.sqf";
-shto_fnc_fire = compile preprocessFileLineNumbers "fcs\fnc_fired.sqf";
+shto_fnc_preparePallet = compile preprocessFileLineNumbers "fnc_preparePallet.sqf";
+shto_fnc_fire = compile preprocessFileLineNumbers "fnc_fired.sqf";
+shto_fnc_initPallet = compile preprocessFileLineNumbers "fnc_initPallet.sqf";
+
+shto_fnc_fillContainer = compile preprocessFileLineNumbers "container\fnc_fillContainer.sqf";
+shto_fnc_removeCrates = compile preprocessFileLineNumbers "container\fnc_removeCrates.sqf";
 
 private _m101Magazines = ["shto_105mm_mag_ab_x1_c1","shto_105mm_mag_ab_x1_c2","shto_105mm_mag_ab_x1_c3","shto_105mm_mag_ab_x1_c4","shto_105mm_mag_ab_x1_c5"];
 [_m101Magazines, 5500, -50] spawn shto_fnc_getFiringSolutionsForMagazines;

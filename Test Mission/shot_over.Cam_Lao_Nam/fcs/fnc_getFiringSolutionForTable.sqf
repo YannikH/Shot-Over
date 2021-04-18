@@ -19,7 +19,7 @@ _interpolatedBracket params ["", "_baseElevation", "_elevAdjustment", "_tofAdjus
 private _elevDiffAdjusted = _elevDiff / 100;
 if (isNil "_elevAdjustment") exitWith {[]};
 private _solution = [
-	_baseElevation + (_elevDiffAdjusted * -_elevAdjustment),
-	_baseTof + (_elevDiffAdjusted * -_tofAdjustment)
+	_baseElevation + (_elevDiffAdjusted * +_elevAdjustment),
+	_baseTof + (_elevDiffAdjusted * +_tofAdjustment)
 ];
 _solution

@@ -24,8 +24,8 @@ if (_minimized) then {
 if (count _ownPosStr % 2 > 0 || _ownPosStr == "") exitWith {systemChat "bad";};
 if (count _tgtPosStr % 2 > 0 || _tgtPosStr == "") exitWith {systemChat "bad";};
 
-private _ownPos = ((_ownPosStr call BIS_fnc_gridToPos) # 0) + [0];
-private _tgtPos = ((_tgtPosStr call BIS_fnc_gridToPos) # 0) + [0];
+private _ownPos = ([_ownPosStr, false] call ace_common_fnc_getMapPosFromGrid);
+private _tgtPos = ([_tgtPosStr, false] call ace_common_fnc_getMapPosFromGrid);
 private _ownElev = parseNumber _ownElevStr;
 private _tgtElev = parseNumber _tgtElevStr;
 
