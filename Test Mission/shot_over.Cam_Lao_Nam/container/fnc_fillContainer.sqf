@@ -3,14 +3,15 @@ params ["_container"];
 	if (!isNil "_x") then {deleteVehicle _x};
 } forEach (_container getVariable ["shto_crateList",[]]);
 
-private _cratesClass = "shto_vn_m101_wp_crate";
+private _containerClass = typeOf _container;
+private _cratesClass = getText (configFile >> "CfgVehicles" >> _containerClass >> "crateClass");
 private _cratesArray = [];
 private _crateSlots = [];
 private _xSpacing = 0.32;
 private _ySpacing = 0.92;
 private _manOffset = [-0.15, -2.5];
 private _totalRows = 6;
-if (_container isKindOf "vn_us_komex_small_01") then {
+if (_container isKindOf "shto_vn_m101_he_container_x504") then {
 	_manOffset = [-0.15, -0.9];
 	_totalRows = 3;
 };
