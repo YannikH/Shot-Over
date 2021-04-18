@@ -107,6 +107,12 @@ shto_fnc_initPallet = compile preprocessFileLineNumbers "pallet\fnc_initPallet.s
 shto_fnc_fillContainer = compile preprocessFileLineNumbers "container\fnc_fillContainer.sqf";
 shto_fnc_removeCrates = compile preprocessFileLineNumbers "container\fnc_removeCrates.sqf";
 
+
+shto_sight_fnc_spawnStakes = compile preprocessFileLineNumbers "sight\fnc_spawnStakes.sqf";
+shto_sight_fnc_openCamera = compile preprocessFileLineNumbers "sight\fnc_openCamera.sqf";
+shto_sight_fnc_spinDial = compile preprocessFileLineNumbers "sight\fnc_spinDial.sqf";
+shto_sight_fnc_renderSight = compile preprocessFileLineNumbers "sight\fnc_renderSight.sqf";
+
 private _m101Magazines = ["shto_105mm_mag_ab_x1_c1","shto_105mm_mag_ab_x1_c2","shto_105mm_mag_ab_x1_c3","shto_105mm_mag_ab_x1_c4","shto_105mm_mag_ab_x1_c5"];
 [_m101Magazines, 5500, -50] spawn shto_fnc_getFiringSolutionsForMagazines;
 //["shto_105mm_mag_ab_x1_c1", -5, 66, false, {code to run when done}] spawn shto_fnc_getRangeTable;

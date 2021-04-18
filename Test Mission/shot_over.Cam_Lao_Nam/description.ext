@@ -10,6 +10,7 @@ import RscButton;
 import RscPicture;
 import RscCombo;
 import RscListNBox;
+import RscActivePicture;
 
 #define COLOR_NOTEPADTEXT {0.41, 0.23, 0.22, 0.75}
 #define COLOR_TITLETEXT {0.21, 0.13, 0.12, 0.85}
@@ -494,6 +495,165 @@ class RscTitles {
 				text = "NEXT"; //--- ToDo: Localize;
 				y = TOP + SECONDSET + LINE(4);
 				style = 1;
+			};
+		};
+	}; // notebook minimized
+	class shto_sight_reticle {
+		idd = 20002;
+		//onLoad = "";
+		movingEnable = 1;
+		duration = 9999999;
+		fadein = 0;
+		fadeout = 0;
+		onLoad = "uiNamespace setVariable [""shto_sight_reticle"", _this select 0];[] spawn shto_sight_fnc_renderSight;";
+		class Controls {
+			class RscPicture_1201: RscPicture
+			{
+				idc = 1201;
+				text = "vn\weapons_f_vietnam\optic\scope_m84_3x\data\vn_reticle_m84_ca.paa";
+				x = safeZoneX + (safeZoneW/2) - (safeZoneH/2);
+				y = safezoneY;
+				w = safeZoneH;
+				h = safeZoneH;
+			};
+			#define SIZE (safeZoneH*1.4)
+			class RscPicture_1202: RscPicture_1201
+			{
+				idc = 1200;
+				text = "vn\weapons_f_vietnam\optic\scope_base\data\vn_scope_ca.paa";
+				x = safeZoneX + (safeZoneW/2) - (SIZE/2);
+				y = safezoneY + (safeZoneH/2) - (SIZE/2);
+				w = SIZE;
+				h = SIZE;
+			};
+			class BackgroundLeft: IGUIBack {
+				idc = 999;
+				x = safeZoneX;
+				y = safezoneY;
+				w = (safeZoneW - SIZE)/2;
+				h = SafeZoneH;
+				colorBackground[] = {0,0,0,1};
+			};
+			class PanelLeft: RscPicture {
+				idc = 1000;
+				x = safeZoneX;
+				y = safezoneY + (SIDEBARW * 0.5);
+				w = (safeZoneW - SIZE)/2;
+				h = SIDEBARW;
+				text = "panel.paa";
+			};
+			class BackgroundRight: BackgroundLeft {
+				idc = 1001;
+				x = safeZoneX + (safeZoneW/2) + (SIZE/2);
+				w = (safeZoneW - SIZE)/2;
+			};
+			class Dial: RscPicture
+			{
+				idc = 1201;
+				text = "vn\weapons_f_vietnam\optic\scope_m84_3x\data\vn_reticle_m84_ca.paa";
+				x = safeZoneX + (SIDEBARW * 0.1);
+				y = safezoneY + (SIDEBARW * 0.1) + (SIDEBARW * 0.6);
+				w = SIDEBARW * 0.4;
+				h = SIDEBARW * 0.4;
+				onMouseButtonUp = "[""quadrant"", _this, 0] call shto_sight_fnc_spinDial;";
+				onMouseZChanged = "[""quadrant"", _this, 0] call shto_sight_fnc_spinDial;";
+			};
+			class TextBold: RscText
+			{
+				idc = 1003;
+				text = "QUADRANT"; //--- ToDo: Localize;
+				x = safeZoneX + (SIDEBARW * 0.5);
+				y = safezoneY + (SIDEBARW * 0.2) + (SIDEBARW * 0.6);
+				w = SIDEBARW * 0.5;
+				h = SIDEBARW * 0.1;
+				font = FONT2_B;
+				sizeEx = SIZEEX2;
+				colorText[] = {1,1,1,1};
+				shadow = 0;
+				style = 0;
+			};
+			class TextNormal: RscText
+			{
+				idc = 1004;
+				text = "0000"; //--- ToDo: Localize;
+				x = safeZoneX + (SIDEBARW * 0.5);
+				y = safezoneY + (SIDEBARW * 0.2) + (SIDEBARW * 0.6) + SIGHTLINEHEIGHT;
+				w = SIDEBARW * 0.5;
+				h = SIDEBARW * 0.1;
+				font = FONT2;
+				sizeEx = SIZEEX2B;
+				colorText[] = {1,1,1,1};
+				shadow = 0;
+				style = 0;
+			};
+			class BubbleDescriptLeft: TextBold
+			{
+				idc = 1005;
+				text = "HIGH"; //--- ToDo: Localize;
+				x = safeZoneX + (SIDEBARW * 0.05);
+				y = safezoneY + (SIDEBARW * 1.2);
+			};
+			class BubbleDescriptRight: TextBold
+			{
+				idc = 1006;
+				text = "LOW"; //--- ToDo: Localize;
+				x = safeZoneX + (SIDEBARW * 0.8);
+				y = safezoneY + (SIDEBARW * 1.2);
+			};
+			class BubbleBack: IGUIBack {
+				idc = 1001;
+				x = safeZoneX + (SIDEBARW * 0.25);
+				y = safezoneY + (SIDEBARW * 1.2);
+				w = SIDEBARW * 0.5;
+				h = SIDEBARW * 0.1;
+				colorBackground[] = {(50/255),(50/255),(20/255),1};
+			};
+			class BubblePic: Dial
+			{
+				idc = 1202;
+				text = "vn\ui_f_vietnam\ui\radios\off_ca.paa";
+				x = safeZoneX + (SIDEBARW * 0.25);
+				y = safezoneY + (SIDEBARW * 1.2);
+				w = SIDEBARW * 0.1;
+				h = SIDEBARW * 0.1;
+			};
+			class BubbleDescriptOn: TextBold
+			{
+				idc = 1006;
+				text = "ON TGT"; //--- ToDo: Localize;
+				x = safeZoneX;
+				w = SIDEBARW;
+				y = safezoneY + (SIDEBARW * 1.3);
+				style = 2;
+			};
+			class DeflectionTape: RscControlsGroupNoScrollbars
+			{
+				idc = 1203;
+				x = safeZoneX + (safeZoneW/2) - (safeZoneH/4);
+				y = safezoneY + safeZoneH - (safeZoneH / 2);
+				w = safeZoneH/2;
+				h = safeZoneH/2;
+				class Controls {
+					class Tape: RscPicture
+					{
+						idc = 1205;
+						//text = "deflectionscale2.paa";
+						text = "deflectionscale2.paa";
+						x = 0;
+						y = 0;
+						w = safeZoneH/2;
+						h = safeZoneH/2;
+					};
+				};
+			};
+			class DeflectionCover	: RscPicture_1201
+			{
+				idc = 1204;
+				text = "deflectioncover2.paa";
+				x = safeZoneX + (safeZoneW/2) - ((safeZoneH/4)*1.1);
+				y = safezoneY + safeZoneH - (safeZoneH / 2);
+				w = (safeZoneH/2)*1.1;
+				h = safeZoneH/2;
 			};
 		};
 	};
