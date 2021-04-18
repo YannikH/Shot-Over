@@ -3,8 +3,10 @@ shto_interaction_distance = 5;
     sleep 1;
     call compile preprocessFileLineNumbers "addHowitzerActions.sqf";
     call compile preprocessFileLineNumbers "addShellActions.sqf";
-    call compile preprocessFileLineNumbers "addCrateActions.sqf";
+    call compile preprocessFileLineNumbers "crate\addCrateActions.sqf";
+    call compile preprocessFileLineNumbers "pallet\addPalletActions.sqf";
     call compile preprocessFileLineNumbers "container\addContainerActions.sqf";
+
     shto_carry_mouseButtonEvent = findDisplay 46 displayAddEventHandler ["MouseButtonDown", "_this call shto_fnc_mouseButton;"];
 
 
@@ -65,19 +67,21 @@ shto_interaction_distance = 5;
     {_unit removeMagazine _x} forEach (magazines _unit);
 }] call CBA_fnc_addClassEventHandler;
 
+//gun
 shto_fnc_tryRagdoll = compile preprocessFileLineNumbers "fnc_tryRagdoll.sqf";
 shto_fnc_forceRagdoll = compile preprocessFileLineNumbers "fnc_forceRagdoll.sqf";
 shto_fnc_posAlongRecoilAxis = compile preprocessFileLineNumbers "fnc_posAlongRecoilAxis.sqf";
 shto_fnc_posAlongDirection = compile preprocessFileLineNumbers "fnc_posAlongDirection.sqf";
 shto_fnc_getTE = compile preprocessFileLineNumbers "fnc_getTE.sqf";
+shto_fnc_remoteFireHowitzer = compile preprocessFileLineNumbers "fnc_remoteFireHowitzer.sqf";
+shto_fnc_fire = compile preprocessFileLineNumbers "fnc_fired.sqf";
+
+//ammo handling
 shto_fnc_mouseButton = compile preprocessFileLineNumbers "fnc_mouseButton.sqf";
 shto_fnc_attemptLoad = compile preprocessFileLineNumbers "fnc_attemptLoad.sqf";
 shto_fnc_getMagazineFromShell = compile preprocessFileLineNumbers "fnc_getMagazineFromShell.sqf";
-shto_fnc_setupSupplyTruck = compile preprocessFileLineNumbers "fnc_setupSupplyTruck.sqf";
-shto_fnc_spawnAndCarry = compile preprocessFileLineNumbers "fnc_spawnAndCarry.sqf";
-shto_fnc_remoteFireHowitzer = compile preprocessFileLineNumbers "fnc_remoteFireHowitzer.sqf";
-shto_fnc_unpackCrate = compile preprocessFileLineNumbers "fnc_unpackCrate.sqf";
 
+//fcs
 shto_fnc_getRangeTable = compile preprocessFileLineNumbers "fcs\fnc_getRangeTable.sqf";
 shto_fnc_getFiringSolutionForTable = compile preprocessFileLineNumbers "fcs\fnc_getFiringSolutionForTable.sqf";
 shto_fnc_getFiringSolutionsForMagazines = compile preprocessFileLineNumbers "fcs\fnc_getFiringSolutionsForMagazines.sqf";
@@ -88,10 +92,18 @@ shto_fnc_saveView = compile preprocessFileLineNumbers "fcs\fnc_saveView.sqf";
 shto_fnc_openMinimized = compile preprocessFileLineNumbers "fcs\fnc_openMinimized.sqf";
 shto_fnc_dialogKeyUp = compile preprocessFileLineNumbers "fcs\fnc_dialogKeyUp.sqf";
 
-shto_fnc_preparePallet = compile preprocessFileLineNumbers "fnc_preparePallet.sqf";
-shto_fnc_fire = compile preprocessFileLineNumbers "fnc_fired.sqf";
-shto_fnc_initPallet = compile preprocessFileLineNumbers "fnc_initPallet.sqf";
+//L3 logi
+shto_fnc_setupSupplyTruck = compile preprocessFileLineNumbers "fnc_setupSupplyTruck.sqf";
 
+//crate
+shto_fnc_unpackCrate = compile preprocessFileLineNumbers "crate\fnc_unpackCrate.sqf";
+shto_fnc_spawnAndCarryAmmo = compile preprocessFileLineNumbers "crate\fnc_spawnAndCarryAmmo.sqf";
+
+//pallet
+shto_fnc_preparePallet = compile preprocessFileLineNumbers "pallet\fnc_preparePallet.sqf";
+shto_fnc_initPallet = compile preprocessFileLineNumbers "pallet\fnc_initPallet.sqf";
+
+//container
 shto_fnc_fillContainer = compile preprocessFileLineNumbers "container\fnc_fillContainer.sqf";
 shto_fnc_removeCrates = compile preprocessFileLineNumbers "container\fnc_removeCrates.sqf";
 
