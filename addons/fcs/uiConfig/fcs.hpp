@@ -288,9 +288,9 @@ class shto_calculator {
             colorSelectBackground[] = {0, 0, 0, 0.025};
             colorSelectBackground2[] = {0, 0, 0, 0.025};
             colorScrollbar[] = {0.95,0,0.95,1};
-            class ListScrollBar: ScrollBar{
-                color[] = {0,0,0,0.6};
-            };
+            //class ListScrollBar: ScrollBar{
+            //    color[] = {0,0,0,0.6};
+            //};
 		};
 		class SolutionTableUnderlines: SolutionTable {
             idc = 1801;
@@ -430,9 +430,9 @@ class RscTitles {
 				colorSelectBackground[] = {0, 0, 0, 0.025};
 				colorSelectBackground2[] = {0, 0, 0, 0.025};
 				colorScrollbar[] = {0.95,0,0.95,1};
-				class ListScrollBar: ScrollBar{
-					color[] = {0,0,0,0.6};
-				};
+				//class ListScrollBar: ScrollBar{
+				//	color[] = {0,0,0,0.6};
+				//};
 			};
 			class SolutionTableUnderlines: SolutionTable {
 				idc = 1801;

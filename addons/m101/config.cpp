@@ -14,3 +14,8 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+class NewTurret;
+#include "config\CfgVehicles.hpp"
+#include "config\CfgWeapons.hpp"
+#include "config\CfgMagazines.hpp"
