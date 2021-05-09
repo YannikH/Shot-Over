@@ -17,9 +17,9 @@
 class shto_calculator {
     idd = 20001;
     movingEnable = true;
-    onLoad = "_this call shto_fcs_fnc_initDialog";
-	onUnload = "[] call shto_fcs_fnc_saveView; [] call shto_fcs_fnc_openMinimized;";
-	onKeyUp = "_this call shto_fcs_fnc_dialogKeyUp;";
+    onLoad = "_this call shot_over_fcs_fnc_initDialog";
+	onUnload = "[] call shot_over_fcs_fnc_saveView; [] call shot_over_fcs_fnc_openMinimized;";
+	onKeyUp = "_this call shot_over_fcs_fnc_dialogKeyUp;";
     class Controls {
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT START (by Yax, v1.063, #Corono)
@@ -167,7 +167,7 @@ class shto_calculator {
 			colorFocused[] = {0,0,0,0};
 			colorShadow[] = {0,0,0,0};
 			colorBorder[] = {0,0,0,0};
-            onButtonClick="[] call shto_fcs_fnc_saveView; [nil, -1] call shto_fcs_fnc_initDialog";
+            onButtonClick="[] call shot_over_fcs_fnc_saveView; [nil, -1] call shot_over_fcs_fnc_initDialog";
 		};
 		class RscText_1012: ButtonBase
 		{
@@ -177,7 +177,7 @@ class shto_calculator {
 			y = 0.698 * safezoneH + safezoneY;
 			w = 0.0368605 * RELWIDTH;
 			h = 0.022 * safezoneH;
-            onButtonClick="[] call shto_fcs_fnc_saveView; [nil, 1] call shto_fcs_fnc_initDialog";
+            onButtonClick="[] call shot_over_fcs_fnc_saveView; [nil, 1] call shot_over_fcs_fnc_initDialog";
 		};
 		class RscText_1009: ButtonBase
 		{
@@ -187,7 +187,7 @@ class shto_calculator {
 			y = 0.653 * safezoneH + safezoneY;
 			w = 0.0303954 * RELWIDTH;
 			h = 0.022 * safezoneH;
-            onButtonClick="[false] spawn shto_fcs_fnc_calculateFromNotebook";
+            onButtonClick="[false] spawn shot_over_fcs_fnc_calculateFromNotebook";
 		};
 		class BaseTextField: RscEdit
 		{
@@ -361,7 +361,7 @@ class shto_calculator {
 class RscTitles {
 	class shto_calculator_minimized {
 		idd = 20001;
-		onLoad = "[_this # 0, 0, true] call shto_fcs_fnc_initDialog";
+		onLoad = "[_this # 0, 0, true] call shot_over_fcs_fnc_initDialog";
 		//onLoad = "";
 		movingEnable = 1;
 		duration = 9999999;

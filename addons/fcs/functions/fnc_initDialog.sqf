@@ -38,4 +38,4 @@ lnbClear (_dialog displayCtrl 1801);
 
 (_dialog displayCtrl 1000) ctrlSetText format["FIREMISSION %1/%2", _openPage + 1, count _pages max 1];
 missionNamespace setVariable ["shto_fcs_currentPage", _openPage];
-[_minimized] spawn shto_fcs_fnc_calculateFromNotebook;
+[_minimized] spawn shot_over_fcs_fnc_calculateFromNotebook;

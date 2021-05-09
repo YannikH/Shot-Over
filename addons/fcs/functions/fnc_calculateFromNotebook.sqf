@@ -51,7 +51,7 @@ private _dir = _ownPos getDir _tgtPos;
 private _magazineText = ["he", "ab", "frag", "wp", "chem", "lume"] # _shellType;
 private _magazines = [1, 2, 3, 4, 5] apply {format ["shto_105mm_mag_%1_x1_c%2", _magazineText, _x]};
 
-private _solutions = [_magazines, _dist, -_altDiff] call shto_fcs_fnc_getFiringSolutionsForMagazines;
+private _solutions = [_magazines, _dist, -_altDiff] call shot_over_fcs_fnc_getFiringSolutionsForMagazines;
 lnbClear (_dialog displayCtrl 1800);
 lnbClear (_dialog displayCtrl 1801);
 (_dialog displayCtrl 1800) lnbAddRow ["Charge", "Elevation", "TOF"];
