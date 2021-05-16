@@ -510,7 +510,7 @@ class RscTitles {
 			class RscPicture_1201: RscPicture
 			{
 				idc = 1201;
-				text = "vn\weapons_f_vietnam\optic\scope_m84_3x\data\vn_reticle_m84_ca.paa";
+				//text = "vn\weapons_f_vietnam\optic\scope_m84_3x\data\vn_reticle_m84_ca.paa";
 				x = safeZoneX + (safeZoneW/2) - (safeZoneH/2);
 				y = safezoneY;
 				w = safeZoneH;
@@ -520,7 +520,7 @@ class RscTitles {
 			class RscPicture_1202: RscPicture_1201
 			{
 				idc = 1200;
-				text = "vn\weapons_f_vietnam\optic\scope_base\data\vn_scope_ca.paa";
+				//text = "vn\weapons_f_vietnam\optic\scope_base\data\vn_scope_ca.paa";
 				x = safeZoneX + (safeZoneW/2) - (SIZE/2);
 				y = safezoneY + (safeZoneH/2) - (SIZE/2);
 				w = SIZE;
@@ -540,7 +540,7 @@ class RscTitles {
 				y = safezoneY + (SIDEBARW * 0.5);
 				w = (safeZoneW - SIZE)/2;
 				h = SIDEBARW;
-				text = "panel.paa";
+				//text = "panel.paa";
 			};
 			class BackgroundRight: BackgroundLeft {
 				idc = 1001;
@@ -550,7 +550,7 @@ class RscTitles {
 			class Dial: RscPicture
 			{
 				idc = 1201;
-				text = "vn\weapons_f_vietnam\optic\scope_m84_3x\data\vn_reticle_m84_ca.paa";
+				//text = "vn\weapons_f_vietnam\optic\scope_m84_3x\data\vn_reticle_m84_ca.paa";
 				x = safeZoneX + (SIDEBARW * 0.1);
 				y = safezoneY + (SIDEBARW * 0.1) + (SIDEBARW * 0.6);
 				w = SIDEBARW * 0.4;
@@ -611,7 +611,7 @@ class RscTitles {
 			class BubblePic: Dial
 			{
 				idc = 1202;
-				text = "vn\ui_f_vietnam\ui\radios\off_ca.paa";
+				//text = "vn\ui_f_vietnam\ui\radios\off_ca.paa";
 				x = safeZoneX + (SIDEBARW * 0.25);
 				y = safezoneY + (SIDEBARW * 1.2);
 				w = SIDEBARW * 0.1;

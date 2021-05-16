@@ -67,7 +67,7 @@ class cfgVehicles {
       };
     };
     class shto_vn_static_m101_01: shto_vn_static_m101_02_base {
-      picture = "\vn\static_f_vietnam\ui\pic_vn_static_m101_01_ca.paa";
+      //picture = "\vn\static_f_vietnam\ui\pic_vn_static_m101_01_ca.paa";
       model = "\vn\static_f_vietnam\m101\vn_b_static_m101_02";
     };
     class ACE_Track;
@@ -77,7 +77,7 @@ class cfgVehicles {
         model = "\vn\static_f_vietnam\m101\proxy\vn_b_static_m101_shell_prop.p3d";
         ace_cargo_size = 1;
         class ACE_Actions {};
-        editorPreview = "\vn\editorpreviews_f_vietnam\magazines\preview_vn_22mm_he_mag.jpg";
+        //editorPreview = "\vn\editorpreviews_f_vietnam\magazines\preview_vn_22mm_he_mag.jpg";
     };
     class shto_vn_m101_shell_he: shto_vn_m101_shell { displayName = "M1 105mm HE Shell"; magazineBase = "shto_105mm_mag_he_x1_c"; };
     class shto_vn_m101_shell_ab: shto_vn_m101_shell { displayName = "M1 105mm AB Shell"; magazineBase = "shto_105mm_mag_ab_x1_c"; };
