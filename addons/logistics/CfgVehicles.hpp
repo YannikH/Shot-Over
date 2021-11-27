@@ -1,6 +1,28 @@
 class cfgVehicles {
-
-    class vn_b_ammobox_12;
+    class ThingX
+    class ReammoBox_F: ThingX {
+      class ACE_Actions { class ACE_MainActions; };
+    };
+    class vn_ammobox_base: ReammoBox_F {
+      class ACE_Actions: ACE_Actions {
+				class ACE_MainActions: ACE_MainActions { };
+      };
+    };
+    class vn_b_ammobox_01: vn_ammobox_base {
+      class ACE_Actions: ACE_Actions {
+				class ACE_MainActions: ACE_MainActions { };
+      };
+    };
+    class vn_b_ammobox_11: vn_b_ammobox_01 {
+      class ACE_Actions: ACE_Actions {
+				class ACE_MainActions: ACE_MainActions { };
+      };
+    };
+    class vn_b_ammobox_12: vn_b_ammobox_11 {
+      class ACE_Actions: ACE_Actions {
+				class ACE_MainActions: ACE_MainActions { };
+      };
+    };
     class shto_vn_crate_base: vn_b_ammobox_12 {
       scope = 1;
       scopeCurator = 1;
@@ -14,10 +36,22 @@ class cfgVehicles {
       ace_dragging_dragPosition[] = {0, 1.2, 0};
       ace_dragging_dragDirection = 0;
       ace_dragging_canCarry = 1;
-      ace_dragging_carryPosition[] = {0, 1.2, 0};
+      ace_dragging_carryPosition[] = {0, 1.2, 0.25};
       ace_dragging_carryDirection = 0;
       openVariant = "shto_vn_crate_open_base";
       //model = "\vn\static_f_vietnam\m101\proxy\vn_b_static_m101_crate_prop.p3d";
+
+      class ACE_Actions: ACE_Actions {
+				class ACE_MainActions: ACE_MainActions {
+					class SHTO_UnpackCrate {
+						displayName = "Unpack Crate";
+						condition = "(alive _target) && (!(_target getVariable [""shto_crateIsOpen"",false]))";
+						statement = "	_target remoteExec [""shto_fnc_unpackCrate"", _target]; _target setVariable [""shto_crateIsOpen"",true];";
+					};
+				};
+			};
+
+
     };
     class shto_vn_crate_open_base: shto_vn_crate_base {
       model = "\vn\static_f_vietnam\m101\proxy\vn_b_static_m101_crate_open_prop.p3d";
@@ -82,10 +116,10 @@ class cfgVehicles {
       displayName = "M1 105mm HE x42 Pallet";
       scope = 1;
       ace_dragging_canDrag = 1;
-      ace_dragging_dragPosition[] = {0, 0.75, 0.75};
+      ace_dragging_dragPosition[] = {0, 1.2, 0};
       ace_dragging_dragDirection = 0;
       ace_dragging_canCarry = 1;
-      ace_dragging_carryPosition[] = {0, 0.75, 0.75};
+      ace_dragging_carryPosition[] = {0, 1.2, 0.75};
       ace_dragging_carryDirection = 0;
       ace_cargo_size = 5;
       ace_cargo_canLoad = 1;
@@ -94,7 +128,7 @@ class cfgVehicles {
       yOffset = 0.2;
       class EventHandlers {
         class shto_palletInit {
-          init = "_this call shto_fnc_initPallet;";
+          init = "_this call shot_over_logistics_fnc_initPallet;";
         };
       };
     };
@@ -196,7 +230,7 @@ class cfgVehicles {
       crateClass = "shto_vn_m101_he_crate";
       class EventHandlers {
         class shto_palletInit {
-          init = "_this call shto_fnc_fillContainer;";
+          init = "_this call shot_over_logistics_fnc_fillContainer;";
         };
       };
     };
