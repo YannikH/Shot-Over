@@ -1,8 +1,9 @@
-PREP(calculateFromNotebook);
-PREP(dialogKeyUp);
-PREP(getFiringSolutionForTable);
-PREP(getFiringSolutionsForMagazines);
-PREP(getRangeTable);
-PREP(initDialog);
-PREP(openMinimized);
-PREP(saveView);
+//shot_over_logistics_fnc_
+//Crate
+PREP(SpawnAndCarryCrate);
+
+//Pallet
+PREP(initPallet);
+PREP(refillPallet);
+
+//Container
