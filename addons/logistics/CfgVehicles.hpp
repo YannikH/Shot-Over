@@ -1,5 +1,21 @@
 class cfgVehicles {
-    class ThingX
+    class ACE_Track;
+    class shto_vn_m101_shell: ACE_Track {
+        displayName = "M1 105mm HE Shell";
+        magazineBase = "shto_105mm_mag_he_x1_c";
+        model = "\vn\static_f_vietnam\m101\proxy\vn_b_static_m101_shell_prop.p3d";
+        ace_cargo_size = 1;
+        class ACE_Actions {};
+        //editorPreview = "\vn\editorpreviews_f_vietnam\magazines\preview_vn_22mm_he_mag.jpg";
+    };
+    class shto_vn_m101_shell_he: shto_vn_m101_shell { displayName = "M1 105mm HE Shell"; magazineBase = "shto_105mm_mag_he_x1_c"; };
+    class shto_vn_m101_shell_ab: shto_vn_m101_shell { displayName = "M1 105mm AB Shell"; magazineBase = "shto_105mm_mag_ab_x1_c"; };
+    class shto_vn_m101_shell_frag: shto_vn_m101_shell { displayName = "M546 105mm FRAG Shell"; magazineBase = "shto_105mm_mag_frag_x1_c"; };
+    class shto_vn_m101_shell_wp: shto_vn_m101_shell { displayName = "M60 105mm WP Shell"; magazineBase = "shto_105mm_mag_wp_x1_c"; };
+    class shto_vn_m101_shell_smk: shto_vn_m101_shell { displayName = "M60 105mm Smoke Shell"; magazineBase = "shto_105mm_mag_chem_x1_c"; };
+    class shto_vn_m101_shell_illum: shto_vn_m101_shell { displayName = "M314 105mm LUME Shell"; magazineBase = "shto_105mm_mag_lume_x1_c"; };
+
+    class ThingX;
     class ReammoBox_F: ThingX {
       class ACE_Actions { class ACE_MainActions; };
     };
@@ -41,15 +57,15 @@ class cfgVehicles {
       openVariant = "shto_vn_crate_open_base";
       //model = "\vn\static_f_vietnam\m101\proxy\vn_b_static_m101_crate_prop.p3d";
 
-      class ACE_Actions: ACE_Actions {
-				class ACE_MainActions: ACE_MainActions {
-					class SHTO_UnpackCrate {
-						displayName = "Unpack Crate";
-						condition = "(alive _target) && (!(_target getVariable [""shto_crateIsOpen"",false]))";
-						statement = "	_target remoteExec [""shto_fnc_unpackCrate"", _target]; _target setVariable [""shto_crateIsOpen"",true];";
-					};
-				};
-			};
+      // class ACE_Actions: ACE_Actions {
+			// 	class ACE_MainActions: ACE_MainActions {
+			// 		class SHTO_UnpackCrate {
+			// 			displayName = "Unpack Crate";
+			// 			condition = "(alive _target) && (!(_target getVariable [""shto_crateIsOpen"",false]))";
+			// 			statement = "	_target remoteExec [""shot_over_logistics_fnc_unpackCrate"", _target]; _target setVariable [""shto_crateIsOpen"",true];";
+			// 		};
+			// 	};
+			// };
 
 
     };

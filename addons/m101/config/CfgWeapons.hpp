@@ -25,7 +25,7 @@ class CfgWeapons {
         };
         class EventHandlers {
             class shot_over_fired {
-                fired = "_this call shto_fnc_fired;";
+                fired = "_this call shot_over_m101_fnc_fired;";
             };
         };
     };

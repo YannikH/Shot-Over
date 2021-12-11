@@ -8,7 +8,7 @@ private _crateaction = ["Take_Crate","Take Crate","",{
 
     private _newCrate = _cratesClass createVehicle (getPos _target);
     [ace_player, _newCrate] call ace_dragging_fnc_startCarry;
-    [_target, 1] call shto_fnc_removeCrates;
+    [_target, 1] call shot_over_logistics_fnc_removeCrates;
   },
   { (_target getVariable ["shto_cratesleft",0]) > 0 }, nil, nil, [0,0,0.4], shto_interaction_distance, [false, false, false, false, false], {
     params ["_target", "_player", "_params", "_actionData"];
@@ -26,7 +26,7 @@ private _palletaction = ["Take_Pallet","Take Pallet","",{
 
     private _newCrate = "shto_vn_m101_he_pallet_x42" createVehicle (getPos _target);
     //[ace_player, _newCrate] call ace_dragging_fnc_startCarry;
-    [_target, getNumber(configFile >> "CfgVehicles" >> "shto_vn_m101_he_pallet_x42" >> "crateCount")] call shto_fnc_removeCrates;
+    [_target, getNumber(configFile >> "CfgVehicles" >> "shto_vn_m101_he_pallet_x42" >> "crateCount")] call shot_over_logistics_fnc_removeCrates;
   },
   { (_target getVariable ["shto_cratesleft",0]) > 0 }, nil, nil, [0,0,0.4], shto_interaction_distance, [false, false, false, false, false], {
     params ["_target", "_player", "_params", "_actionData"];
