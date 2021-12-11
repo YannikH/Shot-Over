@@ -15,7 +15,8 @@ class CfgWeapons {
             "shto_105mm_mag_frag_x1_c1","shto_105mm_mag_frag_x1_c2", "shto_105mm_mag_frag_x1_c3", "shto_105mm_mag_frag_x1_c4", "shto_105mm_mag_frag_x1_c5",
             "shto_105mm_mag_wp_x1_c1","shto_105mm_mag_wp_x1_c2", "shto_105mm_mag_wp_x1_c3", "shto_105mm_mag_wp_x1_c4", "shto_105mm_mag_wp_x1_c5",
             "shto_105mm_mag_chem_x1_c1","shto_105mm_mag_chem_x1_c2", "shto_105mm_mag_chem_x1_c3", "shto_105mm_mag_chem_x1_c4", "shto_105mm_mag_chem_x1_c5",
-            "shto_105mm_mag_lume_x1_c1","shto_105mm_mag_lume_x1_c2", "shto_105mm_mag_lume_x1_c3", "shto_105mm_mag_lume_x1_c4", "shto_105mm_mag_lume_x1_c5"
+            "shto_105mm_mag_lume_x1_c1","shto_105mm_mag_lume_x1_c2", "shto_105mm_mag_lume_x1_c3", "shto_105mm_mag_lume_x1_c4", "shto_105mm_mag_lume_x1_c5",
+            "shto_105mm_mag_icm_x1_c1","shto_105mm_mag_icm_x1_c2", "shto_105mm_mag_icm_x1_c3", "shto_105mm_mag_icm_x1_c4", "shto_105mm_mag_icm_x1_c5"
         };
         class Single: Single1 {
             displayName = "";

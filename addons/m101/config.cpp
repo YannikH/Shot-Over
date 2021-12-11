@@ -1,7 +1,9 @@
 #include "script_component.hpp"
 
-class CfgPatches {
-    class ADDON {
+class CfgPatches
+{
+    class ADDON
+    {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
@@ -19,3 +21,4 @@ class NewTurret;
 #include "config\CfgVehicles.hpp"
 #include "config\CfgWeapons.hpp"
 #include "config\CfgMagazines.hpp"
+#include "config\CfgAmmo.hpp"

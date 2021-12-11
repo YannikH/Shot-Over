@@ -14,6 +14,7 @@ class cfgVehicles {
     class shto_vn_m101_shell_wp: shto_vn_m101_shell { displayName = "M60 105mm WP Shell"; magazineBase = "shto_105mm_mag_wp_x1_c"; };
     class shto_vn_m101_shell_smk: shto_vn_m101_shell { displayName = "M60 105mm Smoke Shell"; magazineBase = "shto_105mm_mag_chem_x1_c"; };
     class shto_vn_m101_shell_illum: shto_vn_m101_shell { displayName = "M314 105mm LUME Shell"; magazineBase = "shto_105mm_mag_lume_x1_c"; };
+    class shto_vn_m101_shell_icm: shto_vn_m101_shell { displayName = "M444 105mm ICM Shell"; magazineBase = "shto_105mm_mag_icm_x1_c"; };
 
     class ThingX;
     class ReammoBox_F: ThingX {
@@ -124,7 +125,16 @@ class cfgVehicles {
 		};
     class shto_vn_m101_illum_crate_open: shto_vn_crate_open_base {
 			displayName = "M314 105mm LUME x2 Crate (Open)";
-      shellType = "shto_vn_m101_shell_illum";
+      shellType = "shto_vn_m101_shell_icm";
+		};
+    class shto_vn_m101_icm_crate: shto_vn_crate_base {
+      scope = 2;
+			displayName = "M444 105mm ICM x2 Crate";
+      openVariant = "shto_vn_m101_illum_crate_open";
+		};
+    class shto_vn_m101_icm_crate_open: shto_vn_crate_open_base {
+			displayName = "M444 105mm ICM x2 Crate (Open)";
+      shellType = "shto_vn_m101_shell_icm";
 		};
 
     class Land_vn_us_common_pallet_01;
@@ -234,6 +244,21 @@ class cfgVehicles {
     };
     class shto_vn_m101_illum_pallet_x18: shto_vn_m101_illum_pallet_x42 {
       displayName = "M314 105mm LUME x18 Pallet";
+      crateCount = 9;
+    };
+
+    class shto_vn_m101_icm_pallet_x42: shto_vn_m101_pallet_base {
+      scope = 2;
+      displayName = "M444 105mm ICM x42 Pallet";
+      crateCount = 21;
+      crateClass = "shto_vn_m101_icm_crate";
+    };
+    class shto_vn_m101_icm_pallet_x24: shto_vn_m101_icm_pallet_x42 {
+      displayName = "M444 105mm ICM x24 Pallet";
+      crateCount = 12;
+    };
+    class shto_vn_m101_icm_pallet_x18: shto_vn_m101_icm_pallet_x42 {
+      displayName = "M444 105mm ICM x18 Pallet";
       crateCount = 9;
     };
 

@@ -40,4 +40,10 @@ class CfgMagazines {
     class shto_105mm_mag_lume_x1_c3: shto_105mm_mag_lume_x1_c1 { initSpeed = 240; displayNameShort = "105mm LUME Chg. 3"; };
     class shto_105mm_mag_lume_x1_c4: shto_105mm_mag_lume_x1_c1 { initSpeed = 320; displayNameShort = "105mm LUME Chg. 4"; };
     class shto_105mm_mag_lume_x1_c5: shto_105mm_mag_lume_x1_c1 { initSpeed = 400; displayNameShort = "105mm LUME Chg. 5"; };
+    
+    class shto_105mm_mag_icm_x1_c1: vn_cannon_m101_mag_lume_x8 { displayName = "M314 105mm ICM"; displayNameShort = "105mm ICM Chg. 1"; initSpeed = 86; count = 1; ammo = "shto_vn_shell_105mm_m444_icm_ammo"; };
+    class shto_105mm_mag_icm_x1_c2: shto_105mm_mag_icm_x1_c1 { initSpeed = 160; displayNameShort = "105mm ICM Chg. 2"; };
+    class shto_105mm_mag_icm_x1_c3: shto_105mm_mag_icm_x1_c1 { initSpeed = 240; displayNameShort = "105mm ICM Chg. 3"; };
+    class shto_105mm_mag_icm_x1_c4: shto_105mm_mag_icm_x1_c1 { initSpeed = 320; displayNameShort = "105mm ICM Chg. 4"; };
+    class shto_105mm_mag_icm_x1_c5: shto_105mm_mag_icm_x1_c1 { initSpeed = 400; displayNameShort = "105mm ICM Chg. 5"; };
 };
