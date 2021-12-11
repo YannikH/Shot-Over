@@ -106,7 +106,7 @@ _action = ["Charge 4","Charge 4","",{_target setVariable ["shto_charge", 4, true
 _action = ["Charge 5","Charge 5","",{_target setVariable ["shto_charge", 5, true]},{true}, nil, nil, [0,0,0], shto_interaction_distance, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;["shto_vn_m101_shell", 0, ["M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 [] spawn {
-  waitUntil{sleep 1;["ACE_dragging"] call ace_common_fnc_isModLoaded};
+  waitUntil{sleep 1;["interact_menu"] call ace_common_fnc_isModLoaded};
   sleep 1;
   ["shto_vn_m101_shell", 0,["ACE_MainActions","ACE_dragging_carry"]] call ace_interact_menu_fnc_removeActionFromClass;
   ["shto_vn_m101_shell_ab", 0,["ACE_MainActions","ACE_dragging_carry"]] call ace_interact_menu_fnc_removeActionFromClass;

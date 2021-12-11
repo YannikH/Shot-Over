@@ -9,11 +9,11 @@ private _cratesArray = [];
 private _crateSlots = [];
 private _xSpacing = 0.32;
 private _ySpacing = 0.92;
-private _manOffset = [-0.15, -2.5];
-private _totalRows = 6;
-if (_container isKindOf "shto_vn_m101_he_container_x504") then {
-	_manOffset = [-0.15, -0.9];
-	_totalRows = 3;
+private _manOffset = [-0.15, -0.9];
+private _totalRows = 3;
+if (_container isKindOf "shto_vn_m101_he_container_x504") then { // big container, which we currently don't have
+	_manOffset = [-0.15, -2.5];
+	_totalRows = 7;
 };
 //private _manOffset = [-0.15, -3.9];
 _container setVariable ["shto_cratesleft" ,_totalRows * 84];

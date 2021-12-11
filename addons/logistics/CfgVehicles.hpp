@@ -242,7 +242,7 @@ class cfgVehicles {
     class shto_vn_m101_container_base: vn_us_komex_small_01 {
       scope = 1;
       displayName = "M1 105mm HE x 504 Cargo Container";
-      crateCount = 252;
+      crateCount = 504;
       crateClass = "shto_vn_m101_he_crate";
       class EventHandlers {
         class shto_palletInit {

@@ -5,7 +5,7 @@ PREP(posAlongRecoilAxis);
 PREP(posAlongDirection);
 PREP(getTE);
 PREP(remoteFireHowitzer);
-PREP(fire);
+PREP(fired);
 
 
 PREP(attemptLoad);
