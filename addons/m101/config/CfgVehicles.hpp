@@ -65,6 +65,7 @@ class cfgVehicles {
               initPhase=0;
           };
       };
+      slingLoadCargoMemoryPoints[] = {"pos_cargo", "pos_gunner", "recoil"};
     };
     class shto_vn_static_m101_01: shto_vn_static_m101_02_base {
       //picture = "\vn\static_f_vietnam\ui\pic_vn_static_m101_01_ca.paa";

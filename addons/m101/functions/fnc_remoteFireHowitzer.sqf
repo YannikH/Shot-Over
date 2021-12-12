@@ -19,5 +19,5 @@ if (isNull (gunner _howitzer)) then {
 } else {
 	(gunner _howitzer) fireAtTarget [objNull];
 };
-_howitzer animatesource ["m101_reload_source",1, true];
-_howitzer animatesource ["m101_reload_source",0.95, 0.7];
+// _howitzer animatesource ["m101_reload_source",1, true];
+// _howitzer animatesource ["m101_reload_source",0.95, 0.7];
