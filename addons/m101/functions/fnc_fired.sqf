@@ -5,7 +5,7 @@ if (local _vehicle) then {
 	private _randomFactor = random [(_currentSpeed / 100) * -0.25,0,(_currentSpeed / 100) * 0.25];
 	private _targetSpeed = _currentSpeed + _randomFactor;
 	private _targetVelocity = (vectorNormalized velocity _projectile) vectorMultiply _targetSpeed;
-	_projectile setVelocity _targetVelocity;
+	_projectile setVelocity _targetVelocity;	
 };
 
 if (isServer) then {

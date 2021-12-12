@@ -16,6 +16,12 @@ class cfgVehicles {
     class shto_vn_m101_shell_illum: shto_vn_m101_shell { displayName = "M314 105mm LUME Shell"; magazineBase = "shto_105mm_mag_lume_x1_c"; };
     class shto_vn_m101_shell_icm: shto_vn_m101_shell { displayName = "M444 105mm ICM Shell"; magazineBase = "shto_105mm_mag_icm_x1_c"; };
 
+    class shto_vn_m101_shell_casing: ACE_Track {
+        displayName = "105mm Shell Casign (Empty)";
+        model = "\vn\static_f_vietnam\m101\proxy\vn_b_static_m101_shell_empty_prop.p3d";
+        ace_cargo_size = 1;
+    };
+
     class ThingX;
     class ReammoBox_F: ThingX {
       class ACE_Actions { class ACE_MainActions; };

@@ -3,6 +3,13 @@ shto_interaction_distance = 5;
 _action = ["Open Breech","Open Breech","",{
 	//_target animatesource ["m101_reload_source",0.8375, 2];
 	_target animatesource ["m101_reload_source",0.7, 3];
+	
+	private _breechPos = _target modelToWorld ([_target, [0,-2,0.5]] call shot_over_m101_fnc_posAlongRecoilAxis);
+	private _shellCasing = "shto_vn_m101_shell_casing" createVehicle [0,0,0];
+	_shellCasing setDir ((getDir _target) + 180 - 20 + (random 40));
+	_shellCasing setPos _breechPos;
+	_shellCasing setVelocity  ((vectorDir _target) vectorMultiply (-1 - random 2));
+	_shellCasing disableCollisionWith _target;
 },{
 	//((_target animationSourcePhase "m101_reload_source") < 1) &&
 	((_target animationSourcePhase "m101_reload_source") > 0.85)
