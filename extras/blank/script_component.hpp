@@ -1,6 +1,6 @@
 #define COMPONENT blank
 #define COMPONENT_BEAUTIFIED Blank
-#include "\z\shot_over\addons\main\script_mod.hpp"
+#include "\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -15,4 +15,4 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_BLANK
 #endif
 
-#include "\z\shot_over\addons\main\script_macros.hpp"
+#include "\main\script_macros.hpp"

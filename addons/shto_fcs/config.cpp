@@ -14,3 +14,5 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "uiConfig\includes.hpp"
+#include "uiConfig\fcs.hpp"

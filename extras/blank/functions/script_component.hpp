@@ -1,1 +1,1 @@
-#include "\z\shot_over\addons\blank\script_component.hpp"
+#include "\blank\script_component.hpp"

@@ -6,11 +6,13 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"shot_over_shto_main"};
+        requiredAddons[] = {"ace_common"};
         author = "";
         authors[] = {""};
+        authorUrl = "http://ace3mod.com";
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgModuleCategories.hpp"
