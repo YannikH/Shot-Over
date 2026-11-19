@@ -9,21 +9,21 @@ if (isServer) then {
 
 if (!hasInterface) exitWith {};
 
-// the crew puts the stakes out at the telescope, on foot (the gunner in the seat sees the gun's actions too);
-// the gunner reads the azimuth of lay off the hint or the sights
+// the crew puts the stakes out from the gun's main interactions, on foot (the gunner in the seat sees the gun's
+// actions too); the gunner reads the azimuth of lay off the hint or the sights
 private _action = [QGVAR(emplaceStakes), LLSTRING(Action_EmplaceStakes), "", {
     [_target] call FUNC(emplaceStakes);
 }, {
     isNull objectParent _player && {(_target getVariable [QGVAR(stakes), []]) isEqualTo []}
-}, nil, nil, {[_target, TELESCOPE_OFFSET] call EFUNC(m101,posAlongDirection)}, INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
-[GUN_CLASS, 0, [], _action, true] call ace_interact_menu_fnc_addActionToClass;
+}] call ace_interact_menu_fnc_createAction;
+[GUN_CLASS, 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 _action = [QGVAR(recoverStakes), LLSTRING(Action_RecoverStakes), "", {
     [QGVAR(recoverStakes), [_target]] call CBA_fnc_serverEvent;
 }, {
     isNull objectParent _player && {(_target getVariable [QGVAR(stakes), []]) isNotEqualTo []}
-}, nil, nil, {[_target, TELESCOPE_OFFSET] call EFUNC(m101,posAlongDirection)}, INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
-[GUN_CLASS, 0, [], _action, true] call ace_interact_menu_fnc_addActionToClass;
+}] call ace_interact_menu_fnc_createAction;
+[GUN_CLASS, 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 _action = [QGVAR(open), LLSTRING(Action_Open), "", {
     [_target] call FUNC(open);

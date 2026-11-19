@@ -65,10 +65,10 @@ Raising the deflection therefore lays the gun further left.
 Deflection is measured from the aiming stakes, not from north. Put them out once, when the gun is in position:
 
 1. Lay the gun on the direction it should cover, for example the azimuth the FDC orders, with ACE's **AZ** readout. On the Sights Only M101, point it roughly that way; the exact direction is recorded in step 3.
-2. A crew member on foot, at the telescope on the left of the gun by the gunner's seat, uses the interaction **Emplace Aiming Stakes**. Two stakes go up 25 m and 50 m from the gun, where the telescope sees them at deflection **2800**, and the gun's deflection dial is set to 2800.
+2. A crew member on foot uses the interaction on the gun (hold ++left-windows++) → **Emplace Aiming Stakes**. Two stakes go up 25 m and 50 m from the gun, where the telescope sees them at deflection **2800**, and the gun's deflection dial is set to 2800.
 3. The direction the gun pointed is now its **azimuth of lay**. It shows in a hint and in the sights under the deflection (**AZ OF LAY**). Pass it to the FDC: it goes into the notebook, which then gives the deflection for every fire mission.
 
-The stakes stay until someone uses **Recover Aiming Stakes** at the telescope, or the gun is removed. If the gun is moved, recover the stakes and put them out again: the azimuth of lay changes with it.
+The stakes stay until someone uses the interaction **Recover Aiming Stakes** on the gun, or the gun is removed. If the gun is moved, recover the stakes and put them out again: the azimuth of lay changes with it.
 
 ## Charges and ranges
 
