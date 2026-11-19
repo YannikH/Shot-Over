@@ -25,5 +25,6 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ### Changed
 
+- M101 - No artillery computer: the firing data comes from the FDC notebook (#11) by Andx
 - Config - Loads after S.O.G. Prairie Fire and the ACE parts it patches; all names, actions and hints are in stringtables (#11) by Andx
 - Build - Move from SCons to HEMTT and the arma-mod-template; addons renamed to `main`, `m101`, `logistics`, `fcs`, functions to `shot_over_<component>_fnc_*` (#10) by Andx

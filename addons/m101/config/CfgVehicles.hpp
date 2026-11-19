@@ -46,6 +46,8 @@ class CfgVehicles {
       scope = 2;
       scopeCurator = 2;
       editorSubcategory = "shot_over_guns";
+      // no artillery computer: the firing data comes from the FDC notebook
+      artilleryScanner = 0;
       model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01.p3d";
       class Turrets: Turrets {
           class MainTurret: MainTurret {
