@@ -62,6 +62,9 @@ class CfgVehicles {
               // no vanilla range, elevation and heading overlay; ACE's readout replaces it.
               // The views set their own, which wins over the turret's while in that view.
               turretInfoType = "";
+              // Page Up/Down elevate (elevationMode 3); SOG's 1.2 (54 deg/s) moves tens of mils per tap, too fast to
+              // level the quadrant's bubble. 0.05 is about 40 mil/s: a tap moves about 2 mils, like the handwheel.
+              maxVerticalRotSpeed = 0.05;
               class ViewOptics: ViewOptics {
                   turretInfoType = "";
               };

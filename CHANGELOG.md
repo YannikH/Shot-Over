@@ -13,6 +13,14 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ## [Unreleased]
 
+### Added
+
+- Sight - The M101 gunner can lay the gun with its sights: a panoramic telescope with deflection dial and tape, and a quadrant with a level bubble (#PR) by Andx
+
+### Changed
+
+- M101 - The gun elevates slower (about 40 mils per second) so the elevation can be laid to the mil with Page Up/Down (#PR) by Andx
+
 ## [0.1.0] - 2026-11-19
 
 ### Added
