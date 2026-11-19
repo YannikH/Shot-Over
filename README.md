@@ -49,4 +49,4 @@ For new contributors, see the [Contributing Setup & Guidelines](./.github/CONTRI
 
 ## License
 
-Shot, Over! is licensed under [MIT](./LICENSE). Authors: see [AUTHORS.txt](./AUTHORS.txt). Authors: see [AUTHORS.txt](./AUTHORS.txt).
+Shot, Over! is licensed under [MIT](./LICENSE). Authors: see [AUTHORS.txt](./AUTHORS.txt).
