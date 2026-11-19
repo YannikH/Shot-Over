@@ -248,7 +248,7 @@ class CfgVehicles {
       scopeCurator = 2;
       displayName = CSTRING(m101_illum_pallet_x42_DisplayName);
       crateCount = 21;
-      crateClass = "shto_vn_m101_smoke_crate";
+      crateClass = "shto_vn_m101_illum_crate";
     };
     class shto_vn_m101_illum_pallet_x24: shto_vn_m101_illum_pallet_x42 {
       displayName = CSTRING(m101_illum_pallet_x24_DisplayName);
