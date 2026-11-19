@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<title>shot-over</title>
+<g transform="translate(16.00 16.00) scale(2.40000)" color="#FFFFFF" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="100" cy="100" r="92"/>
+<path d="M95 42 H105 C112 56 120 70 120 92 V126 L115 146 H85 L80 126 V92 C80 70 88 56 95 42 Z"/>
+<rect x="80" y="112" width="40" height="9" fill="currentColor" stroke="none"/>
+<path d="M66 70.3 A40 40 0 0 0 66 121.7 M134 70.3 A40 40 0 0 1 134 121.7"/>
+<path d="M52 58.7 A58 58 0 0 0 52 133.3 M148 58.7 A58 58 0 0 1 148 133.3"/>
+</g>
+</svg>
