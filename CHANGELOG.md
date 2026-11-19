@@ -34,6 +34,7 @@ version, and start a fresh empty [Unreleased] section above it. -->
 - Logistics - "Take Pallet" is available on containers and gives a pallet of the container's ammunition; the FRAG container's smaller pallets were AB (#13) by Andx
 - Logistics - A shell's charge is set from its "Interactions" menu, so shells lying side by side in an open crate no longer show overlapping actions (#27) by Andx
 - M101 - Works in multiplayer: the gun is emptied after each shot with a client gunner, loading and firing run where the gun is local, two crew members loading at once no longer lose a shell (#12) by Andx
+- M101 - Both M101 variants have the gun's actions; one of the two had no Open or Close Breech, Fire Howitzer, Traverse or Elevate Turret (#30) by Andx
 - M101 - The recoil knock-down no longer turns damage back on for units a mission made invulnerable (#12) by Andx
 - Logistics - The illumination crate unpacked ICM shells, and the ICM crate opened as an illumination crate (#11) by Andx
 - Logistics - Typos in the names of the empty shell casing and the 18-crate HE pallet (#11) by Andx
