@@ -11,6 +11,15 @@ The project is entirely open-source and any contributions are welcome.
 
 ## Features
 
-- M101 howitzer loaded by hand
-- Shells, crates and pallets
-- FDC notebook
+- **The M101 loaded by hand**: open the breech, carry a shell with its charge set to it, load, close and fire, with any number of crew in multiplayer. No artillery computer; every round is loaded by hand
+- **Seven shell types** (HE, airburst, FRAG, WP, smoke, illumination, ICM) with five charges
+- **Logistics**: shells in crates, crates on pallets, pallets out of cargo containers, all carried, dragged and loaded with ACE
+- **FDC notebook**: direction, distance, and charge, elevation and time of flight for every charge, from the gun's and the target's grid and elevation; several fire missions, and a minimized view for the gunline
+- **In Eden and Zeus**; optional ACRE2 radio on the PRC-77 prop
+
+## Getting started
+
+- [The M101 Howitzer](gun.md): the crew, loading and firing, charges and ranges
+- [Ammunition and Logistics](ammunition.md): shells, crates, pallets and cargo containers
+- [The FDC Notebook](notebook.md): working out the firing data
+- [Mission Makers](mission-makers.md): placing it, classnames, ACRE2

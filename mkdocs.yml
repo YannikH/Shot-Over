@@ -78,3 +78,7 @@ markdown_extensions:
 # TEMPLATE: add one page per addon or feature
 nav:
   - Home: index.md
+  - The M101 Howitzer: gun.md
+  - Ammunition and Logistics: ammunition.md
+  - The FDC Notebook: notebook.md
+  - Mission Makers: mission-makers.md

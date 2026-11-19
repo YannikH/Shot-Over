@@ -15,6 +15,7 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ### Added
 
+- Docs - Documentation site: the M101 and its crew, ammunition and logistics, the FDC notebook, and a page for mission makers (#PR) by Andx
 - Editor - Gun, shells, crates, pallets and containers in their own "Shot, Over!" Eden category and in Zeus (#11) by Andx
 - ACRE - The PRC-77 prop's radio rack moved into an optional ACRE compatibility addon, so Shot, Over! loads without ACRE (#11) by Andx
 
