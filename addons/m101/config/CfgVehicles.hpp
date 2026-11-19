@@ -36,6 +36,7 @@ class CfgVehicles {
       };
     };
     class vn_b_army_static_m101_02: vn_static_m101_02_base {
+      class AnimationSources;
       class Turrets: Turrets {
                 class MainTurret: MainTurret {
                     class ViewOptics;
@@ -53,7 +54,7 @@ class CfgVehicles {
       artilleryScanner = 0;
       // ACE's azimuth/elevation readout in mils for the gunner; it would otherwise follow artilleryScanner and stay off
       ace_artillerytables_showGunLaying = 1;
-      model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01.p3d";
+      model = "\vn\static_f_vietnam\m101\vn_b_static_m101_02.p3d";
       class Turrets: Turrets {
           class MainTurret: MainTurret {
               weapons[] = {"shto_howitzer_105mm_base"};
@@ -69,7 +70,9 @@ class CfgVehicles {
               };
           };
         };
-      class AnimationSources //removing shield actions
+      // keeps SOG's sources (wheel and hull damage, clutter), which the model's animations need;
+      // only the breech is moved by the crew's actions instead of the weapon's reload
+      class AnimationSources: AnimationSources
       {
           class m101_reload_source
           {
@@ -88,7 +91,20 @@ class CfgVehicles {
     };
     class shto_vn_static_m101_01: shto_vn_static_m101_02_base {
       //picture = "\vn\static_f_vietnam\ui\pic_vn_static_m101_01_ca.paa";
-      model = "\vn\static_f_vietnam\m101\vn_b_static_m101_02.p3d";
+      model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01.p3d";
+      // the model with shields on a parent without them: SOG's values from vn_static_m101_base, no actions to lower them
+      class AnimationSources: AnimationSources
+      {
+          class gunner_lower_shield
+          {
+              source = "user";
+              animPeriod = 1;
+              initPhase = 0;
+              sound = "MetalDoorsSound";
+              soundPosition = "hatch_sound";
+          };
+          class cargo_lower_shield: gunner_lower_shield {};
+      };
     };
 
     class vn_b_pack_lw_06;
