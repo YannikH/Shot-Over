@@ -163,5 +163,8 @@
         <Key ID="STR_shot_over_m101_static_m101_02_base_DisplayName">
             <English>M101 Howitzer (Shot, Over!)</English>
         </Key>
+        <Key ID="STR_shot_over_m101_static_m101_sights_DisplayName">
+            <English>M101 Howitzer, Sights Only (Shot, Over!)</English>
+        </Key>
     </Package>
 </Project>

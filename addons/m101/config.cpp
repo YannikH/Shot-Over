@@ -8,6 +8,8 @@ class CfgPatches
         units[] = {
             "shto_vn_static_m101_02_base",
             "shto_vn_static_m101_01",
+            "shto_vn_static_m101_02_sights",
+            "shto_vn_static_m101_01_sights",
             "shto_vn_prop_prc77_01"
         };
         weapons[] = {};

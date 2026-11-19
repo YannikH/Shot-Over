@@ -25,7 +25,7 @@ After every shot the gun is empty: every round is loaded by hand.
 
 ## Laying the gun
 
-The gunner traverses and elevates the gun as usual while looking through the optics. There, ACE shows where the gun points: **AZ** (direction) and **EL** (elevation), both in mils, the same units as the FDC notebook. Lay the gun until both match the fire mission.
+The gunner traverses and elevates the gun as usual while looking through the optics. There, ACE shows where the gun points: **AZ** (direction) and **EL** (elevation), both in mils, the same units as the FDC notebook. Lay the gun until both match the fire mission. The **Sights Only** M101 has no readout: there the gunner lays with the gun's sights only.
 
 Crew members outside the gun can check the elevation with **Elevate Turret** at the elevation handwheel: it shows the elevation in mils.
 
@@ -64,7 +64,7 @@ Raising the deflection therefore lays the gun further left.
 
 Deflection is measured from the aiming stakes, not from north. Put them out once, when the gun is in position:
 
-1. Lay the gun on the direction it should cover, for example the azimuth the FDC orders, with ACE's **AZ** readout.
+1. Lay the gun on the direction it should cover, for example the azimuth the FDC orders, with ACE's **AZ** readout. On the Sights Only M101, point it roughly that way; the exact direction is recorded in step 3.
 2. A crew member on foot, at the telescope on the left of the gun by the gunner's seat, uses the interaction **Emplace Aiming Stakes**. Two stakes go up 25 m and 50 m from the gun, where the telescope sees them at deflection **2800**, and the gun's deflection dial is set to 2800.
 3. The direction the gun pointed is now its **azimuth of lay**. It shows in a hint and in the sights under the deflection (**AZ OF LAY**). Pass it to the FDC: it goes into the notebook, which then gives the deflection for every fire mission.
 

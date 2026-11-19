@@ -15,6 +15,7 @@ Everything is also in **Zeus**. Pallets and containers are filled when they are 
 | Object | Classnames |
 | --- | --- |
 | M101 Howitzer | `shto_vn_static_m101_02_base` (without shields), `shto_vn_static_m101_01` (with shields) |
+| M101 Howitzer, Sights Only | `shto_vn_static_m101_02_sights` (without shields), `shto_vn_static_m101_01_sights` (with shields) |
 | Shells | `shto_vn_m101_shell_he`, `_ab`, `_frag`, `_wp`, `_smk`, `_illum`, `_icm` |
 | Crates | `shto_vn_m101_he_crate`, `_ab_crate`, `_frag_crate`, `_wp_crate`, `_smoke_crate`, `_illum_crate`, `_icm_crate` |
 | Pallets | `shto_vn_m101_<type>_pallet_x42`, `_x24`, `_x18` with `<type>` `he`, `ab`, `frag`, `wp`, `smk`, `illum`, `icm` |
@@ -23,6 +24,8 @@ Everything is also in **Zeus**. Pallets and containers are filled when they are 
 | PRC-77 Radio | `shto_vn_prop_prc77_01` |
 
 The two M101 classes are the two models of S.O.G. Prairie Fire's M101 and work the same.
+
+The **Sights Only** guns are the same guns without ACE's AZ/EL readout: the gunner lays with the panoramic telescope, the aiming stakes and the quadrant only (see [The M101](gun.md#the-guns-sights)). Place them when the crew should lay by the sights. Without the readout the gunner can't lay on an exact azimuth before the stakes go out; whatever direction the gun points when they are emplaced becomes its azimuth of lay.
 
 ## Giving players the notebook
 

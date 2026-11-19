@@ -109,6 +109,16 @@ class CfgVehicles {
           class cargo_lower_shield: gunner_lower_shield {};
       };
     };
+    // the same guns without ACE's AZ/EL readout: the gunner lays with the sights (shot_over_sight) only.
+    // ACE reads the readout from config when the gunner gets in, so it is a class of its own, not a setting.
+    class shto_vn_static_m101_02_sights: shto_vn_static_m101_02_base {
+      displayName = CSTRING(static_m101_sights_DisplayName);
+      ace_artillerytables_showGunLaying = 0;
+    };
+    class shto_vn_static_m101_01_sights: shto_vn_static_m101_01 {
+      displayName = CSTRING(static_m101_sights_DisplayName);
+      ace_artillerytables_showGunLaying = 0;
+    };
 
     class vn_b_pack_lw_06;
     class shto_rto_pack: vn_b_pack_lw_06 {
