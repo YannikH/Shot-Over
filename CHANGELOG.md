@@ -26,7 +26,7 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ### Removed
 
-- M101 - The "Fire Howitzer" lanyard action: the gunner fires the gun (#PR) by Andx
+- M101 - The "Fire Howitzer" lanyard action: the gunner fires the gun (#43) by Andx
 
 ## [0.1.0] - 2026-11-19
 
