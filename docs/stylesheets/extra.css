@@ -1,0 +1,15 @@
+/* TEMPLATE: set the brand color of the mod. Header text is fixed white, so light mode
+   needs a dark enough primary for contrast; dark mode gets the brighter accent. */
+:root {
+  --md-primary-fg-color: #37474F;
+  --md-primary-fg-color--light: #78909C;
+  --md-primary-fg-color--dark: #263238;
+}
+
+[data-md-color-scheme="default"] {
+  --md-accent-fg-color: #37474F;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-accent-fg-color: #78909C;
+}

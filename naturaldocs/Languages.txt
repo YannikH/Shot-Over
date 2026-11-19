@@ -1,8 +1,0 @@
-Language: SQF
-
-   Extension: sqf
-
-   Line Comment: //
-   Block Comment: /* */
-   Line Extender: \
-   Case Sensitive: No

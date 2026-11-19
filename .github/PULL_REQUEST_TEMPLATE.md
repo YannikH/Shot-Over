@@ -1,5 +1,16 @@
-**When merged this pull request will:**
+## When merged this pull request will:
+
 - Describe what this pull request will do
 - Each change in a separate line
-- Include documentation if applicable
-- Respect the [Development Guidelines](https://ace3mod.com/wiki/development/)
+
+## Important
+
+<!-- TEMPLATE: relative links don't resolve in the PR-compose preview, so this needs
+     an absolute URL; replace Shot-Over with the repo slug per SETUP.md -->
+- [ ] [Development Guidelines](https://github.com/Andx667/Shot-Over/blob/main/.github/CONTRIBUTING.md) are read, understood and applied.
+- [ ] Title of this PR uses our standard template `Component - Add|Fix|Improve|Change|Remove {changes}`.
+
+<!-- Known issues that need to be addressed -->
+## Known Issues
+
+- [ ] Issue

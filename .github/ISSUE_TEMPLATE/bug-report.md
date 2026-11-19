@@ -1,31 +1,31 @@
 ---
 name: Bug report
-about: Report an issue with ACE3
-
+about: Create a bug report to help us improve
+title: ''
+labels: kind/bug
 ---
 
-**Arma 3 Version:** `x.xx` (stable / rc / dev)
-**CBA Version:** `3.x.x` (stable / dev + commit hash)
-**ACE3 Version:** `3.x.x` (stable / dev + commit hash)
+## Describe the bug
 
-**Mods:**
-```
-- CBA_A3
-- ace
-```
+A clear and concise description of what the bug is.
 
-**Description:**
-- Add a detailed description of the error. This makes it easier for us to fix the issue.
+## To reproduce
 
-**Steps to reproduce:**
-- Add the steps needed to reproduce the issue.
+Steps to reproduce the behavior:
 
-**Where did the issue occur?**
-- Dedicated / Self-Hosted Multiplayer / Singleplayer / Editor (Singleplayer) / Editor (Multiplayer) / Virtual Arsenal
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-**Additional information:**
-- Provide any additional information that will help us solve this issue.
+## Expected behavior
 
-**RPT log file:**
-- Add a link ([gist](https://gist.github.com) or [pastebin](http://pastebin.com)) to the client and/or server RPT file. An instruction to find your RPT files can be found [here](https://community.bistudio.com/wiki/Crash_Files#Arma_3).
-- If possible at the time the bug is encountered, go to Options and select "ACE Debug To Clipboard", this will print extensive debug information to the RPT file and copy it to clipboard.
+A clear and concise description of what you expected to happen.
+
+## Attachments
+
+If applicable, add screenshots or RPT logs to help explain your problem.
+
+## Additional context
+
+Add any other context about the problem here.

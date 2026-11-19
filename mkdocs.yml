@@ -1,0 +1,80 @@
+# Read by Zensical (https://zensical.org), which builds the docs. MkDocs reads it as well.
+site_name: Shot, Over! Documentation
+site_description: Documentation for the Shot, Over! mod for Arma 3
+site_url: https://andx667.github.io/Shot-Over/
+
+repo_url: https://github.com/Andx667/Shot-Over
+repo_name: Andx667/Shot-Over
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  # TEMPLATE: "classic" keeps the Material look, Zensical's default is a newer one.
+  variant: classic
+  language: en
+  # TEMPLATE: once img/icon.png exists, copy it to docs/icon.png and add
+  #   logo: icon.png
+  #   favicon: icon.png
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.path
+    - navigation.indexes
+    - content.action.edit
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - search.share
+
+plugins:
+  - privacy
+  - search
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - abbr
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+# TEMPLATE: add one page per addon or feature
+nav:
+  - Home: index.md

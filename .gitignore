@@ -1,8 +1,10 @@
-release/*
-*.cache
 *.pbo
-texHeaders.bin
-*.swp
-*.swo
+.hemttout
+hemtt
+hemtt.exe
 *.biprivatekey
-Thumbs.db
+*.hemttprivatekey
+releases
+
+# docs build
+site/

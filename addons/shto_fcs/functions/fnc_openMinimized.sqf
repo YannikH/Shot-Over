@@ -1,1 +1,0 @@
-95010 cutRsc ["shto_calculator_minimized", "PLAIN", -1, true];
