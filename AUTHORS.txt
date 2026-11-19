@@ -1,6 +1,11 @@
-﻿# CONTRIBUTOR LIST
+# CONTRIBUTOR LIST
 
 # CORE TEAM
+YannikH
+toadball (Andrew Somerville)
+Yax
 
+# MAINTAINER
+Andx
 
 # CONTRIBUTORS
