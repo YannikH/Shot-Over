@@ -29,7 +29,7 @@ if (_left <= 0 || {_pallets isEqualTo []}) exitWith {};
 
 _pallets sort false;
 private _index = _pallets findIf {(_x select 0) <= _left};
-(if (_index == -1) then {[_left, (_pallets select (count _pallets - 1)) select 1]} else {_pallets select _index}) params ["_crateCount", "_palletClass"];
+(if (_index == -1) then {[_left, (_pallets select -1) select 1]} else {_pallets select _index}) params ["_crateCount", "_palletClass"];
 
 _container setVariable ["shto_cratesleft", _left - _crateCount, true];
 
