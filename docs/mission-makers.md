@@ -38,7 +38,7 @@ _shell setVariable ["shto_charge", 3, true];
 
 ## ACRE2
 
-With ACRE2 loaded, the **PRC-77 Radio (Shot, Over!)** has a mounted ACRE PRC-77 that crew members can use from the ACE interaction menu. Without ACRE2 it is a prop that can be carried and dragged.
+With ACRE2 loaded, the **PRC-77 Radio (Shot, Over!)** has a mounted ACRE PRC-77 that players within 10 m can use from the ACE interaction menu (**Interactions → Racks**). It is set up once the first player is in the mission, also for radios placed later in Zeus. Without ACRE2 it is a prop that can be carried and dragged.
 
 ## What Shot, Over! changes
 
