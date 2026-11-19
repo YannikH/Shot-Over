@@ -4,8 +4,17 @@
         <Key ID="STR_shot_over_sight_Action_Close">
             <English>Close Sights</English>
         </Key>
+        <Key ID="STR_shot_over_sight_Action_EmplaceStakes">
+            <English>Emplace Aiming Stakes</English>
+        </Key>
         <Key ID="STR_shot_over_sight_Action_Open">
             <English>Look Through Sights</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Action_RecoverStakes">
+            <English>Recover Aiming Stakes</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_AzimuthOfLay">
+            <English>AZ OF LAY %1</English>
         </Key>
         <Key ID="STR_shot_over_sight_Deflection">
             <English>DEFLECTION</English>
@@ -15,6 +24,9 @@
         </Key>
         <Key ID="STR_shot_over_sight_High">
             <English>HIGH</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Hint_StakesEmplaced">
+            <English>Aiming stakes emplaced at deflection %1. Azimuth of lay: %2 mils, for the FDC notebook.</English>
         </Key>
         <Key ID="STR_shot_over_sight_Keybind_DeflectionDown">
             <English>Sights: Deflection Down</English>

@@ -2,8 +2,9 @@
 
 /*
  * Author: YannikH, toadball, Andx
- * Saves the open page of the FDC notebook (grids, elevations, notes, shell type) into shto_fcs_pages, before a
- * page is turned or the notebook is closed. Does nothing for the minimized notebook, which has no fields.
+ * Saves the open page of the FDC notebook (grids, elevations, notes, shell type, azimuth of lay) into
+ * shto_fcs_pages, before a page is turned or the notebook is closed. Does nothing for the minimized notebook, which
+ * has no fields.
  *
  * Arguments:
  * 0: Notebook display (default: the open one) <DISPLAY>
@@ -31,6 +32,7 @@ _pages set [missionNamespace getVariable ["shto_fcs_currentPage", 0], [
     ctrlText (_dialog displayCtrl IDC_TARGET_GRID),
     ctrlText (_dialog displayCtrl IDC_TARGET_ELEVATION),
     ctrlText (_dialog displayCtrl IDC_NOTES),
-    lbCurSel (_dialog displayCtrl IDC_SHELL_TYPE)
+    lbCurSel (_dialog displayCtrl IDC_SHELL_TYPE),
+    ctrlText (_dialog displayCtrl IDC_AZIMUTH_OF_LAY)
 ]];
 missionNamespace setVariable ["shto_fcs_pages", _pages];

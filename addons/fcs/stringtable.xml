@@ -58,8 +58,14 @@
         <Key ID="STR_shot_over_fcs_TargetNear">
             <English>Tgt near %1</English>
         </Key>
+        <Key ID="STR_shot_over_fcs_calculator_AzimuthOfLay_Text">
+            <English>Az. of Lay</English>
+        </Key>
         <Key ID="STR_shot_over_fcs_calculator_ButtonBase_Text">
             <English>BACK</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_Deflection_Text">
+            <English>Deflection:</English>
         </Key>
         <Key ID="STR_shot_over_fcs_calculator_RscText_1001_Text">
             <English>TARGET INFO</English>

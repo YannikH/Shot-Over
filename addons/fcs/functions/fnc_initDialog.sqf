@@ -37,14 +37,16 @@ private _pages = missionNamespace getVariable ["shto_fcs_pages", []];
 private _page = if (_openPage < count _pages) then {
     _pages select _openPage
 } else {
-    // a new page: the firing unit is still where the last mission had it
-    (_pages param [count _pages - 1, ["", ""]]) params [["_ownGrid", ""], ["_ownElevation", ""]];
-    [_ownGrid, _ownElevation, "", "", "", 0]
+    // a new page: the firing unit is still where the last mission had it, and laid the same way
+    (_pages param [count _pages - 1, []]) params [["_ownGrid", ""], ["_ownElevation", ""], "", "", "", "", ["_azimuthOfLay", ""]];
+    [_ownGrid, _ownElevation, "", "", "", 0, _azimuthOfLay]
 };
 
 {
     (_dialog displayCtrl _x) ctrlSetText (_page select _forEachIndex);
 } forEach [IDC_OWN_GRID, IDC_OWN_ELEVATION, IDC_TARGET_GRID, IDC_TARGET_ELEVATION, IDC_NOTES];
+// pages from before the azimuth of lay have no seventh entry
+(_dialog displayCtrl IDC_AZIMUTH_OF_LAY) ctrlSetText (_page param [6, ""]);
 
 // the list is filled anew for every page, so clear it first
 private _shellList = _dialog displayCtrl IDC_SHELL_TYPE;
