@@ -163,11 +163,6 @@ class CfgVehicles {
       crateCount = 21;
       crateClass = "shto_vn_m101_he_crate";
       yOffset = 0.2;
-      class EventHandlers {
-        class shto_palletInit {
-          init = QUOTE(_this call FUNC(initPallet));
-        };
-      };
     };
     class shto_vn_m101_he_pallet_x42: shto_vn_m101_pallet_base {
       scope = 2;
@@ -291,11 +286,6 @@ class CfgVehicles {
       // crates of 2 rounds, 504 rounds; the stock is a number, the container shows no crates
       crateCount = 252;
       crateClass = "shto_vn_m101_he_crate";
-      class EventHandlers {
-        class shto_palletInit {
-          init = QUOTE(_this call FUNC(initContainer));
-        };
-      };
     };
     class shto_vn_m101_he_container_x504: shto_vn_m101_container_base {
       scope = 2;

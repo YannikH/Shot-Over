@@ -22,6 +22,7 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ### Fixed
 
+- Logistics - Pallets and containers keep CBA's and SOG's event handlers: no more "does not support Extended Event Handlers" warnings in the RPT (#25) by Andx
 - Logistics - Illumination pallets were stacked with smoke crates (#24) by Andx
 - FCS - The FDC notebook works out its solutions again: it asked for range tables from an ACE extension that current ACE no longer has; it now computes them itself, with the same no-air-friction ballistics (#14) by Andx
 - FCS - ICM can be picked as shell type in the notebook (#14) by Andx
