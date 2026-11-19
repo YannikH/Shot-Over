@@ -1,120 +1,69 @@
 #include "script_component.hpp"
 
-shto_interaction_distance = 5;
-// container
-private _crateaction = ["Take_Crate",LLSTRING(Action_TakeCrate),"",{
-    params ["_target"];
+// stock changes run on the server, so two players cannot take the same crate
+if (isServer) then {
+    [QGVAR(takeCrate), LINKFUNC(takeCrate)] call CBA_fnc_addEventHandler;
+    [QGVAR(takePallet), LINKFUNC(takePallet)] call CBA_fnc_addEventHandler;
+    [QGVAR(unpackCrate), LINKFUNC(unpackCrate)] call CBA_fnc_addEventHandler;
+};
 
-    private _targetClass = typeOf _target;
-    private _cratesClass = getText (configFile >> "CfgVehicles" >> _targetClass >> "crateClass");
-    private _carriedObj = ace_player getVariable "ace_dragging_carriedObject";
-    if (!isNil "_carriedObj" && !(isNull _carriedObj)) exitWith {};
+if (!hasInterface) exitWith {};
 
-    private _newCrate = _cratesClass createVehicle (getPos _target);
-    [ace_player, _newCrate] call ace_dragging_fnc_startCarry;
-    [_target, 1] call shot_over_logistics_fnc_removeCrates;
-  },
-  { (_target getVariable ["shto_cratesleft",0]) > 0 }, nil, nil, [0,0,0.4], shto_interaction_distance, [false, false, false, false, false], {
-    params ["_target", "_player", "_params", "_actionData"];
+// shells are carried with ACE's own carry action; tell the carrier how to load them
+["ace_dragging_startedCarry", {
+    params ["_unit", "_target"];
+    if (_unit isEqualTo ACE_player && {_target isKindOf "shto_vn_m101_shell"}) then {
+        [LLSTRING(Hint_LoadShell), 3] call ace_common_fnc_displayTextStructured;
+    };
+}] call CBA_fnc_addEventHandler;
 
-    _actionData set [1, format [LLSTRING(Action_TakeFormat), getText (configFile >> "CfgVehicles" >> (getText ((configOf _target) >> "crateClass")) >> "displayName")]];
-}] call ace_interact_menu_fnc_createAction;
+// "Take <crate> (<n> left)" for pallets and containers
+private _takeCrateName = {
+    params ["_target", "", "", "_actionData"];
+    private _crateName = getText (configFile >> "CfgVehicles" >> getText (configOf _target >> "crateClass") >> "displayName");
+    _actionData set [1, format [LLSTRING(Action_TakeFormatStock), _crateName, _target getVariable ["shto_cratesleft", 0]]];
+};
 
-// pallet
-private _palletaction = ["Take_Pallet",LLSTRING(Action_TakePallet),"",{
-    params ["_target"];
-
-    private _targetClass = typeOf _target;
-
-    private _carriedObj = ace_player getVariable "ace_dragging_carriedObject";
-    if (!isNil "_carriedObj" && !(isNull _carriedObj)) exitWith {};
-
-    private _newCrate = "shto_vn_m101_he_pallet_x42" createVehicle (getPos _target);
-    //[ace_player, _newCrate] call ace_dragging_fnc_startCarry;
-    [_target, getNumber(configFile >> "CfgVehicles" >> "shto_vn_m101_he_pallet_x42" >> "crateCount")] call shot_over_logistics_fnc_removeCrates;
-  },
-  { (_target getVariable ["shto_cratesleft",0]) > 0 }, nil, nil, [0,0,0.4], shto_interaction_distance, [false, false, false, false, false], {
-    params ["_target", "_player", "_params", "_actionData"];
-
-    _actionData set [1, format [LLSTRING(Action_TakeFormat), getText (configFile >> "CfgVehicles" >> (getText ((configOf _target) >> "crateClass")) >> "displayName")]];
-}] call ace_interact_menu_fnc_createAction;
-
-["shto_vn_m101_container_base", 0, ["ACE_MainActions"], _crateaction, true] call ace_interact_menu_fnc_addActionToClass;
-
-_action = ["Unpack Crate",LLSTRING(Action_UnpackCrate),"",{
-	_target remoteExec ["shot_over_logistics_fnc_unpackCrate", _target];
-  _target setVariable ["shto_crateIsOpen",true];
-},{!(_target getVariable ["shto_crateIsOpen",false])}] call ace_interact_menu_fnc_createAction;
-["shto_vn_crate_base", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-
-// crate
-_action = ["Take_Crate",LLSTRING(Action_TakeCrate),"",{
-    params ["_target"];
-
-    private _targetClass = typeOf _target;
-    private _cratesClass = getText (configFile >> "CfgVehicles" >> _targetClass >> "crateClass");
-    private _cratesArray = _target getVariable "shto_crateList";
-    private _crate = _cratesArray # ((count _cratesArray)-1);
-
-    private _carriedObj = ace_player getVariable "ace_dragging_carriedObject";
-    if (!isNil "_carriedObj" && !(isNull _carriedObj)) exitWith {};
-
-    private _newCrate = _cratesClass createVehicle (getPos _target);
-    [ace_player, _newCrate] call ace_dragging_fnc_startCarry;
-
-    deleteVehicle _crate;
-    private _cratesArray = _cratesArray - [_crate];
-    _target setVariable ["shto_crateList",_cratesArray,true];
-    _target setVariable ["shto_cratesleft",count (_cratesArray),true];
-    [_target, (ceil(count (_cratesArray) / 21) * 5)] call ace_cargo_fnc_setSize;
-  },
-  {
-    (_target getVariable ["shto_cratesleft",0]) > 0
-  }, nil, nil, [0,0,0.4], shto_interaction_distance, [false, false, false, false, false], {
-    params ["_target", "_player", "_params", "_actionData"];
-
-    _actionData set [1, format [LLSTRING(Action_TakeFormat), getText (configFile >> "CfgVehicles" >> (getText ((configOf _target) >> "crateClass")) >> "displayName")]];
-}] call ace_interact_menu_fnc_createAction;
-
+private _action = ["Take_Crate", LLSTRING(Action_TakeCrate), "", {
+    [QGVAR(takeCrate), [_target, _player]] call CBA_fnc_serverEvent;
+}, {
+    (_target getVariable ["shto_cratesleft", 0]) > 0
+}, nil, nil, [0, 0, 0.4], INTERACTION_DISTANCE, [false, false, false, false, false], _takeCrateName] call ace_interact_menu_fnc_createAction;
+["shto_vn_m101_container_base", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ["shto_vn_m101_pallet_base", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
-// shell
-_action = ["M101 Shell",LLSTRING(Action_Shell),"",{},{true}, nil, nil, [0,0,0.4], shto_interaction_distance, [false, false, false, false, false], {
-    params ["_target", "_player", "_params", "_actionData"];
+_action = ["Take_Pallet", LLSTRING(Action_TakePallet), "", {
+    [QGVAR(takePallet), [_target, _player]] call CBA_fnc_serverEvent;
+}, {
+    (_target getVariable ["shto_cratesleft", 0]) > 0
+}, nil, nil, [0, 0, 0.4], INTERACTION_DISTANCE, [false, false, false, false, false], {
+    params ["_target", "", "", "_actionData"];
+    private _palletClass = getArray (configOf _target >> "palletClasses") param [0, ""];
+    _actionData set [1, format [LLSTRING(Action_TakeFormat), getText (configFile >> "CfgVehicles" >> _palletClass >> "displayName")]];
+}] call ace_interact_menu_fnc_createAction;
+["shto_vn_m101_container_base", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
-    _actionData set [1, format [LLSTRING(Action_ShellFormat), getText ((configOf _target) >> "displayName"), _target getVariable ["shto_charge", 1]]];
+_action = ["Unpack Crate", LLSTRING(Action_UnpackCrate), "", {
+    [QGVAR(unpackCrate), [_target]] call CBA_fnc_serverEvent;
+}, {
+    !(_target getVariable ["shto_crateIsOpen", false])
+}] call ace_interact_menu_fnc_createAction;
+["shto_vn_crate_base", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+// shell: its name with the charge set on it, and the charge to set
+_action = ["M101 Shell", LLSTRING(Action_Shell), "", {}, {true}, nil, nil, [0, 0, 0.4], INTERACTION_DISTANCE, [false, false, false, false, false], {
+    params ["_target", "", "", "_actionData"];
+    _actionData set [1, format [LLSTRING(Action_ShellFormat), getText (configOf _target >> "displayName"), _target getVariable ["shto_charge", 1]]];
 }] call ace_interact_menu_fnc_createAction;
 ["shto_vn_m101_shell", 0, [], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["Carry Shell",LLSTRING(Action_CarryShell),"",{
-    private _shell = ace_player getVariable "ace_dragging_carriedObject";
-    if (!isNil "_shell" && !(isNull _shell)) exitWith {};
-    [ace_player, _target] call ace_dragging_fnc_startCarry;
-
-    [] spawn {
-        sleep 0.1;
-        [localize "STR_ACE_Dragging_Drop", LLSTRING(Hint_Load), localize "STR_ace_dragging_RaiseLowerRotate"] call ace_interaction_fnc_showMouseHint;
-    };
-},{true}, nil, nil, [0,0,0], shto_interaction_distance, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;
+_action = ["Set Charge", LLSTRING(Action_SetCharge), "", {}, {true}, nil, nil, [0, 0, 0], INTERACTION_DISTANCE, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;
 ["shto_vn_m101_shell", 0, ["M101 Shell"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["Set Charge",LLSTRING(Action_SetCharge),"",{},{true}, nil, nil, [0,0,0], shto_interaction_distance, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;
-["shto_vn_m101_shell", 0, ["M101 Shell"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-
-_action = ["Charge 1",format [LLSTRING(Action_Charge), 1],"",{_target setVariable ["shto_charge", 1, true]},{true}, nil, nil, [0,0,0], shto_interaction_distance, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;["shto_vn_m101_shell", 0, ["M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-_action = ["Charge 2",format [LLSTRING(Action_Charge), 2],"",{_target setVariable ["shto_charge", 2, true]},{true}, nil, nil, [0,0,0], shto_interaction_distance, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;["shto_vn_m101_shell", 0, ["M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-_action = ["Charge 3",format [LLSTRING(Action_Charge), 3],"",{_target setVariable ["shto_charge", 3, true]},{true}, nil, nil, [0,0,0], shto_interaction_distance, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;["shto_vn_m101_shell", 0, ["M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-_action = ["Charge 4",format [LLSTRING(Action_Charge), 4],"",{_target setVariable ["shto_charge", 4, true]},{true}, nil, nil, [0,0,0], shto_interaction_distance, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;["shto_vn_m101_shell", 0, ["M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-_action = ["Charge 5",format [LLSTRING(Action_Charge), 5],"",{_target setVariable ["shto_charge", 5, true]},{true}, nil, nil, [0,0,0], shto_interaction_distance, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;["shto_vn_m101_shell", 0, ["M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
-
-[] spawn {
-  waitUntil{sleep 1;["interact_menu"] call ace_common_fnc_isModLoaded};
-  sleep 1;
-  ["shto_vn_m101_shell", 0,["ACE_MainActions","ACE_dragging_carry"]] call ace_interact_menu_fnc_removeActionFromClass;
-  ["shto_vn_m101_shell_ab", 0,["ACE_MainActions","ACE_dragging_carry"]] call ace_interact_menu_fnc_removeActionFromClass;
-  ["shto_vn_m101_shell_frag", 0,["ACE_MainActions","ACE_dragging_carry"]] call ace_interact_menu_fnc_removeActionFromClass;
-  ["shto_vn_m101_shell_wp", 0,["ACE_MainActions","ACE_dragging_carry"]] call ace_interact_menu_fnc_removeActionFromClass;
-  ["shto_vn_m101_shell_smk", 0,["ACE_MainActions","ACE_dragging_carry"]] call ace_interact_menu_fnc_removeActionFromClass;
-  ["shto_vn_m101_shell_illum", 0,["ACE_MainActions","ACE_dragging_carry"]] call ace_interact_menu_fnc_removeActionFromClass;
-
+for "_charge" from 1 to 5 do {
+    _action = [format ["Charge %1", _charge], format [LLSTRING(Action_Charge), _charge], "", {
+        params ["_target", "", "_charge"];
+        _target setVariable ["shto_charge", _charge, true];
+    }, {true}, nil, _charge, [0, 0, 0], INTERACTION_DISTANCE, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;
+    ["shto_vn_m101_shell", 0, ["M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 };

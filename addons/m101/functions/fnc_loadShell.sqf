@@ -3,8 +3,9 @@
 /*
  * Author: YannikH, toadball, Andx
  * Loads the shell a unit carries into the nearest M101: checks the breech is open and empty and the shell is at the
- * breech, puts the shell down (ACE dragging) and deletes it, and sends the load to the machine where the gun is
- * local (fnc_onLoadShell), which checks again, as another crew member may have loaded it in the meantime.
+ * breech, deletes the shell (ACE dragging ends the carry by itself once the carried object is gone) and sends the
+ * load to the machine where the gun is local (fnc_onLoadShell), which checks again, as another crew member may
+ * have loaded it in the meantime.
  * Runs on the machine of the carrying unit.
  *
  * Arguments:
@@ -46,7 +47,6 @@ private _magazine = [_shell] call FUNC(getMagazineFromShell);
 private _shellClass = typeOf _shell;
 private _charge = _shell getVariable ["shto_charge", 1];
 
-[_unit, _shell] call ace_dragging_fnc_dropObject;
 deleteVehicle _shell;
 
 [QGVAR(loadShell), [_gun, _magazine, _shellClass, _charge], _gun] call CBA_fnc_targetEvent;

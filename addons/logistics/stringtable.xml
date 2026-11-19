@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="shot_over">
     <Package name="logistics">
-        <Key ID="STR_shot_over_logistics_Action_CarryShell">
-            <English>Carry Shell</English>
-        </Key>
         <Key ID="STR_shot_over_logistics_Action_Charge">
             <English>Charge %1</English>
         </Key>
@@ -22,14 +19,17 @@
         <Key ID="STR_shot_over_logistics_Action_TakeFormat">
             <English>Take %1</English>
         </Key>
+        <Key ID="STR_shot_over_logistics_Action_TakeFormatStock">
+            <English>Take %1 (%2 left)</English>
+        </Key>
         <Key ID="STR_shot_over_logistics_Action_TakePallet">
             <English>Take Pallet</English>
         </Key>
         <Key ID="STR_shot_over_logistics_Action_UnpackCrate">
             <English>Unpack Crate</English>
         </Key>
-        <Key ID="STR_shot_over_logistics_Hint_Load">
-            <English>Load</English>
+        <Key ID="STR_shot_over_logistics_Hint_LoadShell">
+            <English>Right click at the open breech to load the shell</English>
         </Key>
         <Key ID="STR_shot_over_logistics_Hint_NoHowitzer">
             <English>No howitzer nearby</English>

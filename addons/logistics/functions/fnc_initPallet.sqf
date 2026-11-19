@@ -1,59 +1,56 @@
-params ["_pallet","_cratesCount"];
-//params ["_pallet","_cratesCount","_cratesClass","_yPos"];
+#include "..\script_component.hpp"
+
+/*
+ * Author: YannikH, toadball, Andx
+ * Stacks a pallet with crates on the server: attached simple objects, three per layer, each layer turned by 90°,
+ * replacing any crates it already had. Stores them as shto_crateList and their number as shto_cratesleft (both
+ * public) and sets the ACE cargo size. Init event handler of the pallets, so it also runs on clients; it only acts
+ * on the server, which owns the crates (a client deleting them on joining would remove them for everyone).
+ *
+ * Arguments:
+ * 0: Pallet <OBJECT>
+ * 1: Number of crates (default: the pallet's crateCount) <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_pallet, 12] call shot_over_logistics_fnc_initPallet
+ *
+ * Public: No
+ */
+
+params [["_pallet", objNull, [objNull]], ["_crateCount", -1, [0]]];
+
+if (!isServer || {isNull _pallet}) exitWith {};
+
 {
-	if (!isNil "_x") then {deleteVehicle _x};
-} forEach (_pallet getVariable ["shto_crateList",[]]);
+    deleteVehicle _x;
+} forEach (_pallet getVariable ["shto_crateList", []]);
 
-if (!isServer) exitWith {};
+private _config = configOf _pallet;
+if (_crateCount < 0) then {
+    _crateCount = getNumber (_config >> "crateCount");
+};
+private _crateClass = getText (_config >> "crateClass");
+private _height = getNumber (_config >> "yOffset");
 
-private _palletClass = typeOf _pallet;
-if (isNil "_cratesCount") then { _cratesCount = getNumber (configFile >> "CfgVehicles" >> _palletClass >> "crateCount"); };
-private _cratesClass = getText (configFile >> "CfgVehicles" >> _palletClass >> "crateClass");
-private _yPos = getNumber (configFile >> "CfgVehicles" >> _palletClass >> "yOffset");
-
-private _bas = floor (_cratesCount / 3);
-private _exs = _cratesCount mod 3;
-
-private _curLevel = 0;
-private _cratesArray = [];
-
-for [{_level = 1}, {_level <= _bas}, {_level = _level + 1}] do {
-   _xPos = -0.35;
-   for [{_box = 0}, {_box < 3}, {_box = _box + 1}] do {
-     //private _crate = _cratesClass createVehicle getPos _pallet;
-     private _crate = createSimpleObject  [_cratesClass, (getPosASL _pallet)];
-     _cratesArray pushBack _crate;
-     if ((_level mod 2) > 0) then {
-       _crate attachTo [_pallet, [0.0, _xPos, _yPos]];
-       _crate setVectorDirAndUp [[0,1,0], [0,0,1]];
-     } else {
-       _crate attachTo [_pallet, [_xPos, 0.0, _yPos]];
-       _crate setVectorDirAndUp [[1,0,0], [0,0,1]];
-     };
-     _xPos = _xPos + 0.35;
-   };
-   _yPos = _yPos + 0.2;
-   _curLevel = _level;
+private _crates = [];
+for "_index" from 0 to _crateCount - 1 do {
+    private _layer = floor (_index / 3);
+    private _offset = -0.35 + (_index % 3) * 0.35;
+    private _crate = createSimpleObject [_crateClass, getPosASL _pallet];
+    // the first, third, ... layer lies along the pallet's y axis, the others along its x axis
+    if (_layer % 2 == 0) then {
+        _crate attachTo [_pallet, [0, _offset, _height + _layer * 0.2]];
+        _crate setVectorDirAndUp [[0, 1, 0], [0, 0, 1]];
+    } else {
+        _crate attachTo [_pallet, [_offset, 0, _height + _layer * 0.2]];
+        _crate setVectorDirAndUp [[1, 0, 0], [0, 0, 1]];
+    };
+    _crates pushBack _crate;
 };
 
-if (_exs > 0) then {
- _curLevel = _curLevel + 1;
- _xPos = -0.35;
- for [{_box = 0}, {_box < _exs}, {_box = _box + 1}] do {
-   //private _crate = _cratesClass createVehicle getPos _pallet;
-   private _crate = createSimpleObject  [_cratesClass, getPosASL _pallet];
-   _cratesArray pushBack _crate;
-   if ((_curLevel mod 2) > 0) then {
-     _crate attachTo [_pallet, [0.0, _xPos, _yPos]];
-     _crate setVectorDirAndUp [[0,1,0], [0,0,1]];
-   } else {
-     _crate attachTo [_pallet, [_xPos, 0.0, _yPos]];
-     _crate setVectorDirAndUp [[1,0,0], [0,0,1]];
-   };
-   _xPos = _xPos + 0.35;
- };
-};
-
-[_pallet, (ceil(_cratesCount / 21) * 5)] call ace_cargo_fnc_setSize;
-_pallet setVariable ["shto_crateList",_cratesArray,true];
-_pallet setVariable ["shto_cratesleft",count (_cratesArray),true];
+_pallet setVariable ["shto_crateList", _crates, true];
+_pallet setVariable ["shto_cratesleft", count _crates, true];
+[_pallet, PALLET_CARGO_SIZE(count _crates)] call ace_cargo_fnc_setSize;
