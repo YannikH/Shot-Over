@@ -50,8 +50,8 @@ A press turns a dial by 1 mil; hold the key to turn it faster. The keys can be c
 
 **Direction**:
 
-1. Set the deflection of the fire mission (right panel, tape at the bottom). The view swings away from the aiming point: the telescope looks the deflection to the right of the barrel, all the way round from 0 to 6400 mils.
-2. Traverse the gun with the mouse until the aiming point is back on the vertical line. The deflection reading does not change while you traverse; telescope and gun turn together.
+1. Set the deflection of the fire mission (right panel, tape at the bottom). The view swings away from the aiming stakes: the telescope looks the deflection to the right of the barrel, all the way round from 0 to 6400 mils.
+2. Traverse the gun with the mouse until the aiming stakes are back on the vertical line, the near one in front of the far one. The deflection reading does not change while you traverse; telescope and gun turn together.
 
 Raising the deflection therefore lays the gun further left.
 
@@ -60,8 +60,15 @@ Raising the deflection therefore lays the gun further left.
 1. Set the quadrant of the fire mission (left panel).
 2. Elevate the gun with ++page-up++ / ++page-down++ until the bubble is centred and **LEVEL** shows; tap the key for the last mils. The bubble moves to **HIGH** when the barrel is too high and to **LOW** when it is too low.
 
-!!! note "Deflection needs an aiming point"
-    Deflection is measured from an aiming point, not from north. Aiming stakes and a deflection in the FDC notebook will come in a later version; until then, lay the direction with ACE's **AZ** readout.
+### Aiming stakes
+
+Deflection is measured from the aiming stakes, not from north. Put them out once, when the gun is in position:
+
+1. Lay the gun on the direction it should cover, for example the azimuth the FDC orders, with ACE's **AZ** readout.
+2. A crew member on foot, at the telescope on the left of the gun by the gunner's seat, uses the interaction **Emplace Aiming Stakes**. Two stakes go up 25 m and 50 m from the gun, where the telescope sees them at deflection **2800**, and the gun's deflection dial is set to 2800.
+3. The direction the gun pointed is now its **azimuth of lay**. It shows in a hint and in the sights under the deflection (**AZ OF LAY**). Pass it to the FDC: it goes into the notebook, which then gives the deflection for every fire mission.
+
+The stakes stay until someone uses **Recover Aiming Stakes** at the telescope, or the gun is removed. If the gun is moved, recover the stakes and put them out again: the azimuth of lay changes with it.
 
 ## Charges and ranges
 

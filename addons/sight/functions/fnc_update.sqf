@@ -49,6 +49,10 @@ if (isNull _display) exitWith {};
 
 (_display displayCtrl IDC_DEFLECTION) ctrlSetText ([_deflection, 4] call CBA_fnc_formatNumber);
 (_display displayCtrl IDC_QUADRANT) ctrlSetText str _quadrant;
+private _azimuthOfLay = _gun getVariable [QGVAR(azimuthOfLay), -1];
+(_display displayCtrl IDC_AZIMUTH_OF_LAY) ctrlSetText (
+    [format [LLSTRING(AzimuthOfLay), [_azimuthOfLay, 4] call CBA_fnc_formatNumber], ""] select (_azimuthOfLay < 0)
+);
 
 // the tape's mark for the deflection under the cover's index; a second tape one turn further fills the window
 // around 0/6400

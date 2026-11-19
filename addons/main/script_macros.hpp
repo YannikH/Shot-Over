@@ -16,3 +16,7 @@
     // LINKFUNC / PREP_RECOMPILE_START / PREP_RECOMPILE_END already match ACE3's script_debug.hpp for this branch - not redefined here.
     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
+
+// Deflection (mils) at which the crew emplaces the aiming stakes (sight) and from which the FDC notebook works out
+// the deflection of a fire mission (fcs): 2800, as for the real M101's aiming posts
+#define REFERRED_DEFLECTION 2800

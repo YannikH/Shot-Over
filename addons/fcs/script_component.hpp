@@ -30,5 +30,7 @@
 #define IDC_SOLUTIONS 1800
 #define IDC_SOLUTION_LINES 1801
 #define IDC_SHELL_TYPE 2100
+#define IDC_AZIMUTH_OF_LAY 1505
+#define IDC_DEFLECTION 1021
 // Layer of the minimized notebook (cutRsc)
 #define MINIMIZED_LAYER 95010

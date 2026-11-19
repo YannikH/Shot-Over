@@ -100,7 +100,7 @@ class shto_calculator {
             idc = 1001;
             text = CSTRING(calculator_RscText_1001_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
-            y = QUOTE(0.379 * safezoneH + safezoneY);
+            y = QUOTE(0.395 * safezoneH + safezoneY);
             w = QUOTE(0.0758837 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -109,7 +109,7 @@ class shto_calculator {
             idc = 1005;
             text = CSTRING(calculator_RscText_1005_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
-            y = QUOTE(0.412 * safezoneH + safezoneY);
+            y = QUOTE(0.428 * safezoneH + safezoneY);
             w = QUOTE(0.0383721 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -118,7 +118,7 @@ class shto_calculator {
             idc = 1006;
             text = CSTRING(calculator_RscText_1006_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
-            y = QUOTE(0.434 * safezoneH + safezoneY);
+            y = QUOTE(0.45 * safezoneH + safezoneY);
             w = QUOTE(0.0383721 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -127,7 +127,7 @@ class shto_calculator {
             idc = 1007;
             text = CSTRING(calculator_RscText_1007_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
-            y = QUOTE(0.456 * safezoneH + safezoneY);
+            y = QUOTE(0.472 * safezoneH + safezoneY);
             w = QUOTE(0.0383721 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -136,7 +136,7 @@ class shto_calculator {
             idc = 1008;
             text = CSTRING(calculator_RscText_1008_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
-            y = QUOTE(0.5 * safezoneH + safezoneY);
+            y = QUOTE(0.511 * safezoneH + safezoneY);
             w = QUOTE(0.0383721 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -227,7 +227,7 @@ class shto_calculator {
         {
             idc = 1402;
             x = QUOTE(0.423255 * RELX + safezoneX);
-            y = QUOTE(0.412 * safezoneH + safezoneY);
+            y = QUOTE(0.428 * safezoneH + safezoneY);
             w = QUOTE(0.0575581 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -236,7 +236,7 @@ class shto_calculator {
         {
             idc = 1403;
             x = QUOTE(0.423256 * RELX + safezoneX);
-            y = QUOTE(0.434 * safezoneH + safezoneY);
+            y = QUOTE(0.45 * safezoneH + safezoneY);
             w = QUOTE(0.0575581 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -245,7 +245,7 @@ class shto_calculator {
         {
             idc = 2100;
             x = QUOTE(0.423256 * RELX + safezoneX);
-            y = QUOTE(0.456 * safezoneH + safezoneY);
+            y = QUOTE(0.472 * safezoneH + safezoneY);
             w = QUOTE(0.0575581 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
             colorBackground[] = {0,0,0,0};
@@ -260,9 +260,9 @@ class shto_calculator {
         {
             idc = 1404;
             x = QUOTE(0.388721 * RELX + safezoneX);
-            y = QUOTE(0.533 * safezoneH + safezoneY);
+            y = QUOTE(0.544 * safezoneH + safezoneY);
             w = QUOTE(0.082093 * RELWIDTH);
-            h = QUOTE(0.099 * safezoneH);
+            h = QUOTE(0.088 * safezoneH);
             text = "_____________________________________________________________________________________________________________";
         };
         class RscEdit_1404U: RscEdit_1404 { idc = 1504; type = 2; text = ""; };
@@ -275,7 +275,7 @@ class shto_calculator {
             x = QUOTE(0.503837 * RELX + safezoneX);
             y = QUOTE(0.3 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
-            h = QUOTE(0.32 * safezoneH);
+            h = QUOTE(0.3 * safezoneH);
             columns[] = {0.05,0.35,0.7};
             rowHeight = QUOTE(0.04 * safeZoneH);
             sizeEx = "0.03 * safeZoneH";
@@ -301,7 +301,7 @@ class shto_calculator {
             idc = 1013;
             text = CSTRING(calculator_RscText_1013_Text);
             x = QUOTE(0.506837 * RELX + safezoneX);
-            y = QUOTE(0.643 * safezoneH + safezoneY);
+            y = QUOTE(0.623 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -310,7 +310,7 @@ class shto_calculator {
             idc = 1014;
             text = "";
             x = QUOTE(0.54837 * RELX + safezoneX);
-            y = QUOTE(0.643 * safezoneH + safezoneY);
+            y = QUOTE(0.623 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
             colorText[] = COLOR_BALLPENTEXT;
@@ -320,7 +320,7 @@ class shto_calculator {
             idc = 1015;
             text = CSTRING(calculator_RscText_1015_Text);
             x = QUOTE(0.506837 * RELX + safezoneX);
-            y = QUOTE(0.663 * safezoneH + safezoneY);
+            y = QUOTE(0.643 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
         };
@@ -329,7 +329,7 @@ class shto_calculator {
             idc = 1016;
             text = "";
             x = QUOTE(0.54837 * RELX + safezoneX);
-            y = QUOTE(0.663 * safezoneH + safezoneY);
+            y = QUOTE(0.643 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
             colorText[] = COLOR_BALLPENTEXT;
@@ -339,7 +339,7 @@ class shto_calculator {
             idc = 1017;
             text = "";
             x = QUOTE(0.506837 * RELX + safezoneX);
-            y = QUOTE(0.623 * safezoneH + safezoneY);
+            y = QUOTE(0.603 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
             colorText[] = COLOR_BALLPENTEXT;
@@ -354,7 +354,30 @@ class shto_calculator {
             h = QUOTE(0.022 * safezoneH);
             colorText[] = COLOR_BALLPENTEXT;
         };
-
+        // the firing unit's azimuth of lay (from the aiming stakes) and the deflection worked out from it
+        class AzimuthOfLayText: RscText_1005
+        {
+            idc = 1019;
+            text = CSTRING(calculator_AzimuthOfLay_Text);
+            y = QUOTE(0.368 * safezoneH + safezoneY);
+        };
+        class AzimuthOfLayField: RscEdit_1402
+        {
+            idc = 1405;
+            y = QUOTE(0.368 * safezoneH + safezoneY);
+        };
+        class AzimuthOfLayFieldU: AzimuthOfLayField {idc = 1505; type = 2; text = "";};
+        class DeflectionText: RscText_1015
+        {
+            idc = 1020;
+            text = CSTRING(calculator_Deflection_Text);
+            y = QUOTE(0.663 * safezoneH + safezoneY);
+        };
+        class DeflectionValue: RscText_1016
+        {
+            idc = 1021;
+            y = QUOTE(0.663 * safezoneH + safezoneY);
+        };
     };
 };
 
@@ -482,6 +505,17 @@ class RscTitles {
                 text = CSTRING(calculator_minimized_RscText_1012_Text);
                 y = QUOTE(TOP + SECONDSET + LINE(4));
                 style = 1;
+            };
+            class DeflectionText: RscText_1015
+            {
+                idc = 1020;
+                text = CSTRING(calculator_Deflection_Text);
+                y = QUOTE(TOP + SECONDSET + LINE(3));
+            };
+            class DeflectionValue: RscText_1016
+            {
+                idc = 1021;
+                y = QUOTE(TOP + SECONDSET + LINE(3));
             };
         };
     }; // notebook minimized

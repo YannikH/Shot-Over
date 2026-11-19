@@ -33,10 +33,11 @@ private _page = if (_minimized) then {
         ctrlText (_dialog displayCtrl IDC_TARGET_GRID),
         ctrlText (_dialog displayCtrl IDC_TARGET_ELEVATION),
         ctrlText (_dialog displayCtrl IDC_NOTES),
-        lbCurSel (_dialog displayCtrl IDC_SHELL_TYPE)
+        lbCurSel (_dialog displayCtrl IDC_SHELL_TYPE),
+        ctrlText (_dialog displayCtrl IDC_AZIMUTH_OF_LAY)
     ]
 };
-_page params [["_ownGrid", "", [""]], ["_ownElevation", "", [""]], ["_targetGrid", "", [""]], ["_targetElevation", "", [""]], "", ["_shellType", 0, [0]]];
+_page params [["_ownGrid", "", [""]], ["_ownElevation", "", [""]], ["_targetGrid", "", [""]], ["_targetElevation", "", [""]], "", ["_shellType", 0, [0]], ["_azimuthOfLay", "", [""]]];
 
 private _solutionsCtrl = _dialog displayCtrl IDC_SOLUTIONS;
 private _linesCtrl = _dialog displayCtrl IDC_SOLUTION_LINES;
@@ -47,7 +48,7 @@ _linesCtrl lnbAddRow ["", "", ""];
 // the controls keep the last page's values, which an unworkable page must not show
 {
     (_dialog displayCtrl _x) ctrlSetText "";
-} forEach [IDC_DIRECTION, IDC_DISTANCE, IDC_TARGET_NEAR, IDC_OWN_NEAR];
+} forEach [IDC_DIRECTION, IDC_DISTANCE, IDC_TARGET_NEAR, IDC_OWN_NEAR, IDC_DEFLECTION];
 
 // a grid has as many easting as northing digits
 private _isGrid = {_this != "" && {count _this % 2 == 0}};
@@ -79,5 +80,13 @@ private _magazines = CHARGES apply {format [MAGAZINE_FORMAT, _shell, _x]};
     _linesCtrl lnbAddRow ["____", "____", "____"];
 } forEach ([_magazines, _distance, _height] call FUNC(getFiringSolutionsForMagazines));
 
-(_dialog displayCtrl IDC_DIRECTION) ctrlSetText format [LLSTRING(Format_Mils), round ((_ownPos getDir _targetPos) * 6400 / 360)];
+private _direction = round ((_ownPos getDir _targetPos) * 6400 / 360) % 6400;
+(_dialog displayCtrl IDC_DIRECTION) ctrlSetText format [LLSTRING(Format_Mils), _direction];
 (_dialog displayCtrl IDC_DISTANCE) ctrlSetText format [LLSTRING(Format_Meters), round _distance];
+
+// the gunner sees the aiming stakes at the referred deflection when laid on the azimuth of lay; the deflection
+// grows as the gun turns left of it ("left add")
+if (_azimuthOfLay != "") then {
+    private _deflection = (REFERRED_DEFLECTION + parseNumber _azimuthOfLay - _direction + 12800) % 6400;
+    (_dialog displayCtrl IDC_DEFLECTION) ctrlSetText format [LLSTRING(Format_Mils), [_deflection, 4] call CBA_fnc_formatNumber];
+};

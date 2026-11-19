@@ -101,7 +101,7 @@ class RscTitles {
                 x = QUOTE(PANEL_RIGHT_X);
                 y = QUOTE(PANEL_Y);
                 w = QUOTE(PANEL_W);
-                h = QUOTE(PANEL_SIZE * 0.5);
+                h = QUOTE(PANEL_SIZE * 0.62);
             };
             class DeflectionTitle: RscText {
                 idc = -1;
@@ -123,6 +123,14 @@ class RscTitles {
                 sizeEx = QUOTE(TEXT_SIZE * 1.5);
                 y = QUOTE(PANEL_Y + PANEL_SIZE * 0.22);
                 h = QUOTE(TEXT_SIZE * 1.8);
+            };
+            // the gun's azimuth of lay once the aiming stakes are out, for the FDC
+            class AzimuthOfLay: DeflectionTitle {
+                idc = IDC_AZIMUTH_OF_LAY;
+                text = "";
+                font = FONT_TEXT;
+                sizeEx = QUOTE(TEXT_SIZE * 0.8);
+                y = QUOTE(PANEL_Y + PANEL_SIZE * 0.47);
             };
 
             // left panel: quadrant counter and level bubble
