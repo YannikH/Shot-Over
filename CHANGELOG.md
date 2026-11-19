@@ -16,8 +16,8 @@ version, and start a fresh empty [Unreleased] section above it. -->
 ### Added
 
 - Sight - The M101 gunner can lay the gun with its sights: a panoramic telescope with deflection dial and tape, and a quadrant with a level bubble (#37) by Andx
-- Sight - The crew can emplace aiming stakes at the gun; the gun's azimuth of lay shows in a hint and in the sights (#PR) by Andx
-- FCS - The FDC notebook takes the gun's azimuth of lay and gives the deflection for the gunner's sights (#PR) by Andx
+- Sight - The crew can emplace aiming stakes at the gun; the gun's azimuth of lay shows in a hint and in the sights (#38) by Andx
+- FCS - The FDC notebook takes the gun's azimuth of lay and gives the deflection for the gunner's sights (#38) by Andx
 
 ### Changed
 
