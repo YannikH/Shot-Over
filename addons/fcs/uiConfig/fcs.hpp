@@ -203,7 +203,7 @@ class shto_calculator {
             sizeEx = 0.05;
             tooltipColorBox[] = {0,0,0,0};
             colorBorder[] = {0, 0, 0, 0};
-            style = "16 + 512";
+            style = 16 + 512; // ST_MULTI + ST_NO_RECT
             linespacing = 1;
             text = "__________";
             type = 0;
