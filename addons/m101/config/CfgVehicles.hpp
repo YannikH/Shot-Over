@@ -42,7 +42,10 @@ class CfgVehicles {
         };
     class shto_vn_static_m101_02_base: vn_b_army_static_m101_02 {
       //crew = "B_UAV_AI";
-      displayName = "M101 Howitzer (Shot, Over!)";
+      displayName = CSTRING(static_m101_02_base_DisplayName);
+      scope = 2;
+      scopeCurator = 2;
+      editorSubcategory = "shot_over_guns";
       model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01.p3d";
       class Turrets: Turrets {
           class MainTurret: MainTurret {
@@ -74,30 +77,22 @@ class CfgVehicles {
 
     class vn_b_pack_lw_06;
     class shto_rto_pack: vn_b_pack_lw_06 {
-      displayName = "FDC Backpack (Shot, Over!)";
+      displayName = CSTRING(rto_pack_DisplayName);
     };
     class vn_b_prop_prc77_01;
     class shto_vn_prop_prc77_01: vn_b_prop_prc77_01 {
-      displayName = "PRC-77 Radio (Shot, Over!)";
+      displayName = CSTRING(prop_prc77_01_DisplayName);
+      scope = 2;
+      scopeCurator = 2;
+      editorCategory = "shot_over";
+      editorSubcategory = "shot_over_supplies";
       ace_dragging_canDrag = 1;
       ace_dragging_dragPosition[] = {0, 1.2, 0};
       ace_dragging_dragDirection = 0;
       ace_dragging_canCarry = 1;
       ace_dragging_carryPosition[] = {0, 1.2, 0};
       ace_dragging_carryDirection = 0;
-      class AcreRacks {
-        class Rack_1 {
-          displayName = "Radio"; // Name is displayed in the interaction menu.
-          shortName = "Radio";
-          componentName = "ACRE_VRC64";
-          allowedPositions[] = {"external"};
-          disabledPositions[] = {};
-          defaultComponents[] = {};
-          mountedRadio = "ACRE_PRC77";                 // Predefined mounted radio
-          isRadioRemovable = 0;
-          intercom[] = {};                   // All units in intercom will be able to hear/send transmittions (ACE3 interaction menu) but they cannot manipulate the radio (GUI interface)
-        };
-      };
+      // the ACRE radio rack is added by compat_acre when ACRE is loaded
     };
 
  

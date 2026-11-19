@@ -1,7 +1,7 @@
 class CfgFactionClasses {
     class NO_CATEGORY;
     class shot_over: NO_CATEGORY {
-        displayName = "shot_over";
+        displayName = CSTRING(shot_over_DisplayName);
         priority = 2;
         side = 7;
     };
@@ -9,6 +9,6 @@ class CfgFactionClasses {
 
 class CfgVehicleClasses {
     class shot_over_Vehicles {
-        displayName = "shot_over Vehicles";
+        displayName = CSTRING(shot_over_Vehicles_DisplayName);
     };
 };

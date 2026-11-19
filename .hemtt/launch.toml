@@ -6,3 +6,10 @@ workshop = [
 dlc = [
     "S.O.G. Prairie Fire",
 ]
+
+# ACRE2 compatibility (addons/compat_acre), chained after another profile: hemtt launch default acre
+[acre]
+extends = "default"
+workshop = [
+    "751965892", # ACRE2
+]

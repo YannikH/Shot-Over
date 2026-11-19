@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="shot_over">
+    <Package name="main">
+        <Key ID="STR_shot_over_main_EditorCategory">
+            <English>Shot, Over!</English>
+        </Key>
+        <Key ID="STR_shot_over_main_EditorSubcategory_Ammunition">
+            <English>Ammunition</English>
+        </Key>
+        <Key ID="STR_shot_over_main_EditorSubcategory_Guns">
+            <English>Shot, Over!</English>
+        </Key>
+        <Key ID="STR_shot_over_main_EditorSubcategory_Supplies">
+            <English>Supplies</English>
+        </Key>
+        <Key ID="STR_shot_over_main_shot_over_DisplayName">
+            <English>shot_over</English>
+        </Key>
+        <Key ID="STR_shot_over_main_shot_over_Vehicles_DisplayName">
+            <English>shot_over Vehicles</English>
+        </Key>
+    </Package>
+</Project>

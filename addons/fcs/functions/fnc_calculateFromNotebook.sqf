@@ -1,3 +1,5 @@
+#include "..\script_component.hpp"
+
 params ["_minimized"];
 private _dialog = uiNamespace getVariable "shto_fcs_dialog";
 
@@ -40,7 +42,7 @@ private _tgtElev = parseNumber _tgtElevStr;
 			(_dialog displayCtrl _idc) ctrlSetText "";
 		};
 	};
-} forEach [["Tgt near %1", _tgtPos, 1017], ["We're near %1", _ownPos, 1018]];
+} forEach [[LLSTRING(TargetNear), _tgtPos, 1017], [LLSTRING(OwnNear), _ownPos, 1018]];
 
 
 //systemChat str [_ownPos, _tgtPos, _ownElev, _tgtElev];
@@ -54,11 +56,11 @@ private _magazines = [1, 2, 3, 4, 5] apply {format ["shto_105mm_mag_%1_x1_c%2", 
 private _solutions = [_magazines, _dist, -_altDiff] call shot_over_fcs_fnc_getFiringSolutionsForMagazines;
 lnbClear (_dialog displayCtrl 1800);
 lnbClear (_dialog displayCtrl 1801);
-(_dialog displayCtrl 1800) lnbAddRow ["Charge", "Elevation", "TOF"];
+(_dialog displayCtrl 1800) lnbAddRow [LLSTRING(Column_Charge), LLSTRING(Column_Elevation), LLSTRING(Column_TOF)];
 (_dialog displayCtrl 1801) lnbAddRow ["", "", ""];
 {
 	(_dialog displayCtrl 1800 )lnbAddRow [ str round (_x # 0), str round (_x # 1), str ([(_x # 2), 1] call BIS_fnc_cutDecimals)];
 	(_dialog displayCtrl 1801 )lnbAddRow ["____","____","____"];
 } forEach _solutions;
-(_dialog displayCtrl 1014) ctrlSetText format["%1 mils", round (_dir / 360 * 6400)];
-(_dialog displayCtrl 1016) ctrlSetText format["%1m", round _dist];
+(_dialog displayCtrl 1014) ctrlSetText format[LLSTRING(Format_Mils), round (_dir / 360 * 6400)];
+(_dialog displayCtrl 1016) ctrlSetText format[LLSTRING(Format_Meters), round _dist];

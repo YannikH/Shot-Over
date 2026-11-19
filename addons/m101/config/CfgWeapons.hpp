@@ -8,7 +8,7 @@ class CfgWeapons {
         modes[] = {"Single"};
         reloadTime = 0;
         magazineReloadTime = 0;
-        displayName = "M101 105mm Howitzer";
+        displayName = CSTRING(howitzer_105mm_base_DisplayName);
         magazines[] = {
             "shto_105mm_mag_he_x1_c1","shto_105mm_mag_he_x1_c2", "shto_105mm_mag_he_x1_c3", "shto_105mm_mag_he_x1_c4", "shto_105mm_mag_he_x1_c5",
             "shto_105mm_mag_ab_x1_c1","shto_105mm_mag_ab_x1_c2", "shto_105mm_mag_ab_x1_c3", "shto_105mm_mag_ab_x1_c4", "shto_105mm_mag_ab_x1_c5",

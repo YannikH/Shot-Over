@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="shot_over">
+    <Package name="compat_acre">
+        <Key ID="STR_shot_over_compat_acre_Rack_DisplayName">
+            <English>Radio</English>
+        </Key>
+        <Key ID="STR_shot_over_compat_acre_Rack_ShortName">
+            <English>Radio</English>
+        </Key>
+    </Package>
+</Project>
