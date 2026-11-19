@@ -13,6 +13,8 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-19
+
 ### Added
 
 - Main - Mod icon in the launcher and main menu, and a Workshop preview image, in the ANDX branding (#19) by Andx
