@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 shto_interaction_distance = 20;
-_action = ["Open Breech","Open Breech","",{
+_action = ["Open Breech",LLSTRING(Action_OpenBreech),"",{
 	//_target animatesource ["m101_reload_source",0.8375, 2];
 	_target animatesource ["m101_reload_source",0.7, 3];
 	
@@ -24,7 +24,7 @@ _action = ["Open Breech","Open Breech","",{
 //}, nil, nil, {[_target, [0,-1.8,0.5]] call shot_over_m101_fnc_posAlongRecoilAxis;}, SHTO_INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
 //["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["Close Breech","Close Breech","",{
+_action = ["Close Breech",LLSTRING(Action_CloseBreech),"",{
 	_target animatesource ["m101_reload_source",0, 4];
 },{
 	((_target animationSourcePhase "m101_reload_source") < 0.31) &&
@@ -32,7 +32,7 @@ _action = ["Close Breech","Close Breech","",{
 }, nil, nil, {[_target, [0.35,-1.07,0.8]] call shot_over_m101_fnc_posAlongRecoilAxis;}, shto_interaction_distance] call ace_interact_menu_fnc_createAction;
 ["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["Fire Howitzer","Fire Howitzer","",{
+_action = ["Fire Howitzer",LLSTRING(Action_FireHowitzer),"",{
 	if (!isNull (gunner _target)) then {
 		[_target, player] remoteExecCall ["shot_over_m101_fnc_remoteFireHowitzer", gunner _target];
 	} else {
@@ -43,16 +43,16 @@ _action = ["Fire Howitzer","Fire Howitzer","",{
 }, nil, nil, {[_target, [0.2,-1,0.25]] call shot_over_m101_fnc_posAlongRecoilAxis;}, shto_interaction_distance] call ace_interact_menu_fnc_createAction;
 ["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["Traverse Turret","Traverse Turret","",{
+_action = ["Traverse Turret",LLSTRING(Action_TraverseTurret),"",{
 	private _direction = (direction _target) - (_target animationPhase "mainturret") * 57.2958; // around otocvez
-	hint format ["Direction: %1 mils", round (_direction * (6400 / 360))];
+	hint format [LLSTRING(Hint_Direction), round (_direction * (6400 / 360))];
 },{true}, nil, nil,
 {[_target, [-0.5,-0.5,0]] call shot_over_m101_fnc_posAlongDirection;}, 1, [false, false, false, true, false]] call ace_interact_menu_fnc_createAction;
 ["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["Elevate Turret","Elevate Turret","",{
+_action = ["Elevate Turret",LLSTRING(Action_ElevateTurret),"",{
 	private _direction = (_target animationPhase "maingun") * 57.2958; // around otocvez
-	hint format ["Elevation: %1 mils", round (_direction * (6400 / 360))];
+	hint format [LLSTRING(Hint_Elevation), round (_direction * (6400 / 360))];
 },{true}, nil, nil, 
 {[_target, [0.4,-0.3,0.2]] call shot_over_m101_fnc_posAlongDirection;}, 1, [false, false, false, true, false]] call ace_interact_menu_fnc_createAction;
 ["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;

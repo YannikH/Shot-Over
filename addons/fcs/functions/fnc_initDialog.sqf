@@ -1,3 +1,5 @@
+#include "..\script_component.hpp"
+
 params ["_dialog", ["_pageChange", 0], ["_minimized", false]];
 // systemChat str _this;
 if (!_minimized) then {95010 cutText ["", "PLAIN"];};
@@ -22,20 +24,20 @@ private _page = if (_openPage >= count _pages) then [{_lastPage}, {(_pages # _op
 	(_dialog displayCtrl _x) ctrlSetText (_page # _forEachIndex);
 } forEach [1500, 1501, 1502, 1503, 1504];
 private _combo = _dialog displayCtrl 2100;
-_combo lbAdd "HE";
-_combo lbAdd "Airburst";
-_combo lbAdd "FRAG";
-_combo lbAdd "WP";
-_combo lbAdd "Smoke";
-_combo lbAdd "Lume";
+_combo lbAdd LLSTRING(Shell_HE);
+_combo lbAdd LLSTRING(Shell_Airburst);
+_combo lbAdd LLSTRING(Shell_FRAG);
+_combo lbAdd LLSTRING(Shell_WP);
+_combo lbAdd LLSTRING(Shell_Smoke);
+_combo lbAdd LLSTRING(Shell_Lume);
 _combo lbSetCurSel _page # 5;
 
 lnbClear (_dialog displayCtrl 1800);
 lnbClear (_dialog displayCtrl 1801);
 
-(_dialog displayCtrl 1800) lnbAddRow ["Charge", "Elevation", "TOF"];
+(_dialog displayCtrl 1800) lnbAddRow [LLSTRING(Column_Charge), LLSTRING(Column_Elevation), LLSTRING(Column_TOF)];
 (_dialog displayCtrl 1801) lnbAddRow ["", "", ""];
 
-(_dialog displayCtrl 1000) ctrlSetText format["FIREMISSION %1/%2", _openPage + 1, count _pages max 1];
+(_dialog displayCtrl 1000) ctrlSetText format[LLSTRING(Firemission), _openPage + 1, count _pages max 1];
 missionNamespace setVariable ["shto_fcs_currentPage", _openPage];
 [_minimized] spawn shot_over_fcs_fnc_calculateFromNotebook;

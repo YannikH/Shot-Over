@@ -54,7 +54,7 @@ class shto_calculator {
         class TitleBase: RscText
         {
             idc = 1000;
-            text = "FIREMISSION 1/1"; //--- ToDo: Localize;
+            text = CSTRING(calculator_TitleBase_Text);
             x = QUOTE(0.39707 * RELX + safezoneX);
             y = QUOTE(0.28 * safezoneH + safezoneY);
             w = QUOTE(0.0758837 * RELWIDTH);
@@ -67,7 +67,7 @@ class shto_calculator {
         class TextBase: RscText
         {
             idc = 1002;
-            text = "Own Grid"; //--- ToDo: Localize;
+            text = CSTRING(calculator_TextBase_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.324 * safezoneH + safezoneY);
             w = QUOTE(0.0345349 * RELWIDTH);
@@ -80,7 +80,7 @@ class shto_calculator {
         class RscText_1003: TextBase
         {
             idc = 1003;
-            text = "Elevation"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1003_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.346 * safezoneH + safezoneY);
             w = QUOTE(0.0306977 * RELWIDTH);
@@ -89,7 +89,7 @@ class shto_calculator {
         class RscText_1004: TitleBase
         {
             idc = 1004;
-            text = "FIRING UNIT"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1004_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.302 * safezoneH + safezoneY);
             w = QUOTE(0.0558837 * RELWIDTH);
@@ -98,7 +98,7 @@ class shto_calculator {
         class RscText_1001: TitleBase
         {
             idc = 1001;
-            text = "TARGET INFO"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1001_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.379 * safezoneH + safezoneY);
             w = QUOTE(0.0758837 * RELWIDTH);
@@ -107,7 +107,7 @@ class shto_calculator {
         class RscText_1005: TextBase
         {
             idc = 1005;
-            text = "Target Grid"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1005_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.412 * safezoneH + safezoneY);
             w = QUOTE(0.0383721 * RELWIDTH);
@@ -116,7 +116,7 @@ class shto_calculator {
         class RscText_1006: TextBase
         {
             idc = 1006;
-            text = "Elevation"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1006_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.434 * safezoneH + safezoneY);
             w = QUOTE(0.0383721 * RELWIDTH);
@@ -125,7 +125,7 @@ class shto_calculator {
         class RscText_1007: TextBase
         {
             idc = 1007;
-            text = "Shell Type"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1007_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.456 * safezoneH + safezoneY);
             w = QUOTE(0.0383721 * RELWIDTH);
@@ -134,7 +134,7 @@ class shto_calculator {
         class RscText_1008: TitleBase
         {
             idc = 1008;
-            text = "NOTES"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1008_Text);
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.5 * safezoneH + safezoneY);
             w = QUOTE(0.0383721 * RELWIDTH);
@@ -143,7 +143,7 @@ class shto_calculator {
         class RscText_1010: TitleBase
         {
             idc = 1010;
-            text = "SOLUTION"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1010_Text);
             x = QUOTE(0.534535 * RELX + safezoneX);
             y = QUOTE(0.28 * safezoneH + safezoneY);
             w = QUOTE(0.0618837 * RELWIDTH);
@@ -152,7 +152,7 @@ class shto_calculator {
         class ButtonBase: RscButton
         {
             idc = 1011;
-            text = "BACK"; //--- ToDo: Localize;
+            text = CSTRING(calculator_ButtonBase_Text);
             x = QUOTE(0.388721 * RELX + safezoneX);
             y = QUOTE(0.698 * safezoneH + safezoneY);
             w = QUOTE(0.0468605 * RELWIDTH);
@@ -172,7 +172,7 @@ class shto_calculator {
         class RscText_1012: ButtonBase
         {
             idc = 1012;
-            text = "NEXT"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1012_Text);
             x = QUOTE(0.556744 * RELX + safezoneX);
             y = QUOTE(0.698 * safezoneH + safezoneY);
             w = QUOTE(0.0368605 * RELWIDTH);
@@ -182,7 +182,7 @@ class shto_calculator {
         class RscText_1009: ButtonBase
         {
             idc = 1009;
-            text = "CALC"; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1009_Text);
             x = QUOTE(0.450419 * RELX + safezoneX);
             y = QUOTE(0.653 * safezoneH + safezoneY);
             w = QUOTE(0.0303954 * RELWIDTH);
@@ -299,7 +299,7 @@ class shto_calculator {
         class RscText_1013: TitleBase
         {
             idc = 1013;
-            text = "Direction: "; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1013_Text);
             x = QUOTE(0.506837 * RELX + safezoneX);
             y = QUOTE(0.643 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
@@ -308,7 +308,7 @@ class shto_calculator {
         class RscText_1014: TitleBase
         {
             idc = 1014;
-            text = ""; //--- ToDo: Localize;
+            text = "";
             x = QUOTE(0.54837 * RELX + safezoneX);
             y = QUOTE(0.643 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
@@ -318,7 +318,7 @@ class shto_calculator {
         class RscText_1015: TitleBase
         {
             idc = 1015;
-            text = "Distance: "; //--- ToDo: Localize;
+            text = CSTRING(calculator_RscText_1015_Text);
             x = QUOTE(0.506837 * RELX + safezoneX);
             y = QUOTE(0.663 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
@@ -327,7 +327,7 @@ class shto_calculator {
         class RscText_1016: TitleBase
         {
             idc = 1016;
-            text = ""; //--- ToDo: Localize;
+            text = "";
             x = QUOTE(0.54837 * RELX + safezoneX);
             y = QUOTE(0.663 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
@@ -337,7 +337,7 @@ class shto_calculator {
         class RscText_1017: TitleBase
         {
             idc = 1017;
-            text = ""; //--- ToDo: Localize;
+            text = "";
             x = QUOTE(0.506837 * RELX + safezoneX);
             y = QUOTE(0.623 * safezoneH + safezoneY);
             w = QUOTE(0.0997674 * RELWIDTH);
@@ -347,7 +347,7 @@ class shto_calculator {
         class RscText_1018: TitleBase
         {
             idc = 1018;
-            text = ""; //--- ToDo: Localize;
+            text = "";
             x = QUOTE(0.384884 * RELX + safezoneX);
             y = QUOTE(0.623 * safezoneH + safezoneY);
             w = QUOTE(0.0977674 * RELWIDTH);
@@ -401,7 +401,7 @@ class RscTitles {
             class TitleBase: RscText
             {
                 idc = 1010;
-                text = "SOLUTION"; //--- ToDo: Localize;
+                text = CSTRING(calculator_minimized_TitleBase_Text);
                 x = QUOTE(safeZoneX + (0.025 * safeZoneH) + (WIDTH*0.05));
                 y = QUOTE(safeZoneY + safeZoneH - (0.45 * safeZoneH));
                 w = QUOTE((WIDTH*0.9));
@@ -441,14 +441,14 @@ class RscTitles {
             class RscText_1013: TitleBase
             {
                 idc = 1013;
-                text = "Direction: "; //--- ToDo: Localize;
+                text = CSTRING(calculator_minimized_RscText_1013_Text);
                 y = QUOTE(TOP + SECONDSET + LINE(1));
                 style = 0;
             };
             class RscText_1014: TitleBase
             {
                 idc = 1014;
-                text = ""; //--- ToDo: Localize;
+                text = "";
                 y = QUOTE(TOP + SECONDSET + LINE(1));
                 style = 2;
                 colorText[] = COLOR_BALLPENTEXT;
@@ -456,14 +456,14 @@ class RscTitles {
             class RscText_1015: TitleBase
             {
                 idc = 1015;
-                text = "Distance: "; //--- ToDo: Localize;
+                text = CSTRING(calculator_minimized_RscText_1015_Text);
                 y = QUOTE(TOP + SECONDSET + LINE(2));
                 style = 0;
             };
             class RscText_1016: TitleBase
             {
                 idc = 1016;
-                text = ""; //--- ToDo: Localize;
+                text = "";
                 y = QUOTE(TOP + SECONDSET + LINE(2));
                 style = 2;
                 colorText[] = COLOR_BALLPENTEXT;
@@ -471,7 +471,7 @@ class RscTitles {
             class RscText_1017: TitleBase
             {
                 idc = 1017;
-                text = ""; //--- ToDo: Localize;
+                text = "";
                 y = QUOTE(TOP + SECONDSET + LINE(0));
                 colorText[] = COLOR_BALLPENTEXT;
                 style = 0;
@@ -479,7 +479,7 @@ class RscTitles {
             class RscText_1012: TitleBase
             {
                 idc = 1012;
-                text = "NEXT"; //--- ToDo: Localize;
+                text = CSTRING(calculator_minimized_RscText_1012_Text);
                 y = QUOTE(TOP + SECONDSET + LINE(4));
                 style = 1;
             };

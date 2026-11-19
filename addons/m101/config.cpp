@@ -5,10 +5,14 @@ class CfgPatches
     class ADDON
     {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            "shto_vn_static_m101_02_base",
+            "shto_vn_static_m101_01",
+            "shto_vn_prop_prc77_01"
+        };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"shot_over_main"};
+        requiredAddons[] = {"shot_over_main", "loadorder_f_vietnam", "ace_interact_menu"};
         author = AUTHOR;
         authors[] = {"YannikH", "toadball", "Yax", "Andx"};
         VERSION_CONFIG;

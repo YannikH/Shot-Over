@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="shot_over">
+    <Package name="fcs">
+        <Key ID="STR_shot_over_fcs_Action_HideNotebook">
+            <English>Hide FDC Notebook</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Action_OpenNotebook">
+            <English>Open FDC Notebook</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Column_Charge">
+            <English>Charge</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Column_Elevation">
+            <English>Elevation</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Column_TOF">
+            <English>TOF</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Firemission">
+            <English>FIREMISSION %1/%2</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Format_Meters">
+            <English>%1m</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Format_Mils">
+            <English>%1 mils</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Keybind_CloseNotebook">
+            <English>Close FDC Notebook</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Keybind_ToggleNotebook">
+            <English>Open FDC Notebook</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_OwnNear">
+            <English>We're near %1</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Shell_Airburst">
+            <English>Airburst</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Shell_FRAG">
+            <English>FRAG</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Shell_HE">
+            <English>HE</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Shell_Lume">
+            <English>Lume</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Shell_Smoke">
+            <English>Smoke</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_Shell_WP">
+            <English>WP</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_TargetNear">
+            <English>Tgt near %1</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_ButtonBase_Text">
+            <English>BACK</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1001_Text">
+            <English>TARGET INFO</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1003_Text">
+            <English>Elevation</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1004_Text">
+            <English>FIRING UNIT</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1005_Text">
+            <English>Target Grid</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1006_Text">
+            <English>Elevation</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1007_Text">
+            <English>Shell Type</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1008_Text">
+            <English>NOTES</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1009_Text">
+            <English>CALC</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1010_Text">
+            <English>SOLUTION</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1012_Text">
+            <English>NEXT</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1013_Text">
+            <English>Direction:</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_RscText_1015_Text">
+            <English>Distance:</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_TextBase_Text">
+            <English>Own Grid</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_TitleBase_Text">
+            <English>FIREMISSION 1/1</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_minimized_RscText_1012_Text">
+            <English>NEXT</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_minimized_RscText_1013_Text">
+            <English>Direction:</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_minimized_RscText_1015_Text">
+            <English>Distance:</English>
+        </Key>
+        <Key ID="STR_shot_over_fcs_calculator_minimized_TitleBase_Text">
+            <English>SOLUTION</English>
+        </Key>
+    </Package>
+</Project>

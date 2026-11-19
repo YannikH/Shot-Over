@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="shot_over">
+    <Package name="m101">
+        <Key ID="STR_shot_over_m101_105mm_mag_ab_x1_c1_DisplayName">
+            <English>M1 105mm AB</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_ab_x1_c1_DisplayNameShort">
+            <English>105mm AB Chg. 1</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_ab_x1_c2_DisplayNameShort">
+            <English>105mm AB Chg. 2</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_ab_x1_c3_DisplayNameShort">
+            <English>105mm AB Chg. 3</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_ab_x1_c4_DisplayNameShort">
+            <English>105mm AB Chg. 4</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_ab_x1_c5_DisplayNameShort">
+            <English>105mm AB Chg. 5</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_chem_x1_c1_DisplayName">
+            <English>M60 105mm Smoke</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_chem_x1_c1_DisplayNameShort">
+            <English>105mm Smoke Chg. 1</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_chem_x1_c2_DisplayNameShort">
+            <English>105mm Smoke CHG. 2</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_chem_x1_c3_DisplayNameShort">
+            <English>105mm Smoke CHG. 3</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_chem_x1_c4_DisplayNameShort">
+            <English>105mm Smoke CHG. 4</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_chem_x1_c5_DisplayNameShort">
+            <English>105mm Smoke CHG. 5</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_frag_x1_c1_DisplayName">
+            <English>M546 105mm FRAG</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_frag_x1_c1_DisplayNameShort">
+            <English>105mm FRAG Chg. 1</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_frag_x1_c2_DisplayNameShort">
+            <English>105mm FRAG Chg. 2</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_frag_x1_c3_DisplayNameShort">
+            <English>105mm FRAG Chg. 3</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_frag_x1_c4_DisplayNameShort">
+            <English>105mm FRAG Chg. 4</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_frag_x1_c5_DisplayNameShort">
+            <English>105mm FRAG Chg. 5</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_he_x1_c1_DisplayName">
+            <English>M1 105mm HE</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_he_x1_c1_DisplayNameShort">
+            <English>105mm HE Chg. 1</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_he_x1_c2_DisplayNameShort">
+            <English>105mm HE Chg. 2</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_he_x1_c3_DisplayNameShort">
+            <English>105mm HE Chg. 3</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_he_x1_c4_DisplayNameShort">
+            <English>105mm HE Chg. 4</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_he_x1_c5_DisplayNameShort">
+            <English>105mm HE Chg. 5</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_icm_x1_c1_DisplayName">
+            <English>M314 105mm ICM</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_icm_x1_c1_DisplayNameShort">
+            <English>105mm ICM Chg. 1</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_icm_x1_c2_DisplayNameShort">
+            <English>105mm ICM Chg. 2</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_icm_x1_c3_DisplayNameShort">
+            <English>105mm ICM Chg. 3</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_icm_x1_c4_DisplayNameShort">
+            <English>105mm ICM Chg. 4</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_icm_x1_c5_DisplayNameShort">
+            <English>105mm ICM Chg. 5</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_lume_x1_c1_DisplayName">
+            <English>M314 105mm LUME</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_lume_x1_c1_DisplayNameShort">
+            <English>105mm LUME Chg. 1</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_lume_x1_c2_DisplayNameShort">
+            <English>105mm LUME Chg. 2</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_lume_x1_c3_DisplayNameShort">
+            <English>105mm LUME Chg. 3</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_lume_x1_c4_DisplayNameShort">
+            <English>105mm LUME Chg. 4</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_lume_x1_c5_DisplayNameShort">
+            <English>105mm LUME Chg. 5</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_wp_x1_c1_DisplayName">
+            <English>M60 105mm WP</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_wp_x1_c1_DisplayNameShort">
+            <English>105mm WP Chg. 1</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_wp_x1_c2_DisplayNameShort">
+            <English>105mm WP CHG. 2</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_wp_x1_c3_DisplayNameShort">
+            <English>105mm WP CHG. 3</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_wp_x1_c4_DisplayNameShort">
+            <English>105mm WP CHG. 4</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_105mm_mag_wp_x1_c5_DisplayNameShort">
+            <English>105mm WP CHG. 5</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Action_CloseBreech">
+            <English>Close Breech</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Action_ElevateTurret">
+            <English>Elevate Turret</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Action_FireHowitzer">
+            <English>Fire Howitzer</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Action_OpenBreech">
+            <English>Open Breech</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Action_TraverseTurret">
+            <English>Traverse Turret</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Hint_BreechNotEmpty">
+            <English>The breech isn't empty</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Hint_Direction">
+            <English>Direction: %1 mils</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Hint_Elevation">
+            <English>Elevation: %1 mils</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_Hint_ShellTooFar">
+            <English>The shell is too far away from the breech</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_howitzer_105mm_base_DisplayName">
+            <English>M101 105mm Howitzer</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_prop_prc77_01_DisplayName">
+            <English>PRC-77 Radio (Shot, Over!)</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_rto_pack_DisplayName">
+            <English>FDC Backpack (Shot, Over!)</English>
+        </Key>
+        <Key ID="STR_shot_over_m101_static_m101_02_base_DisplayName">
+            <English>M101 Howitzer (Shot, Over!)</English>
+        </Key>
+    </Package>
+</Project>

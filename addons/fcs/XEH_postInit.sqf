@@ -1,11 +1,13 @@
-_action = ["SHTO_FDC_Notebook","Open FDC Notebook","vn\modules_f_vietnam\data\vn_displayartillery\mapfolder.paa",{
+#include "script_component.hpp"
+
+_action = ["SHTO_FDC_Notebook",LLSTRING(Action_OpenNotebook),"vn\modules_f_vietnam\data\vn_displayartillery\mapfolder.paa",{
 	createDialog "shto_calculator";
 },{
 	(backpack player) isKindOf "shto_rto_pack"
 }] call ace_interact_menu_fnc_createAction;
 ["Man", 1, ["ACE_SelfActions", "ACE_Equipment"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["SHTO_FDC_Notebook_hide","Hide FDC Notebook","vn\modules_f_vietnam\data\vn_displayartillery\mapfolder.paa",{
+_action = ["SHTO_FDC_Notebook_hide",LLSTRING(Action_HideNotebook),"vn\modules_f_vietnam\data\vn_displayartillery\mapfolder.paa",{
 	95010 cutText ["", "PLAIN"];
 },{
 	private _dialog = uiNamespace getVariable "shto_fcs_dialog";
@@ -13,7 +15,7 @@ _action = ["SHTO_FDC_Notebook_hide","Hide FDC Notebook","vn\modules_f_vietnam\da
 }] call ace_interact_menu_fnc_createAction;
 ["Man", 1, ["ACE_SelfActions", "ACE_Equipment"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
-_action = ["SHTO_FDC_Notebook","Open FDC Notebook","vn\modules_f_vietnam\data\vn_displayartillery\mapfolder.paa",{
+_action = ["SHTO_FDC_Notebook",LLSTRING(Action_OpenNotebook),"vn\modules_f_vietnam\data\vn_displayartillery\mapfolder.paa",{
 	createDialog "shto_calculator";
 },{
 	(((getBackpackCargo _target) findIf {(_x # 0 == "shto_rto_pack")}) > -1)
@@ -24,7 +26,7 @@ _action = ["SHTO_FDC_Notebook","Open FDC Notebook","vn\modules_f_vietnam\data\vn
 [
 	"Shot, Over!",
 	"shto_keybind_togglenotebook",
-	"Open FDC Notebook",
+	LLSTRING(Keybind_ToggleNotebook),
 	{},{
 		if (!((backpack player) isKindOf "shto_rto_pack")) exitWith {};
 		private _dialog = uiNamespace getVariable "shto_fcs_dialog";
@@ -39,7 +41,7 @@ _action = ["SHTO_FDC_Notebook","Open FDC Notebook","vn\modules_f_vietnam\data\vn
 [
 	"Shot, Over!",
 	"shto_keybind_closenotebook",
-	"Close FDC Notebook",
+	LLSTRING(Keybind_CloseNotebook),
 	{},{
 		private _dialog = uiNamespace getVariable "shto_fcs_dialog";
 		if (!isNull _dialog) then {

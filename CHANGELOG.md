@@ -13,6 +13,18 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ## [Unreleased]
 
+### Added
+
+- Editor - Gun, shells, crates, pallets and containers in their own "Shot, Over!" Eden category and in Zeus (#11) by Andx
+- ACRE - The PRC-77 prop's radio rack moved into an optional ACRE compatibility addon, so Shot, Over! loads without ACRE (#11) by Andx
+
+### Fixed
+
+- Logistics - The illumination crate unpacked ICM shells, and the ICM crate opened as an illumination crate (#11) by Andx
+- Logistics - Typos in the names of the empty shell casing and the 18-crate HE pallet (#11) by Andx
+
 ### Changed
 
+- M101 - No artillery computer: the firing data comes from the FDC notebook (#11) by Andx
+- Config - Loads after S.O.G. Prairie Fire and the ACE parts it patches; all names, actions and hints are in stringtables (#11) by Andx
 - Build - Move from SCons to HEMTT and the arma-mod-template; addons renamed to `main`, `m101`, `logistics`, `fcs`, functions to `shot_over_<component>_fnc_*` (#10) by Andx
