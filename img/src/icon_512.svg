@@ -1,9 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
 <title>shot-over</title>
 <g transform="translate(16.00 16.00) scale(2.40000)" color="#FFFFFF" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="100" cy="100" r="92"/>
-<path d="M95 42 H105 C112 56 120 70 120 92 V126 L115 146 H85 L80 126 V92 C80 70 88 56 95 42 Z"/>
-<rect x="80" y="112" width="40" height="9" fill="currentColor" stroke="none"/>
-<path d="M66 70.3 A40 40 0 0 0 66 121.7 M134 70.3 A40 40 0 0 1 134 121.7"/>
-<path d="M52 58.7 A58 58 0 0 0 52 133.3 M148 58.7 A58 58 0 0 1 148 133.3"/>
+<g transform="translate(-1 -6)">
+<circle cx="80" cy="130" r="22"/>
+<circle cx="80" cy="130" r="5" fill="currentColor" stroke="none"/>
+<path d="M62 134 L40 147 L42 155"/>
+<g transform="rotate(-30 80 104)">
+<rect x="54" y="96" width="44" height="17" rx="3"/>
+<rect x="98" y="99.5" width="30" height="10"/>
+<rect x="128" y="97" width="7" height="15" rx="1"/>
+<path d="M142 104.5 H150 M140 95 L146 89 M140 114 L146 120"/>
+<path d="M156 101 H165 C169 101 172 102.5 173 104.5 C172 106.5 169 108 165 108 H156 Z" fill="currentColor"/>
+</g>
+</g>
 </g>
 </svg>
