@@ -25,12 +25,9 @@ After every shot the gun is empty: every round is loaded by hand.
 
 ## Laying the gun
 
-The gunner traverses and elevates the gun as usual. In the gunner's optics, ACE shows where the gun points: **AZ** (direction) and **EL** (elevation), both in mils, the same units as the FDC notebook.
+The gunner traverses and elevates the gun as usual while looking through the optics. There, ACE shows where the gun points: **AZ** (direction) and **EL** (elevation), both in mils, the same units as the FDC notebook. Lay the gun until both match the fire mission.
 
-Crew members outside the gun can check the lay with two actions at the handwheels:
-
-- **Traverse Turret**: the direction in mils
-- **Elevate Turret**: the elevation in mils
+Crew members outside the gun can check the elevation with **Elevate Turret** at the elevation handwheel: it shows the elevation in mils.
 
 ## Charges and ranges
 
