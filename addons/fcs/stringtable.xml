@@ -43,6 +43,9 @@
         <Key ID="STR_shot_over_fcs_Shell_HE">
             <English>HE</English>
         </Key>
+        <Key ID="STR_shot_over_fcs_Shell_ICM">
+            <English>ICM</English>
+        </Key>
         <Key ID="STR_shot_over_fcs_Shell_Lume">
             <English>Lume</English>
         </Key>

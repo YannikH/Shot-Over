@@ -18,7 +18,7 @@ class shto_calculator {
     idd = 20001;
     movingEnable = 1;
     onLoad = "_this call shot_over_fcs_fnc_initDialog";
-    onUnload = "[] call shot_over_fcs_fnc_saveView; [] call shot_over_fcs_fnc_openMinimized;";
+    onUnload = "[_this select 0] call shot_over_fcs_fnc_saveView; call shot_over_fcs_fnc_openMinimized;";
     onKeyUp = "_this call shot_over_fcs_fnc_dialogKeyUp;";
     class Controls {
         ////////////////////////////////////////////////////////
@@ -187,7 +187,7 @@ class shto_calculator {
             y = QUOTE(0.653 * safezoneH + safezoneY);
             w = QUOTE(0.0303954 * RELWIDTH);
             h = QUOTE(0.022 * safezoneH);
-            onButtonClick="[false] spawn shot_over_fcs_fnc_calculateFromNotebook";
+            onButtonClick="[false] call shot_over_fcs_fnc_calculateFromNotebook";
         };
         class BaseTextField: RscEdit
         {
