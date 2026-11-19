@@ -1,15 +1,18 @@
-/* TEMPLATE: set the brand color of the mod. Header text is fixed white, so light mode
-   needs a dark enough primary for contrast; dark mode gets the brighter accent. */
+/* Olive drab and stencil yellow, after the markings on US artillery shells of the era.
+   Header text is fixed white (8.2:1 on olive drab). Link colours differ per scheme so both
+   meet WCAG AA: dark yellow on white (5.1:1), bright yellow on slate (8.0:1). */
 :root {
-  --md-primary-fg-color: #37474F;
-  --md-primary-fg-color--light: #78909C;
-  --md-primary-fg-color--dark: #263238;
+  --md-primary-fg-color: #4B5320;
+  --md-primary-fg-color--light: #6B7339;
+  --md-primary-fg-color--dark: #353B16;
 }
 
 [data-md-color-scheme="default"] {
-  --md-accent-fg-color: #37474F;
+  --md-typeset-a-color: #8A6A00;
+  --md-accent-fg-color: #6E5500;
 }
 
 [data-md-color-scheme="slate"] {
-  --md-accent-fg-color: #78909C;
+  --md-typeset-a-color: #E0B000;
+  --md-accent-fg-color: #F0C830;
 }
