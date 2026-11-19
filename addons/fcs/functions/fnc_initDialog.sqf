@@ -54,7 +54,7 @@ lbClear _shellList;
 } forEach [LLSTRING(Shell_HE), LLSTRING(Shell_Airburst), LLSTRING(Shell_FRAG), LLSTRING(Shell_WP), LLSTRING(Shell_Smoke), LLSTRING(Shell_Lume), LLSTRING(Shell_ICM)];
 _shellList lbSetCurSel (_page select 5);
 
-(_dialog displayCtrl IDC_TITLE) ctrlSetText format [LLSTRING(Firemission), _openPage + 1, count _pages max 1];
+(_dialog displayCtrl IDC_TITLE) ctrlSetText format [LLSTRING(Firemission), _openPage + 1, count _pages max (_openPage + 1)];
 missionNamespace setVariable ["shto_fcs_currentPage", _openPage];
 
 [_minimized] call FUNC(calculateFromNotebook);
