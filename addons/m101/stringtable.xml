@@ -142,14 +142,8 @@
         <Key ID="STR_shot_over_m101_Action_OpenBreech">
             <English>Open Breech</English>
         </Key>
-        <Key ID="STR_shot_over_m101_Action_TraverseTurret">
-            <English>Traverse Turret</English>
-        </Key>
         <Key ID="STR_shot_over_m101_Hint_BreechNotEmpty">
             <English>The breech isn't empty</English>
-        </Key>
-        <Key ID="STR_shot_over_m101_Hint_Direction">
-            <English>Direction: %1 mils</English>
         </Key>
         <Key ID="STR_shot_over_m101_Hint_Elevation">
             <English>Elevation: %1 mils</English>
