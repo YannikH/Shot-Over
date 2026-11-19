@@ -29,7 +29,7 @@
             <English>Unpack Crate</English>
         </Key>
         <Key ID="STR_shot_over_logistics_Hint_LoadShell">
-            <English>Right click at the open breech to load the shell</English>
+            <English>Load the shell at the open breech: interaction "Load Shell" or right click</English>
         </Key>
         <Key ID="STR_shot_over_logistics_Hint_NoHowitzer">
             <English>No howitzer nearby</English>
