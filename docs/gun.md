@@ -29,6 +29,40 @@ The gunner traverses and elevates the gun as usual while looking through the opt
 
 Crew members outside the gun can check the elevation with **Elevate Turret** at the elevation handwheel: it shows the elevation in mils.
 
+### The gun's sights
+
+The gunner can also lay the gun with its own sights, as on the real M101: the **panoramic telescope** for direction and the **quadrant** with its level bubble for elevation. Open them with the self-interaction (hold ++left-windows++ on the gun) **Look Through Sights**, or with ++num5++. Close them the same way (**Close Sights**); they also close when you leave the gun.
+
+Laying is always two steps, as on the real gun: **set the dials** to the fire mission, then **lay the gun** with the usual controls until the sights show it is on.
+
+!!! info "The dials never move the gun"
+    The deflection dial turns only the telescope, the quadrant dial only the bubble's reference. The gun moves only with the mouse (traverse) and ++page-up++ / ++page-down++ (elevation).
+
+| Key | Dial |
+| --- | --- |
+| ++num6++ / ++num4++ | Deflection up / down |
+| ++num8++ / ++num2++ | Quadrant up / down |
+
+A press turns a dial by 1 mil; hold the key to turn it faster. The keys can be changed in the CBA keybindings under **Shot, Over!**. The dials keep their settings for the next gunner.
+
+!!! tip "Everything on the keypad"
+    The gun's elevation is Arma's own control (default ++page-up++ / ++page-down++). Bind it to ++num9++ / ++num3++ as well, and the sights (++num5++), both dials and the elevation are all on the keypad.
+
+**Direction**:
+
+1. Set the deflection of the fire mission (right panel, tape at the bottom). The view swings away from the aiming point: the telescope looks the deflection to the right of the barrel, all the way round from 0 to 6400 mils.
+2. Traverse the gun with the mouse until the aiming point is back on the vertical line. The deflection reading does not change while you traverse; telescope and gun turn together.
+
+Raising the deflection therefore lays the gun further left.
+
+**Elevation**:
+
+1. Set the quadrant of the fire mission (left panel).
+2. Elevate the gun with ++page-up++ / ++page-down++ until the bubble is centred and **LEVEL** shows; tap the key for the last mils. The bubble moves to **HIGH** when the barrel is too high and to **LOW** when it is too low.
+
+!!! note "Deflection needs an aiming point"
+    Deflection is measured from an aiming point, not from north. Aiming stakes and a deflection in the FDC notebook will come in a later version; until then, lay the direction with ACE's **AZ** readout.
+
 ## Charges and ranges
 
 Every shell type uses the same charges. Ranges are for level ground, without air friction, as the notebook computes them:

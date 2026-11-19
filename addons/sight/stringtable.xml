@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="shot_over">
+    <Package name="sight">
+        <Key ID="STR_shot_over_sight_Action_Close">
+            <English>Close Sights</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Action_Open">
+            <English>Look Through Sights</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Deflection">
+            <English>DEFLECTION</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Help">
+            <English>The dials only turn the sights: lay the gun to match them</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_High">
+            <English>HIGH</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Keybind_DeflectionDown">
+            <English>Sights: Deflection Down</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Keybind_DeflectionUp">
+            <English>Sights: Deflection Up</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Keybind_QuadrantDown">
+            <English>Sights: Quadrant Down</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Keybind_QuadrantUp">
+            <English>Sights: Quadrant Up</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Keybind_Toggle">
+            <English>Toggle Gun Sights</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Level">
+            <English>LEVEL</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Low">
+            <English>LOW</English>
+        </Key>
+        <Key ID="STR_shot_over_sight_Quadrant">
+            <English>QUADRANT</English>
+        </Key>
+    </Package>
+</Project>
