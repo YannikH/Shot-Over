@@ -19,7 +19,7 @@ _action = ["SHTO_FDC_Notebook",LLSTRING(Action_OpenNotebook),"vn\modules_f_vietn
 	createDialog "shto_calculator";
 },{
 	(((getBackpackCargo _target) findIf {(_x # 0 == "shto_rto_pack")}) > -1)
-}, nil, nil, [0,0,-0.4], shto_interaction_distance] call ace_interact_menu_fnc_createAction;
+}, nil, nil, [0,0,-0.4], INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
 ["GroundWeaponHolder", 0, [], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 

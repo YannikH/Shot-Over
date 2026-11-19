@@ -1,11 +1,29 @@
-params ["_target", "_coordinates"];
-private _elevation = (_target animationPhase "maingun")  * 57.2958; // around osaveze
-private _direction = (_target animationPhase "mainturret") * 57.2958; // around otocvez
-private _origin = _target selectionPosition "osaveze";
-private _vectToCoordinates = _coordinates call CBA_fnc_vect2polar;
-private _vect = [
-	(_vectToCoordinates # 0),
-	-_direction + (_vectToCoordinates # 1),
-	-_elevation + (_vectToCoordinates # 2)
-] call CBA_fnc_polar2vect;
-_origin vectorAdd _vect;
+#include "..\script_component.hpp"
+
+/*
+ * Author: YannikH, toadball
+ * Converts a position given along the barrel into model coordinates of the gun: the offset is turned with the
+ * turret's traverse and the barrel's elevation around the elevation axis ("osaveze"), so it follows the breech.
+ *
+ * Arguments:
+ * 0: Gun <OBJECT>
+ * 1: Offset from the elevation axis with the barrel level and pointing forward, model space <ARRAY>
+ *
+ * Return Value:
+ * Position in model coordinates <ARRAY>
+ *
+ * Example:
+ * _gun modelToWorld ([_gun, [0, -1.5, 0.5]] call shot_over_m101_fnc_posAlongRecoilAxis)
+ *
+ * Public: No
+ */
+
+params [["_gun", objNull, [objNull]], ["_offset", [0, 0, 0], [[]], 3]];
+
+private _elevation = deg (_gun animationPhase "maingun");
+private _direction = deg (_gun animationPhase "mainturret");
+private _origin = _gun selectionPosition "osaveze";
+
+(_offset call CBA_fnc_vect2Polar) params ["_distance", "_azimuth", "_pitch"];
+
+_origin vectorAdd ([_distance, _azimuth - _direction, _pitch - _elevation] call CBA_fnc_polar2vect)
