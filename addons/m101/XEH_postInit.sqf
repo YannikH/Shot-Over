@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 
-// each event runs where its target is local: the gun (load, fire), the unit (knock-down), the server (casing)
+// each event runs where its target is local: the gun (load), the unit (knock-down), the server (casing)
 [QGVAR(loadShell), LINKFUNC(onLoadShell)] call CBA_fnc_addEventHandler;
-[QGVAR(fire), LINKFUNC(onFire)] call CBA_fnc_addEventHandler;
 [QGVAR(knockDown), LINKFUNC(knockDown)] call CBA_fnc_addEventHandler;
 if (isServer) then {
     [QGVAR(ejectCasing), LINKFUNC(ejectCasing)] call CBA_fnc_addEventHandler;
@@ -35,14 +34,6 @@ _action = ["Load Shell", LLSTRING(Action_LoadShell), "", {
     && {magazines _target isEqualTo []}
     && {abs ((_target animationSourcePhase BREECH_SOURCE) - BREECH_OPEN) <= 0.01}
 }, nil, nil, {[_target, BREECH_OFFSET] call FUNC(posAlongRecoilAxis)}, INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
-["shto_vn_static_m101_02_base", 0, [], _action, true] call ace_interact_menu_fnc_addActionToClass;
-
-// pulling the lanyard: needs a gunner, who fires the round where the gun is local
-_action = ["Fire Howitzer", LLSTRING(Action_FireHowitzer), "", {
-    [QGVAR(fire), [_target], _target] call CBA_fnc_targetEvent;
-}, {
-    (_target animationSourcePhase BREECH_SOURCE) < 0.01 && {alive gunner _target}
-}, nil, nil, {[_target, [0.2, -1, 0.25]] call FUNC(posAlongRecoilAxis)}, INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
 ["shto_vn_static_m101_02_base", 0, [], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 _action = ["Elevate Turret", LLSTRING(Action_ElevateTurret), "", {

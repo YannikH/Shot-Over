@@ -133,9 +133,6 @@
         <Key ID="STR_shot_over_m101_Action_ElevateTurret">
             <English>Elevate Turret</English>
         </Key>
-        <Key ID="STR_shot_over_m101_Action_FireHowitzer">
-            <English>Fire Howitzer</English>
-        </Key>
         <Key ID="STR_shot_over_m101_Action_LoadShell">
             <English>Load Shell</English>
         </Key>

@@ -24,6 +24,10 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 - M101 - The gun elevates slower (about 40 mils per second) so the elevation can be laid to the mil with Page Up/Down (#37) by Andx
 
+### Removed
+
+- M101 - The "Fire Howitzer" lanyard action: the gunner fires the gun (#43) by Andx
+
 ## [0.1.0] - 2026-11-19
 
 ### Added

@@ -56,7 +56,7 @@ _player addEventHandler ["Respawn", {call shto_test_fnc_loadout}];
 
     player createDiaryRecord ["Diary", ["Test stations", "
 Numbers are the sections of the checklist in GitHub issue #9. The control board next to the arsenal has teleports, scenarios and diagnostics.<br/><br/>
-<marker name='shto_test_gunline'>Gun line</marker>: guns A and B for players, gun C with an AI gunner for the lanyard (Fire Howitzer) and the knock-down dummy. All face south, towards the targets (1-3).<br/>
+<marker name='shto_test_gunline'>Gun line</marker>: guns A and B for players, gun C with an AI gunner (fired from the control board) and the knock-down dummy. All face south, towards the targets (1-3).<br/>
 <marker name='shto_test_ammopoint'>Ammunition point</marker>: one crate of every type, the seven loose shells (and an HE shell set to charge 3), HE x42, FRAG x24 and ICM x18 pallets, HE and FRAG containers (4, 5). 'Restock ammunition point' puts everything back.<br/>
 <marker name='shto_test_fdc'>FDC</marker>: the FDC backpack on the ground and the PRC-77 radio on the table (6, 8). The FDC slot wears an FDC backpack.<br/>
 Targets T1 to T4 straight south of gun B at 500 m, 2 km, 4.5 km and 6.5 km, T5 off the axis at about 3.2 km (6).<br/><br/>
@@ -100,6 +100,7 @@ Zeus (7): 'Take Zeus' on the control board. Settings: there are none; keybinds u
         ["Restock ammunition point", "shto_test_restock", []],
         ["Gun C: AI gunner in", "shto_test_aiGunner", [true]],
         ["Gun C: AI gunner out", "shto_test_aiGunner", [false]],
+        ["Gun C: AI gunner fires", "shto_test_fire", []],
         ["Place AI dummy behind gun C's breech", "shto_test_dummy", []],
         ["Take Zeus", "shto_test_zeus", []]
     ];
