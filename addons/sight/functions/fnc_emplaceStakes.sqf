@@ -24,7 +24,8 @@ private _azimuthOfLay = round (((_weaponDir select 0) atan2 (_weaponDir select 1
 
 // on the rounded azimuth, which is what the FDC works with
 private _origin = _gun modelToWorld ([_gun, TELESCOPE_OFFSET] call EFUNC(m101,posAlongDirection));
-private _direction = (_azimuthOfLay + REFERRED_DEFLECTION) / MILS_PER_DEGREE;
+// at 2800 the telescope looks 400 mils left of the barrel: the stakes stand to the left front, as on the real gun
+private _direction = (_azimuthOfLay + REFERRED_DEFLECTION - DEFLECTION_FORWARD) / MILS_PER_DEGREE;
 private _positions = STAKE_DISTANCES apply {
     ((_origin getPos [_x, _direction]) select [0, 2]) + [0]
 };

@@ -4,9 +4,9 @@
  * Per-frame handler while the sights are open: turns a held dial, places the telescope's camera and moves the
  * deflection tape and the level bubble. Closes the sights once the player is no longer the gun's gunner.
  *
- * The telescope sits on the carriage and stays level: it turns with the traverse, not with the elevation, and looks
- * the deflection to the right of the barrel. With the aiming point on the vertical line, raising the deflection
- * therefore traverses the gun left, as on the real gun.
+ * The telescope sits on the carriage and stays level: it turns with the traverse, not with the elevation. At
+ * deflection 3200 it looks along the barrel, at 0 straight back, and a higher deflection turns it right. With the
+ * aiming point on the vertical line, raising the deflection therefore traverses the gun left, as on the real gun.
  *
  * Arguments:
  * 0: Gun <OBJECT>
@@ -40,7 +40,7 @@ private _deflection = round GVAR(currentDeflection) % 6400;
 private _quadrant = round GVAR(currentQuadrant);
 
 private _weaponDir = _gun weaponDirection currentWeapon _gun;
-private _azimuth = ((_weaponDir select 0) atan2 (_weaponDir select 1)) + _deflection / MILS_PER_DEGREE;
+private _azimuth = ((_weaponDir select 0) atan2 (_weaponDir select 1)) + (_deflection - DEFLECTION_FORWARD) / MILS_PER_DEGREE;
 GVAR(camera) setPosASL (_gun modelToWorldVisualWorld ([_gun, TELESCOPE_OFFSET] call EFUNC(m101,posAlongDirection)));
 GVAR(camera) setVectorDirAndUp [[sin _azimuth, cos _azimuth, 0], [0, 0, 1]];
 
