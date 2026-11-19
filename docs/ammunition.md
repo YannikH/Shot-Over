@@ -14,7 +14,7 @@ The gunline is stocked from containers, through pallets and crates, down to the 
 | **M314 105mm LUME Shell** | Illumination |
 | **M444 105mm ICM Shell** | Cluster munition (ICM) |
 
-A shell is carried with ACE's carry action. Its charge is set on the shell itself (interaction on the shell → **Set Charge**); the charge is kept when the shell is put down or handed over. Loading is described on [The M101 Howitzer](gun.md#firing-a-round).
+A shell is carried with ACE's carry action. Its charge is set on the shell itself (interaction on the shell → **Interactions** → **Set Charge**); the charge is kept when the shell is put down or handed over. Loading is described on [The M101 Howitzer](gun.md#firing-a-round).
 
 ## Crates
 
