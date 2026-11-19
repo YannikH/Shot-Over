@@ -12,6 +12,9 @@
 #define TELESCOPE_OFFSET [-0.45, 0, 0.4]
 #define TELESCOPE_FOV 0.19
 #define DEFAULT_DEFLECTION 3200
+// The deflection at which the telescope looks along the barrel, as on the US panoramic telescope: 0/6400 looks
+// straight back, higher values turn it right
+#define DEFLECTION_FORWARD 3200
 
 // Aiming stakes: placed along the telescope's line at REFERRED_DEFLECTION (main\script_macros.hpp), at these
 // distances (m); ACE action distance (m) to the telescope
