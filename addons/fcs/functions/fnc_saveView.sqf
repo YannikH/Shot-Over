@@ -1,20 +1,36 @@
-private _dialog = uiNamespace getVariable "shto_fcs_dialog";
-private _openPage = missionNamespace getVariable ["shto_fcs_currentPage", 0];
-private _missions = missionNamespace getVariable ["shto_fcs_pages", []];
+#include "..\script_component.hpp"
 
-private _ownPosStr = ctrlText  (1500);
-private _ownElevStr = ctrlText  (1501);
-private _tgtPosStr = ctrlText  (1502);
-private _tgtElevStr = ctrlText  (1503);
-private _notes = ctrlText  (1504);
-private _shellType = lbCurSel (2100);
+/*
+ * Author: YannikH, toadball, Andx
+ * Saves the open page of the FDC notebook (grids, elevations, notes, shell type) into shto_fcs_pages, before a
+ * page is turned or the notebook is closed. Does nothing for the minimized notebook, which has no fields.
+ *
+ * Arguments:
+ * 0: Notebook display (default: the open one) <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call shot_over_fcs_fnc_saveView
+ *
+ * Public: No
+ */
 
-_missions set [_openPage, [
- _ownPosStr,
- _ownElevStr,
- _tgtPosStr,
- _tgtElevStr,
- _notes,
- _shellType
+params [["_dialog", displayNull, [displayNull]]];
+
+if (isNull _dialog) then {
+    _dialog = uiNamespace getVariable ["shto_fcs_dialog", displayNull];
+};
+if (isNull (_dialog displayCtrl IDC_OWN_GRID)) exitWith {};
+
+private _pages = missionNamespace getVariable ["shto_fcs_pages", []];
+_pages set [missionNamespace getVariable ["shto_fcs_currentPage", 0], [
+    ctrlText (_dialog displayCtrl IDC_OWN_GRID),
+    ctrlText (_dialog displayCtrl IDC_OWN_ELEVATION),
+    ctrlText (_dialog displayCtrl IDC_TARGET_GRID),
+    ctrlText (_dialog displayCtrl IDC_TARGET_ELEVATION),
+    ctrlText (_dialog displayCtrl IDC_NOTES),
+    lbCurSel (_dialog displayCtrl IDC_SHELL_TYPE)
 ]];
-missionNamespace setVariable ["shto_fcs_pages", _missions];
+missionNamespace setVariable ["shto_fcs_pages", _pages];
