@@ -37,7 +37,10 @@ class CfgVehicles {
     };
     class vn_b_army_static_m101_02: vn_static_m101_02_base {
       class Turrets: Turrets {
-                class MainTurret: MainTurret { };
+                class MainTurret: MainTurret {
+                    class ViewOptics;
+                    class ViewGunner;
+                };
       };
         };
     class shto_vn_static_m101_02_base: vn_b_army_static_m101_02 {
@@ -48,11 +51,22 @@ class CfgVehicles {
       editorSubcategory = "shot_over_guns";
       // no artillery computer: the firing data comes from the FDC notebook
       artilleryScanner = 0;
+      // ACE's azimuth/elevation readout in mils for the gunner; it would otherwise follow artilleryScanner and stay off
+      ace_artillerytables_showGunLaying = 1;
       model = "\vn\static_f_vietnam\m101\vn_b_static_m101_01.p3d";
       class Turrets: Turrets {
           class MainTurret: MainTurret {
               weapons[] = {"shto_howitzer_105mm_base"};
               magazines[] = {};
+              // no vanilla range, elevation and heading overlay; ACE's readout replaces it.
+              // The views set their own, which wins over the turret's while in that view.
+              turretInfoType = "";
+              class ViewOptics: ViewOptics {
+                  turretInfoType = "";
+              };
+              class ViewGunner: ViewGunner {
+                  turretInfoType = "";
+              };
           };
         };
       class AnimationSources //removing shield actions
