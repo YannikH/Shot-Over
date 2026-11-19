@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"shot_over_m101", "acre_main", "acre_sys_rack"};
+        requiredAddons[] = {"shot_over_m101", "acre_main", "acre_api", "acre_sys_rack"};
         // Loaded only when ACRE2 is loaded
         skipWhenMissingDependencies = 1;
         author = AUTHOR;
@@ -16,4 +16,5 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
