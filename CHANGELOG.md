@@ -20,6 +20,9 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ### Fixed
 
+- Logistics - A player joining mid-mission no longer deletes the crates on every pallet (#PR) by Andx
+- Logistics - Taking crates, taking pallets and unpacking crates run on the server: two players can no longer take the same crate or unpack a crate twice, and unpacking works when a client opens it (#PR) by Andx
+- Logistics - "Take Pallet" is available on containers and gives a pallet of the container's ammunition; the FRAG container's smaller pallets were AB (#PR) by Andx
 - M101 - Works in multiplayer: the gun is emptied after each shot with a client gunner, loading and firing run where the gun is local, two crew members loading at once no longer lose a shell (#12) by Andx
 - M101 - The recoil knock-down no longer turns damage back on for units a mission made invulnerable (#12) by Andx
 - Logistics - The illumination crate unpacked ICM shells, and the ICM crate opened as an illumination crate (#11) by Andx
@@ -27,6 +30,8 @@ version, and start a fresh empty [Unreleased] section above it. -->
 
 ### Changed
 
+- Logistics - Shells are carried with ACE's own carry action, with a hint on how to load them; taken crates are put on the ground to carry (#PR) by Andx
+- Logistics - Containers hold 252 crates (504 rounds) as a number and show it in the "Take" action, instead of stacking crate objects (#PR) by Andx
 - M101 - "Fire Howitzer" needs a gunner; no AI gunner is created for it (#12) by Andx
 - M101 - Empty casings are removed after 5 minutes; the gun's actions are reached from 3 m (#12) by Andx
 - M101 - No artillery computer: the firing data comes from the FDC notebook (#11) by Andx

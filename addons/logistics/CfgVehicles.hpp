@@ -69,18 +69,7 @@ class CfgVehicles {
       ace_dragging_carryDirection = 0;
       openVariant = "shto_vn_crate_open_base";
       //model = "\vn\static_f_vietnam\m101\proxy\vn_b_static_m101_crate_prop.p3d";
-
-      // class ACE_Actions: ACE_Actions {
-            //     class ACE_MainActions: ACE_MainActions {
-            //         class SHTO_UnpackCrate {
-            //             displayName = "Unpack Crate";
-            //             condition = "(alive _target) && (!(_target getVariable [""shto_crateIsOpen"",false]))";
-            //             statement = "    _target remoteExec [""shot_over_logistics_fnc_unpackCrate"", _target]; _target setVariable [""shto_crateIsOpen"",true];";
-            //         };
-            //     };
-            // };
-
-
+      // "Unpack Crate" is added in XEH_postInit
     };
     class shto_vn_crate_open_base: shto_vn_crate_base {
       model = "\vn\static_f_vietnam\m101\proxy\vn_b_static_m101_crate_open_prop.p3d";
@@ -176,7 +165,7 @@ class CfgVehicles {
       yOffset = 0.2;
       class EventHandlers {
         class shto_palletInit {
-          init = "_this call shot_over_logistics_fnc_initPallet;";
+          init = QUOTE(_this call FUNC(initPallet));
         };
       };
     };
@@ -299,11 +288,12 @@ class CfgVehicles {
       editorCategory = "shot_over";
       editorSubcategory = "shot_over_supplies";
       displayName = CSTRING(m101_container_base_DisplayName);
-      crateCount = 504;
+      // crates of 2 rounds, 504 rounds; the stock is a number, the container shows no crates
+      crateCount = 252;
       crateClass = "shto_vn_m101_he_crate";
       class EventHandlers {
         class shto_palletInit {
-          init = "_this call shot_over_logistics_fnc_fillContainer;";
+          init = QUOTE(_this call FUNC(initContainer));
         };
       };
     };
@@ -326,7 +316,7 @@ class CfgVehicles {
       scopeCurator = 2;
       displayName = CSTRING(m101_frag_container_x504_DisplayName);
       crateClass = "shto_vn_m101_frag_crate";
-      palletClasses[] = {"shto_vn_m101_frag_pallet_x42","shto_vn_m101_ab_pallet_x24","shto_vn_m101_ab_pallet_x18"};
+      palletClasses[] = {"shto_vn_m101_frag_pallet_x42","shto_vn_m101_frag_pallet_x24","shto_vn_m101_frag_pallet_x18"};
     };
     class shto_vn_m101_wp_container_x504: shto_vn_m101_container_base {
       scope = 2;
