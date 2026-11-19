@@ -1,0 +1,17 @@
+onLoadName = "Shot, Over! - Test Range";
+onLoadMission = "Test stations for the in-game test pass (GitHub issue #9)";
+author = "Andx";
+
+class Header {
+    gameType = "Coop";
+    minPlayers = 1;
+    maxPlayers = 4;
+};
+
+// several checks need a respawn (the notebook's pages, loadouts) and players on different machines
+respawn = "BASE";
+respawnDelay = 5;
+respawnOnStart = -1;
+
+enableDebugConsole = 2;
+disabledAI = 1;
