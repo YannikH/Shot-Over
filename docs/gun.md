@@ -11,7 +11,7 @@ Shot, Over! adds the **M101 Howitzer (Shot, Over!)** from S.O.G. Prairie Fire, l
 
 All actions are in the ACE interaction menu (hold ++left-windows++) on the gun, at the part of the gun they belong to. They can be reached from 3 m.
 
-1. **Set the charge** on a shell: interaction on the shell → **M1 105mm HE Shell, Chg 1** → **Set Charge** → **Charge 1** to **Charge 5**. The action shows the shell and the charge it is set to; new shells have charge 1. See [Ammunition](ammunition.md).
+1. **Set the charge** on a shell: interaction on the shell → **Interactions** → **M1 105mm HE Shell, Chg 1** → **Set Charge** → **Charge 1** to **Charge 5**. The action shows the shell and the charge it is set to; new shells have charge 1. See [Ammunition](ammunition.md).
 2. **Carry the shell** with ACE's carry action. A hint tells you how to load it.
 3. **Load**: with the breech open and empty, stand at the breech and **right click**. The shell has to be within 1 m of the breech, and the gun within 5 m of you. If someone else loaded the gun in the meantime, your shell is put back at the breech.
 4. **Close Breech**.

@@ -51,19 +51,20 @@ _action = ["Unpack Crate", LLSTRING(Action_UnpackCrate), "", {
 ["shto_vn_crate_base", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 // shell: its name with the charge set on it, and the charge to set
-_action = ["M101 Shell", LLSTRING(Action_Shell), "", {}, {true}, nil, nil, [0, 0, 0.4], INTERACTION_DISTANCE, [false, false, false, false, false], {
+// under ACE's main action (from carrying and cargo), so shells lying side by side in a crate have one point each
+_action = ["M101 Shell", LLSTRING(Action_Shell), "", {}, {true}, nil, nil, [0, 0, 0], INTERACTION_DISTANCE, [false, false, false, false, false], {
     params ["_target", "", "", "_actionData"];
     _actionData set [1, format [LLSTRING(Action_ShellFormat), getText (configOf _target >> "displayName"), _target getVariable ["shto_charge", 1]]];
 }] call ace_interact_menu_fnc_createAction;
-["shto_vn_m101_shell", 0, [], _action, true] call ace_interact_menu_fnc_addActionToClass;
+["shto_vn_m101_shell", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 _action = ["Set Charge", LLSTRING(Action_SetCharge), "", {}, {true}, nil, nil, [0, 0, 0], INTERACTION_DISTANCE, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;
-["shto_vn_m101_shell", 0, ["M101 Shell"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+["shto_vn_m101_shell", 0, ["ACE_MainActions", "M101 Shell"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 for "_charge" from 1 to 5 do {
     _action = [format ["Charge %1", _charge], format [LLSTRING(Action_Charge), _charge], "", {
         params ["_target", "", "_charge"];
         _target setVariable ["shto_charge", _charge, true];
     }, {true}, nil, _charge, [0, 0, 0], INTERACTION_DISTANCE, [false, false, false, false, false]] call ace_interact_menu_fnc_createAction;
-    ["shto_vn_m101_shell", 0, ["M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+    ["shto_vn_m101_shell", 0, ["ACE_MainActions", "M101 Shell", "Set Charge"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 };
