@@ -7,9 +7,10 @@
 #define GUN_CLASS "shto_vn_static_m101_02_base"
 #define MILS_PER_DEGREE (6400 / 360)
 
-// Panoramic telescope: position from the elevation axis with the gun pointing forward (model space, tune in-game),
-// field of view (about 4x) and the deflection it shows before anyone set one (the common deflection)
-#define TELESCOPE_OFFSET [-0.45, 0, 0.4]
+// Panoramic telescope: position from the traverse axis ("osaveze") with the gun pointing forward, model space: the
+// SOG model's memory point "look", the gunner's eye at the telescope head, high enough to see over the breech.
+// Field of view (about 4x) and the deflection it shows before anyone set one (the common deflection).
+#define TELESCOPE_OFFSET [-0.401, -0.161, 0.916]
 #define TELESCOPE_FOV 0.19
 #define DEFAULT_DEFLECTION 3200
 
