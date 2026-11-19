@@ -27,6 +27,16 @@ _action = ["Close Breech", LLSTRING(Action_CloseBreech), "", {
 }, nil, nil, {[_target, [0.35, -1.07, 0.8]] call FUNC(posAlongRecoilAxis)}, INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
 ["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
 
+// the same as a right click while carrying (logistics_fnc_mouseButton), which ACE's carry mouse hint doesn't show
+_action = ["Load Shell", LLSTRING(Action_LoadShell), "", {
+    [_player, _player getVariable ["ace_dragging_carriedObject", objNull]] call FUNC(loadShell);
+}, {
+    (_player getVariable ["ace_dragging_carriedObject", objNull]) isKindOf "shto_vn_m101_shell"
+    && {magazines _target isEqualTo []}
+    && {abs ((_target animationSourcePhase BREECH_SOURCE) - BREECH_OPEN) <= 0.01}
+}, nil, nil, {[_target, BREECH_OFFSET] call FUNC(posAlongRecoilAxis)}, INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
+["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
+
 // pulling the lanyard: needs a gunner, who fires the round where the gun is local
 _action = ["Fire Howitzer", LLSTRING(Action_FireHowitzer), "", {
     [QGVAR(fire), [_target], _target] call CBA_fnc_targetEvent;

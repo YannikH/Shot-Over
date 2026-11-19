@@ -136,6 +136,9 @@
         <Key ID="STR_shot_over_m101_Action_FireHowitzer">
             <English>Fire Howitzer</English>
         </Key>
+        <Key ID="STR_shot_over_m101_Action_LoadShell">
+            <English>Load Shell</English>
+        </Key>
         <Key ID="STR_shot_over_m101_Action_OpenBreech">
             <English>Open Breech</English>
         </Key>

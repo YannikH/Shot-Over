@@ -13,7 +13,7 @@ All actions are in the ACE interaction menu (hold ++left-windows++) on the gun, 
 
 1. **Set the charge** on a shell: interaction on the shell → **M1 105mm HE Shell, Chg 1** → **Set Charge** → **Charge 1** to **Charge 5**. The action shows the shell and the charge it is set to; new shells have charge 1. See [Ammunition](ammunition.md).
 2. **Carry the shell** with ACE's carry action. A hint tells you how to load it.
-3. **Load**: with the breech open and empty, stand at the breech and **right click**. The shell has to be within 1 m of the breech, and the gun within 5 m of you. If someone else loaded the gun in the meantime, your shell is put back at the breech.
+3. **Load**: with the breech open and empty, stand at the breech and use the interaction **Load Shell** there, or **right click** as a shortcut. The shell has to be within 1 m of the breech, and the gun within 5 m of you. If someone else loaded the gun in the meantime, your shell is put back at the breech.
 4. **Close Breech**.
 5. **Fire**: the gunner fires, or anyone at the breech pulls the lanyard with **Fire Howitzer**. Fire Howitzer needs a gunner on the gun.
 6. **Open Breech** after the shot: the empty casing is thrown out (it disappears after 5 minutes) and the gun is ready for the next round.
