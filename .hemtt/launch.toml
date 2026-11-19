@@ -6,6 +6,27 @@ workshop = [
 dlc = [
     "S.O.G. Prairie Fire",
 ]
+# test range for the in-game test pass (.hemtt/missions/shot_over_test.VR, GitHub issue #9)
+mission = "shot_over_test.VR"
+
+# Used by tools/debugMP.bat: a local dedicated server and two clients (the same as ITC Land Systems)
+[server]
+extends = "default"
+parameters = [
+    "-server",
+    "-port=2302",
+    "-loadMissionToMemory",
+    "-filePatching",
+    "-config=E:\\SteamLibrary\\steamapps\\common\\Arma 3\\server.cfg"
+]
+
+[player]
+extends = "default"
+parameters = [
+    "-world=empty",
+    "-connect=127.0.0.1",
+    "-port=2302"
+]
 
 # ACRE2 compatibility (addons/compat_acre), chained after another profile: hemtt launch default acre
 [acre]
