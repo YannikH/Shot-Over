@@ -27,6 +27,7 @@ version, and start a fresh empty [Unreleased] section above it. -->
 - FCS - The FDC notebook works out its solutions again: it asked for range tables from an ACE extension that current ACE no longer has; it now computes them itself, with the same no-air-friction ballistics (#14) by Andx
 - FCS - ICM can be picked as shell type in the notebook (#14) by Andx
 - FCS - Turning pages no longer adds the shell types to the list again; Ctrl+End closes the open notebook; no script error from "Hide FDC Notebook" before the notebook was first opened (#14) by Andx
+- FCS - A new or incomplete fire mission page no longer shows the direction, distance and place names of the page before it, and a new page no longer counts as more pages than there are (e.g. "14/13") (#26) by Andx
 - Logistics - A player joining mid-mission no longer deletes the crates on every pallet (#13) by Andx
 - Logistics - Taking crates, taking pallets and unpacking crates run on the server: two players can no longer take the same crate or unpack a crate twice, and unpacking works when a client opens it (#13) by Andx
 - Logistics - "Take Pallet" is available on containers and gives a pallet of the container's ammunition; the FRAG container's smaller pallets were AB (#13) by Andx

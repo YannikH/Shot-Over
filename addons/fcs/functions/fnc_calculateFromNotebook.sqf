@@ -44,6 +44,10 @@ lnbClear _solutionsCtrl;
 lnbClear _linesCtrl;
 _solutionsCtrl lnbAddRow [LLSTRING(Column_Charge), LLSTRING(Column_Elevation), LLSTRING(Column_TOF)];
 _linesCtrl lnbAddRow ["", "", ""];
+// the controls keep the last page's values, which an unworkable page must not show
+{
+    (_dialog displayCtrl _x) ctrlSetText "";
+} forEach [IDC_DIRECTION, IDC_DISTANCE, IDC_TARGET_NEAR, IDC_OWN_NEAR];
 
 // a grid has as many easting as northing digits
 private _isGrid = {_this != "" && {count _this % 2 == 0}};
