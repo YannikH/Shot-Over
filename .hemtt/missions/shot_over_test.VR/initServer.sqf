@@ -145,6 +145,17 @@ shto_test_curator addCuratorEditableObjects [vehicles + allUnits, true];
     ["shto_test_notify", [["Gun C: AI gunner removed", "Gun C: AI gunner in"] select _add], _caller] call CBA_fnc_targetEvent;
 }] call CBA_fnc_addEventHandler;
 
+// gun C's AI gunner fires the loaded round, for the knock-down test (the gun is local here, with the server's AI)
+["shto_test_fire", {
+    params ["_caller"];
+    private _gunner = gunner ((shto_test_guns select 2) select 1);
+    if (!alive _gunner) exitWith {
+        ["shto_test_notify", ["Gun C has no AI gunner"], _caller] call CBA_fnc_targetEvent;
+    };
+    _gunner fireAtTarget [objNull];
+    ["shto_test_notify", ["Gun C: AI gunner fired"], _caller] call CBA_fnc_targetEvent;
+}] call CBA_fnc_addEventHandler;
+
 // an AI soldier standing where the recoil knocks units down, behind gun C's breech
 ["shto_test_dummy", {
     params ["_caller"];

@@ -15,7 +15,7 @@ All actions are in the ACE interaction menu (hold ++left-windows++) on the gun, 
 2. **Carry the shell** with ACE's carry action. A hint tells you how to load it.
 3. **Load**: with the breech open and empty, stand at the breech and use the interaction **Load Shell** there, or **right click** as a shortcut. The shell has to be within 1 m of the breech, and the gun within 5 m of you. If someone else loaded the gun in the meantime, your shell is put back at the breech.
 4. **Close Breech**.
-5. **Fire**: the gunner fires, or anyone at the breech pulls the lanyard with **Fire Howitzer**. Fire Howitzer needs a gunner on the gun.
+5. **Fire**: the gunner fires.
 6. **Open Breech** after the shot: the empty casing is thrown out (it disappears after 5 minutes) and the gun is ready for the next round.
 
 After every shot the gun is empty: every round is loaded by hand.

@@ -3,7 +3,6 @@ PREP(fired);
 PREP(getMagazineFromShell);
 PREP(knockDown);
 PREP(loadShell);
-PREP(onFire);
 PREP(onLoadShell);
 PREP(posAlongDirection);
 PREP(posAlongRecoilAxis);
