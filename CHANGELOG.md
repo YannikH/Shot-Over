@@ -19,6 +19,7 @@ version, and start a fresh empty [Unreleased] section above it. -->
 - Docs - Documentation site: the M101 and its crew, ammunition and logistics, the FDC notebook, and a page for mission makers (#16) by Andx
 - Editor - Gun, shells, crates, pallets and containers in their own "Shot, Over!" Eden category and in Zeus (#11) by Andx
 - ACRE - The PRC-77 prop's radio rack moved into an optional ACRE compatibility addon, so Shot, Over! loads without ACRE (#11) by Andx
+- M101 - The gunner sees the gun's direction and elevation in mils (ACE's AZ/EL readout) instead of the vanilla optics overlay (#32) by Andx
 - M101 - A carried shell can be loaded with the interaction "Load Shell" at the open breech; right click still works as a shortcut (#28) by Andx
 
 ### Fixed
