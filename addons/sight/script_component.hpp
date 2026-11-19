@@ -18,10 +18,9 @@
 #define DEFLECTION_FORWARD 3200
 
 // Aiming stakes: placed along the telescope's line at REFERRED_DEFLECTION (main\script_macros.hpp), at these
-// distances (m); ACE action distance (m) to the telescope
+// distances (m)
 #define STAKE_CLASS "Land_RedWhitePole_F"
 #define STAKE_DISTANCES [25, 50]
-#define INTERACTION_DISTANCE 3
 
 // Quadrant limits (mils): the gun's elevation limits, -5 to 66 degrees, as in the notebook
 #define QUADRANT_MIN -89
