@@ -36,6 +36,7 @@ version, and start a fresh empty [Unreleased] section above it. -->
 - M101 - Works in multiplayer: the gun is emptied after each shot with a client gunner, loading and firing run where the gun is local, two crew members loading at once no longer lose a shell (#12) by Andx
 - M101 - Both M101 variants have the gun's actions; one of the two had no Open or Close Breech, Fire Howitzer, Traverse or Elevate Turret (#30) by Andx
 - M101 - The recoil knock-down no longer turns damage back on for units a mission made invulnerable (#12) by Andx
+- M101 - The gun without shields (`shto_vn_static_m101_02_base`) and the gun with shields (`shto_vn_static_m101_01`) had each other's model; wheel damage, shields and SOG's "hide clutter" option work again (#33) by Andx
 - Logistics - The illumination crate unpacked ICM shells, and the ICM crate opened as an illumination crate (#11) by Andx
 - Logistics - Typos in the names of the empty shell casing and the 18-crate HE pallet (#11) by Andx
 

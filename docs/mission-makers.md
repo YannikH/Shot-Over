@@ -14,7 +14,7 @@ Everything is also in **Zeus**. Pallets and containers are filled when they are 
 
 | Object | Classnames |
 | --- | --- |
-| M101 Howitzer | `shto_vn_static_m101_02_base`, `shto_vn_static_m101_01` |
+| M101 Howitzer | `shto_vn_static_m101_02_base` (without shields), `shto_vn_static_m101_01` (with shields) |
 | Shells | `shto_vn_m101_shell_he`, `_ab`, `_frag`, `_wp`, `_smk`, `_illum`, `_icm` |
 | Crates | `shto_vn_m101_he_crate`, `_ab_crate`, `_frag_crate`, `_wp_crate`, `_smoke_crate`, `_illum_crate`, `_icm_crate` |
 | Pallets | `shto_vn_m101_<type>_pallet_x42`, `_x24`, `_x18` with `<type>` `he`, `ab`, `frag`, `wp`, `smk`, `illum`, `icm` |
