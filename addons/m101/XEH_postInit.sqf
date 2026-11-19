@@ -35,7 +35,7 @@ _action = ["Load Shell", LLSTRING(Action_LoadShell), "", {
     && {magazines _target isEqualTo []}
     && {abs ((_target animationSourcePhase BREECH_SOURCE) - BREECH_OPEN) <= 0.01}
 }, nil, nil, {[_target, BREECH_OFFSET] call FUNC(posAlongRecoilAxis)}, INTERACTION_DISTANCE] call ace_interact_menu_fnc_createAction;
-["shto_vn_static_m101_02_base", 0, [], _action] call ace_interact_menu_fnc_addActionToClass;
+["shto_vn_static_m101_02_base", 0, [], _action, true] call ace_interact_menu_fnc_addActionToClass;
 
 // pulling the lanyard: needs a gunner, who fires the round where the gun is local
 _action = ["Fire Howitzer", LLSTRING(Action_FireHowitzer), "", {
